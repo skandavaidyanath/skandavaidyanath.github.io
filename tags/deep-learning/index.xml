@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Skanda Vaidyanath</title>
-    <link>https://skandavaidyanath.github.io/authors/admin/</link>
-      <atom:link href="https://skandavaidyanath.github.io/authors/admin/index.xml" rel="self" type="application/rss+xml" />
-    <description>Skanda Vaidyanath</description>
+    <title>Deep Learning | Skanda Vaidyanath</title>
+    <link>https://skandavaidyanath.github.io/tags/deep-learning/</link>
+      <atom:link href="https://skandavaidyanath.github.io/tags/deep-learning/index.xml" rel="self" type="application/rss+xml" />
+    <description>Deep Learning</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 20 Oct 2018 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://skandavaidyanath.github.io/img/icon-192.png</url>
-      <title>Skanda Vaidyanath</title>
-      <link>https://skandavaidyanath.github.io/authors/admin/</link>
+      <title>Deep Learning</title>
+      <link>https://skandavaidyanath.github.io/tags/deep-learning/</link>
     </image>
     
     <item>
