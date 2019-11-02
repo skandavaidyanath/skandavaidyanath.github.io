@@ -3,18 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://skandavaidyanath.github.io/project/bug-prediction/</loc>
-    <lastmod>2019-11-01T04:47:15+05:30</lastmod>
-  </url>
-  
-  <url>
     <loc>https://skandavaidyanath.github.io/project/</loc>
-    <lastmod>2019-11-01T04:47:15+05:30</lastmod>
+    <lastmod>2019-11-01T04:46:45+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://skandavaidyanath.github.io/</loc>
-    <lastmod>2019-11-01T04:47:15+05:30</lastmod>
+    <lastmod>2019-11-01T04:46:45+05:30</lastmod>
   </url>
   
   <url>
@@ -28,68 +23,88 @@
   </url>
   
   <url>
-    <loc>https://skandavaidyanath.github.io/project/brain-decoding/</loc>
-    <lastmod>2019-11-01T02:58:19+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skandavaidyanath.github.io/project/cqa/</loc>
-    <lastmod>2019-11-01T02:57:31+05:30</lastmod>
-  </url>
-  
-  <url>
     <loc>https://skandavaidyanath.github.io/authors/admin/</loc>
-    <lastmod>2018-10-20T00:00:00+00:00</lastmod>
+    <lastmod>2019-10-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://skandavaidyanath.github.io/authors/</loc>
-    <lastmod>2018-10-20T00:00:00+00:00</lastmod>
+    <lastmod>2019-10-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://skandavaidyanath.github.io/categories/</loc>
-    <lastmod>2018-10-20T00:00:00+00:00</lastmod>
+    <lastmod>2019-10-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://skandavaidyanath.github.io/categories/deep-learning/</loc>
-    <lastmod>2018-10-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skandavaidyanath.github.io/tags/deep-learning/</loc>
-    <lastmod>2018-10-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skandavaidyanath.github.io/tags/natural-language-processing/</loc>
-    <lastmod>2018-10-20T00:00:00+00:00</lastmod>
+    <loc>https://skandavaidyanath.github.io/categories/machine-learning/</loc>
+    <lastmod>2019-10-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://skandavaidyanath.github.io/categories/natural-language-processing/</loc>
-    <lastmod>2018-10-20T00:00:00+00:00</lastmod>
+    <lastmod>2019-10-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skandavaidyanath.github.io/tags/natural-language-processing/</loc>
+    <lastmod>2019-10-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skandavaidyanath.github.io/tags/other/</loc>
+    <lastmod>2019-10-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skandavaidyanath.github.io/project/bug-prediction/</loc>
+    <lastmod>2019-10-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skandavaidyanath.github.io/categories/software-engineering/</loc>
+    <lastmod>2019-10-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skandavaidyanath.github.io/tags/</loc>
+    <lastmod>2019-10-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skandavaidyanath.github.io/project/brain-decoding/</loc>
+    <lastmod>2019-07-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skandavaidyanath.github.io/project/cqa/</loc>
+    <lastmod>2018-11-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skandavaidyanath.github.io/categories/deep-learning/</loc>
+    <lastmod>2018-11-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skandavaidyanath.github.io/tags/deep-learning/</loc>
+    <lastmod>2018-11-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skandavaidyanath.github.io/tags/information-retrieval/</loc>
+    <lastmod>2018-11-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skandavaidyanath.github.io/categories/information-retrieval/</loc>
+    <lastmod>2018-11-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://skandavaidyanath.github.io/project/mitacs/</loc>
     <lastmod>2018-10-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skandavaidyanath.github.io/tags/</loc>
-    <lastmod>2018-10-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skandavaidyanath.github.io/tags/information-retrieval/</loc>
-    <lastmod>2018-07-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skandavaidyanath.github.io/categories/information-retrieval/</loc>
-    <lastmod>2018-07-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>

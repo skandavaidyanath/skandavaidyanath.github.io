@@ -5,7 +5,7 @@
     <link>https://skandavaidyanath.github.io/authors/</link>
       <atom:link href="https://skandavaidyanath.github.io/authors/index.xml" rel="self" type="application/rss+xml" />
     <description>Authors</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 20 Oct 2018 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 01 Oct 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://skandavaidyanath.github.io/img/icon-192.png</url>
       <title>Authors</title>
@@ -15,11 +15,15 @@
     <item>
       <title></title>
       <link>https://skandavaidyanath.github.io/authors/admin/</link>
-      <pubDate>Sat, 20 Oct 2018 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
       <guid>https://skandavaidyanath.github.io/authors/admin/</guid>
-      <description>&lt;p&gt;I am a final year undergraduate student of computer science at &lt;a href=&#34;https://www.bits-pilani.ac.in/hyderabad/&#34; target=&#34;_blank&#34;&gt;BITS Pilani, Hyderabad Campus&lt;/a&gt;. My research interests include reinforcement learning, deep learning and natural language processing. I like thinking about and working on different applications of RL in the real world - like dialogue systems, robotics and personalized learning. I&amp;rsquo;m also interested in thinking about the modeling of RL problems and I often find myself asking the question &lt;em&gt;&amp;lsquo;What are the properties of a good state space/reward function?&amp;rsquo;&lt;/em&gt;. Recently, I&amp;rsquo;ve also found the idea of meta learning very intriguing and has made me think of the question &lt;em&gt;&amp;lsquo;Can I teach an agent that has learned to play tennis, to play badminton?&amp;rsquo;&lt;/em&gt;. I find neural networks very fascinating as well and often think about how backpropagation works in different deep learning models. A lot of my work also involves NLP and IR and I am very interested in exploring the intersection of NLP/IR and RL.&lt;/p&gt;
+      <description>&lt;p&gt;I am a final year undergraduate student of computer science at &lt;a href=&#34;https://www.bits-pilani.ac.in/hyderabad/&#34; target=&#34;_blank&#34;&gt;BITS Pilani, Hyderabad Campus&lt;/a&gt;. I am currently the class valedictorian and have also served as the captain of the tennis team and as the vice chairperson of the IEEE student branch.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;I am currently pursuing my undergraduate thesis at the &lt;a href=&#34;https://www.mpi-inf.mpg.de/departments/databases-and-information-systems/&#34; target=&#34;_blank&#34;&gt;Max Planck Institute for Informatics&lt;/a&gt; under &lt;a href=&#34;https://andrewyates.net/&#34; target=&#34;_blank&#34;&gt;Dr. Andrew Yates&lt;/a&gt; and &lt;a href=&#34;https://paramitamirza.com/&#34; target=&#34;_blank&#34;&gt;Dr. Paramita Mirza&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I was recently a part of the &lt;a href=&#34;https://www.iusstf.org/program/iusstf-viterbi-program&#34; target=&#34;_blank&#34;&gt;IUSSTF-Viterbi programme 2019&lt;/a&gt;!&lt;/p&gt;
+
+&lt;p&gt;My research interests include reinforcement learning, deep learning and natural language processing. I like thinking about and working on different applications of RL in the real world - like dialogue systems, robotics and personalized learning. I&amp;rsquo;m also interested in thinking about the modeling of RL problems and I often find myself asking the question &lt;em&gt;&amp;lsquo;What are the properties of a good state space/reward function?&amp;rsquo;&lt;/em&gt;. Recently, I&amp;rsquo;ve also found the idea of meta learning very intriguing and has made me think of the question &lt;em&gt;&amp;lsquo;Can I teach an agent that has learned to play tennis, to play badminton?&amp;rsquo;&lt;/em&gt;. I find neural networks very fascinating as well and often think about how backpropagation works in different deep learning models. A lot of my work also involves NLP and IR and I am very interested in exploring the intersection of NLP/IR and RL.&lt;/p&gt;
 
 &lt;p&gt;In the past I&amp;rsquo;ve had the good fortune of working closely with some amazing researchers such as &lt;a href=&#34;https://www.bits-pilani.ac.in/hyderabad/bhanumurthy/Profile&#34; target=&#34;_blank&#34;&gt;Prof. N. L. Bhanu Murthy&lt;/a&gt;, &lt;a href=&#34;https://universe.bits-pilani.ac.in/hyderabad/arunamalapati/Profile&#34; target=&#34;_blank&#34;&gt;Prof. Aruna Malapati&lt;/a&gt;, &lt;a href=&#34;http://people.ict.usc.edu/~kgeorgila/&#34; target=&#34;_blank&#34;&gt;Prof. Kallirroi Georgila&lt;/a&gt; and &lt;a href=&#34;http://ict.usc.edu/profile/david-traum/&#34; target=&#34;_blank&#34;&gt;Prof. David Traum&lt;/a&gt;.&lt;/p&gt;
 

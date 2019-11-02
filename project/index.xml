@@ -5,20 +5,12 @@
     <link>https://skandavaidyanath.github.io/project/</link>
       <atom:link href="https://skandavaidyanath.github.io/project/index.xml" rel="self" type="application/rss+xml" />
     <description>Projects</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 01 Nov 2019 04:47:15 +0530</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 01 Nov 2019 04:46:45 +0530</lastBuildDate>
     <image>
       <url>https://skandavaidyanath.github.io/img/icon-192.png</url>
       <title>Projects</title>
       <link>https://skandavaidyanath.github.io/project/</link>
     </image>
-    
-    <item>
-      <title>Bug Prediction</title>
-      <link>https://skandavaidyanath.github.io/project/bug-prediction/</link>
-      <pubDate>Fri, 01 Nov 2019 04:47:15 +0530</pubDate>
-      <guid>https://skandavaidyanath.github.io/project/bug-prediction/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>Usc Ict</title>
@@ -37,19 +29,30 @@
     </item>
     
     <item>
-      <title>Brain Decoding</title>
-      <link>https://skandavaidyanath.github.io/project/brain-decoding/</link>
-      <pubDate>Fri, 01 Nov 2019 02:58:19 +0530</pubDate>
-      <guid>https://skandavaidyanath.github.io/project/brain-decoding/</guid>
-      <description></description>
+      <title>Software Bug Prediction</title>
+      <link>https://skandavaidyanath.github.io/project/bug-prediction/</link>
+      <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
+      <guid>https://skandavaidyanath.github.io/project/bug-prediction/</guid>
+      <description>&lt;p&gt;CONTENT HERE&lt;/p&gt;
+</description>
     </item>
     
     <item>
-      <title>Cqa</title>
+      <title>Brain Decoding</title>
+      <link>https://skandavaidyanath.github.io/project/brain-decoding/</link>
+      <pubDate>Mon, 01 Jul 2019 00:00:00 +0000</pubDate>
+      <guid>https://skandavaidyanath.github.io/project/brain-decoding/</guid>
+      <description>&lt;p&gt;CONTENT HERE&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Community Question Answering for a distance-learning platform</title>
       <link>https://skandavaidyanath.github.io/project/cqa/</link>
-      <pubDate>Fri, 01 Nov 2019 02:57:31 +0530</pubDate>
+      <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
       <guid>https://skandavaidyanath.github.io/project/cqa/</guid>
-      <description></description>
+      <description>&lt;p&gt;CONTENT HERE&lt;/p&gt;
+</description>
     </item>
     
     <item>

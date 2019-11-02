@@ -5,12 +5,21 @@
     <link>https://skandavaidyanath.github.io/categories/deep-learning/</link>
       <atom:link href="https://skandavaidyanath.github.io/categories/deep-learning/index.xml" rel="self" type="application/rss+xml" />
     <description>Deep Learning</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 20 Oct 2018 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 01 Nov 2018 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://skandavaidyanath.github.io/img/icon-192.png</url>
       <title>Deep Learning</title>
       <link>https://skandavaidyanath.github.io/categories/deep-learning/</link>
     </image>
+    
+    <item>
+      <title>Community Question Answering for a distance-learning platform</title>
+      <link>https://skandavaidyanath.github.io/project/cqa/</link>
+      <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
+      <guid>https://skandavaidyanath.github.io/project/cqa/</guid>
+      <description>&lt;p&gt;CONTENT HERE&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Personalized Learning from Job Descriptions</title>

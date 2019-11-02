@@ -5,12 +5,21 @@
     <link>https://skandavaidyanath.github.io/categories/information-retrieval/</link>
       <atom:link href="https://skandavaidyanath.github.io/categories/information-retrieval/index.xml" rel="self" type="application/rss+xml" />
     <description>Information Retrieval</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 31 Jul 2018 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 01 Nov 2018 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://skandavaidyanath.github.io/img/icon-192.png</url>
       <title>Information Retrieval</title>
       <link>https://skandavaidyanath.github.io/categories/information-retrieval/</link>
     </image>
+    
+    <item>
+      <title>Community Question Answering for a distance-learning platform</title>
+      <link>https://skandavaidyanath.github.io/project/cqa/</link>
+      <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
+      <guid>https://skandavaidyanath.github.io/project/cqa/</guid>
+      <description>&lt;p&gt;CONTENT HERE&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Search Engine On a Nuclear Corpus</title>
