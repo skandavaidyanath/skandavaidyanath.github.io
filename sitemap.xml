@@ -3,18 +3,78 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://skandavaidyanath.github.io/project/</loc>
-    <lastmod>2019-11-01T04:46:45+05:30</lastmod>
+    <loc>https://skandavaidyanath.github.io/authors/admin/</loc>
+    <lastmod>2019-11-04T03:11:13+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skandavaidyanath.github.io/authors/</loc>
+    <lastmod>2019-11-04T03:11:13+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skandavaidyanath.github.io/post/bppt-ft-karpathy/</loc>
+    <lastmod>2019-11-04T03:11:13+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skandavaidyanath.github.io/post/</loc>
+    <lastmod>2019-11-04T03:11:13+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skandavaidyanath.github.io/categories/</loc>
+    <lastmod>2019-11-04T03:11:13+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skandavaidyanath.github.io/categories/deep-learning/</loc>
+    <lastmod>2019-11-04T03:11:13+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skandavaidyanath.github.io/tags/deep-learning/</loc>
+    <lastmod>2019-11-04T03:11:13+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://skandavaidyanath.github.io/</loc>
-    <lastmod>2019-11-01T04:46:45+05:30</lastmod>
+    <lastmod>2019-11-04T03:11:13+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://skandavaidyanath.github.io/project/usc-ict/</loc>
-    <lastmod>2019-11-01T04:46:45+05:30</lastmod>
+    <loc>https://skandavaidyanath.github.io/tags/</loc>
+    <lastmod>2019-11-04T03:11:13+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skandavaidyanath.github.io/categories/information-retrieval/</loc>
+    <lastmod>2019-11-04T03:10:24+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skandavaidyanath.github.io/tags/information-retrieval/</loc>
+    <lastmod>2019-11-04T03:10:24+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skandavaidyanath.github.io/categories/reinforcement-learning/</loc>
+    <lastmod>2019-11-04T03:10:24+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skandavaidyanath.github.io/tags/reinforcement-learning/</loc>
+    <lastmod>2019-11-04T03:10:24+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skandavaidyanath.github.io/post/works-like-a-charm/</loc>
+    <lastmod>2019-11-04T03:10:24+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skandavaidyanath.github.io/post/bridging-the-gaps-with-rl/</loc>
+    <lastmod>2019-11-04T03:10:09+05:30</lastmod>
   </url>
   
   <url>
@@ -23,18 +83,8 @@
   </url>
   
   <url>
-    <loc>https://skandavaidyanath.github.io/authors/admin/</loc>
-    <lastmod>2019-10-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skandavaidyanath.github.io/authors/</loc>
-    <lastmod>2019-10-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skandavaidyanath.github.io/categories/</loc>
-    <lastmod>2019-10-01T00:00:00+00:00</lastmod>
+    <loc>https://skandavaidyanath.github.io/project/</loc>
+    <lastmod>2019-11-01T04:46:38+05:30</lastmod>
   </url>
   
   <url>
@@ -68,8 +118,8 @@
   </url>
   
   <url>
-    <loc>https://skandavaidyanath.github.io/tags/</loc>
-    <lastmod>2019-10-01T00:00:00+00:00</lastmod>
+    <loc>https://skandavaidyanath.github.io/project/usc-ict/</loc>
+    <lastmod>2019-07-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -83,26 +133,6 @@
   </url>
   
   <url>
-    <loc>https://skandavaidyanath.github.io/categories/deep-learning/</loc>
-    <lastmod>2018-11-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skandavaidyanath.github.io/tags/deep-learning/</loc>
-    <lastmod>2018-11-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skandavaidyanath.github.io/tags/information-retrieval/</loc>
-    <lastmod>2018-11-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skandavaidyanath.github.io/categories/information-retrieval/</loc>
-    <lastmod>2018-11-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://skandavaidyanath.github.io/project/mitacs/</loc>
     <lastmod>2018-10-20T00:00:00+00:00</lastmod>
   </url>
@@ -110,10 +140,6 @@
   <url>
     <loc>https://skandavaidyanath.github.io/project/igcar/</loc>
     <lastmod>2018-07-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skandavaidyanath.github.io/post/</loc>
   </url>
   
   <url>

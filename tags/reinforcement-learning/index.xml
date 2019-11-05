@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reinforcement Learning | Skanda Vaidyanath</title>
+    <link>https://skandavaidyanath.github.io/tags/reinforcement-learning/</link>
+      <atom:link href="https://skandavaidyanath.github.io/tags/reinforcement-learning/index.xml" rel="self" type="application/rss+xml" />
+    <description>Reinforcement Learning</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 04 Nov 2019 03:10:24 +0530</lastBuildDate>
+    <image>
+      <url>https://skandavaidyanath.github.io/img/icon-192.png</url>
+      <title>Reinforcement Learning</title>
+      <link>https://skandavaidyanath.github.io/tags/reinforcement-learning/</link>
+    </image>
+    
+    <item>
+      <title>Works Like a Charm</title>
+      <link>https://skandavaidyanath.github.io/post/works-like-a-charm/</link>
+      <pubDate>Mon, 04 Nov 2019 03:10:24 +0530</pubDate>
+      <guid>https://skandavaidyanath.github.io/post/works-like-a-charm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bridging the Gaps With Reinforcement Learning</title>
+      <link>https://skandavaidyanath.github.io/post/bridging-the-gaps-with-rl/</link>
+      <pubDate>Mon, 04 Nov 2019 03:10:09 +0530</pubDate>
+      <guid>https://skandavaidyanath.github.io/post/bridging-the-gaps-with-rl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The Human Swarm Project</title>
+      <link>https://skandavaidyanath.github.io/project/usc-ict/</link>
+      <pubDate>Sat, 20 Jul 2019 00:00:00 +0000</pubDate>
+      <guid>https://skandavaidyanath.github.io/project/usc-ict/</guid>
+      <description>&lt;p&gt;CONTENT HERE&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
