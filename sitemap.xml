@@ -3,48 +3,48 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://skandavaidyanath.github.io/courses/rl-course/post1/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skandavaidyanath.github.io/courses/rl-course/</loc>
+    <lastmod>2018-09-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skandavaidyanath.github.io/courses/rl-course/post2/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://skandavaidyanath.github.io/authors/admin/</loc>
-    <lastmod>2019-11-04T03:11:13+05:30</lastmod>
+    <lastmod>2019-11-04T03:10:24+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://skandavaidyanath.github.io/authors/</loc>
-    <lastmod>2019-11-04T03:11:13+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skandavaidyanath.github.io/post/bppt-ft-karpathy/</loc>
-    <lastmod>2019-11-04T03:11:13+05:30</lastmod>
+    <lastmod>2019-11-04T03:10:24+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://skandavaidyanath.github.io/post/</loc>
-    <lastmod>2019-11-04T03:11:13+05:30</lastmod>
+    <lastmod>2019-11-04T03:10:24+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://skandavaidyanath.github.io/categories/</loc>
-    <lastmod>2019-11-04T03:11:13+05:30</lastmod>
+    <lastmod>2019-11-04T03:10:24+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://skandavaidyanath.github.io/categories/deep-learning/</loc>
-    <lastmod>2019-11-04T03:11:13+05:30</lastmod>
+    <lastmod>2019-11-04T03:10:24+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://skandavaidyanath.github.io/tags/deep-learning/</loc>
-    <lastmod>2019-11-04T03:11:13+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skandavaidyanath.github.io/</loc>
-    <lastmod>2019-11-04T03:11:13+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skandavaidyanath.github.io/tags/</loc>
-    <lastmod>2019-11-04T03:11:13+05:30</lastmod>
+    <lastmod>2019-11-04T03:10:24+05:30</lastmod>
   </url>
   
   <url>
@@ -58,12 +58,22 @@
   </url>
   
   <url>
+    <loc>https://skandavaidyanath.github.io/tags/reinforcement-learning/</loc>
+    <lastmod>2019-11-04T03:10:24+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://skandavaidyanath.github.io/categories/reinforcement-learning/</loc>
     <lastmod>2019-11-04T03:10:24+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://skandavaidyanath.github.io/tags/reinforcement-learning/</loc>
+    <loc>https://skandavaidyanath.github.io/</loc>
+    <lastmod>2019-11-04T03:10:24+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skandavaidyanath.github.io/tags/</loc>
     <lastmod>2019-11-04T03:10:24+05:30</lastmod>
   </url>
   
@@ -78,12 +88,12 @@
   </url>
   
   <url>
-    <loc>https://skandavaidyanath.github.io/project/mpii/</loc>
+    <loc>https://skandavaidyanath.github.io/project/</loc>
     <lastmod>2019-11-01T04:46:38+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://skandavaidyanath.github.io/project/</loc>
+    <loc>https://skandavaidyanath.github.io/project/mpii/</loc>
     <lastmod>2019-11-01T04:46:38+05:30</lastmod>
   </url>
   
@@ -93,12 +103,12 @@
   </url>
   
   <url>
-    <loc>https://skandavaidyanath.github.io/categories/natural-language-processing/</loc>
+    <loc>https://skandavaidyanath.github.io/tags/natural-language-processing/</loc>
     <lastmod>2019-10-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://skandavaidyanath.github.io/tags/natural-language-processing/</loc>
+    <loc>https://skandavaidyanath.github.io/categories/natural-language-processing/</loc>
     <lastmod>2019-10-01T00:00:00+00:00</lastmod>
   </url>
   
@@ -115,6 +125,16 @@
   <url>
     <loc>https://skandavaidyanath.github.io/categories/software-engineering/</loc>
     <lastmod>2019-10-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skandavaidyanath.github.io/talk/</loc>
+    <lastmod>2019-07-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skandavaidyanath.github.io/talk/usc-ict/</loc>
+    <lastmod>2019-07-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -143,15 +163,20 @@
   </url>
   
   <url>
+    <loc>https://skandavaidyanath.github.io/talk/igcar/</loc>
+    <lastmod>2018-07-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skandavaidyanath.github.io/courses/</loc>
+  </url>
+  
+  <url>
     <loc>https://skandavaidyanath.github.io/publication_types/</loc>
   </url>
   
   <url>
     <loc>https://skandavaidyanath.github.io/publication/</loc>
-  </url>
-  
-  <url>
-    <loc>https://skandavaidyanath.github.io/talk/</loc>
   </url>
   
 </urlset>

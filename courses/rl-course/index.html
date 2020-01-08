@@ -28,10 +28,10 @@
   
     
   
-  <meta name="description" content="Final Year Undergraduate Student of Computer Science">
+  <meta name="description" content="A reinforcement learning course that will teach you everything you need right from the very basics till the most complicated algorithms that are in use today.">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://skandavaidyanath.github.io/publication/">
+  <link rel="alternate" hreflang="en-us" href="https://skandavaidyanath.github.io/courses/rl-course/">
 
   
 
@@ -96,14 +96,14 @@
 
 
   
-  <link rel="alternate" href="/publication/index.xml" type="application/rss+xml" title="Skanda Vaidyanath">
+  <link rel="alternate" href="/courses/rl-course/index.xml" type="application/rss+xml" title="Skanda Vaidyanath">
   
 
   <link rel="manifest" href="/index.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon-32.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://skandavaidyanath.github.io/publication/">
+  <link rel="canonical" href="https://skandavaidyanath.github.io/courses/rl-course/">
 
   
   
@@ -116,12 +116,12 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="Skanda Vaidyanath">
-  <meta property="og:url" content="https://skandavaidyanath.github.io/publication/">
-  <meta property="og:title" content="Publications | Skanda Vaidyanath">
-  <meta property="og:description" content="Final Year Undergraduate Student of Computer Science"><meta property="og:image" content="https://skandavaidyanath.github.io/img/icon-192.png">
+  <meta property="og:url" content="https://skandavaidyanath.github.io/courses/rl-course/">
+  <meta property="og:title" content="Course Overview | Skanda Vaidyanath">
+  <meta property="og:description" content="A reinforcement learning course that will teach you everything you need right from the very basics till the most complicated algorithms that are in use today."><meta property="og:image" content="https://skandavaidyanath.github.io/img/icon-192.png">
   <meta property="twitter:image" content="https://skandavaidyanath.github.io/img/icon-192.png"><meta property="og:locale" content="en-us">
   
-    
+    <meta property="og:updated_time" content="2018-09-09T00:00:00&#43;00:00">
   
 
   
@@ -138,7 +138,7 @@
 
 
 
-  <title>Publications | Skanda Vaidyanath</title>
+  <title>Course Overview | Skanda Vaidyanath</title>
 
 </head>
 
@@ -372,71 +372,139 @@
 
   
 
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-  
-  
-    
-  
-<div class="universal-wrapper pt-3">
-  <h1>Publications</h1>
-
-  
-
-  
-</div>
-
-
-
-<div class="universal-wrapper">
-  <div class="row">
-    <div class="col-lg-12">
-
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
       
 
-      
-      
 
-      <div class="form-row mb-4">
-        <div class="col-auto">
-          <input type="search" class="filter-search" placeholder="Search..." autocapitalize="off"
-          autocomplete="off" autocorrect="off" role="textbox" spellcheck="false">
-        </div>
-        <div class="col-auto">
-          <select class="pub-filters pubtype-select form-control form-control-sm" data-filter-group="pubtype">
-            <option value="*">Type</option>
-            
-            
-          </select>
-        </div>
-        <div class="col-auto">
-          <select class="pub-filters form-control form-control-sm" data-filter-group="year">
-            <option value="*">Date</option>
-            
-            
-          </select>
-        </div>
-      </div>
 
-      <div id="container-publications">
-        
-      </div>
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  <div class="docs-toc-item active">
+    <a class="docs-toc-link" href="/courses/rl-course/">Overview</a>
+
+  </div>
+  
+  
+</nav>
 
     </div>
+
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#course-contents">Course Contents</a></li>
+</ul></li>
+</ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          <h1>Course Overview</h1>
+
+          <div class="article-style">
+            
+
+<p>Hi! Thank you for taking the time out to take a look at my RL course. I hope to cover several RL fundamentals and algorithms as a part of this course in a little bit more theoretical detail than I normally come across. Having said that, I will also include some code samples wherever I see fit.</p>
+
+<p>We&rsquo;ll start off with a couple of introduction posts and then cover several common RL algorithms and deep RL algorithms as well. I will try and put in code samples (Python3 and PyTorch) and mathematical proofs whenever possible. I will add a contents section with the course syllabus right here and keep editing it as I add more posts.</p>
+
+<p>I will add references at the end of each lecture but most of the content for this course comes from <a href="http://incompleteideas.net/book/the-book-2nd.html" target="_blank">Reinforcement Learning: An Introduction by Sutton and Barto</a> and this <a href="https://nptel.ac.in/courses/106106143/" target="_blank">NPTEL course</a> by <a href="https://www.cse.iitm.ac.in/~ravi/" target="_blank">Prof. Balaraman Ravindran</a>.</p>
+
+<p>As I am currently conducting research in the field of RL, I will be giving some insights into how people use RL in their work and how they tackle RL problems. I will give detials about modeling the state space, action space and reward functions for an RL problem and other practical challenges one may face as well.</p>
+
+<p>Please let me know if there&rsquo;s anything different you&rsquo;d like to see or if I&rsquo;ve made any mistakes.</p>
+
+<h2 id="course-contents">Course Contents</h2>
+
+<ol>
+<li><a href="courses/rl-course/post1.md" target="_blank">Introduction: Why RL?</a></li>
+<li><a href="courses/rl-course/post2.md" target="_blank">RL Jargon</a><br /></li>
+</ol>
+
+          </div>
+
+          
+
+
+
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Sep 9, 2018</p>
+
+          
+<p class="edit-page">
+  <a href="https://github.com/gcushen/hugo-academic/edit/master/content/courses/rl-course/_index.md">
+    <i class="fas fa-pen pr-2"></i>Edit this page
+  </a>
+</p>
+
+
+
+          
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+  </p>
+</footer>
+
+
+    </main>
   </div>
 </div>
+
 
       
 
@@ -495,6 +563,11 @@
 
     
     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
 
     
     
@@ -546,31 +619,6 @@
 
 
 
-  
-  <div class="container">
-    <footer class="site-footer">
-  
-
-  <p class="powered-by">
-    
-
-    Powered by the
-    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
-    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
-
-    
-    <span class="float-right" aria-hidden="true">
-      <a href="#" class="back-to-top">
-        <span class="button_icon">
-          <i class="fas fa-chevron-up fa-2x"></i>
-        </span>
-      </a>
-    </span>
-    
-  </p>
-</footer>
-
-  </div>
   
 
   

@@ -5,7 +5,7 @@
     <link>https://skandavaidyanath.github.io/authors/admin/</link>
       <atom:link href="https://skandavaidyanath.github.io/authors/admin/index.xml" rel="self" type="application/rss+xml" />
     <description>Skanda Vaidyanath</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 04 Nov 2019 03:11:13 +0530</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 04 Nov 2019 03:10:24 +0530</lastBuildDate>
     <image>
       <url>https://skandavaidyanath.github.io/img/icon-192.png</url>
       <title>Skanda Vaidyanath</title>
@@ -13,19 +13,12 @@
     </image>
     
     <item>
-      <title>Backprop through Time Ft. Karpathy</title>
-      <link>https://skandavaidyanath.github.io/post/bppt-ft-karpathy/</link>
-      <pubDate>Mon, 04 Nov 2019 03:11:13 +0530</pubDate>
-      <guid>https://skandavaidyanath.github.io/post/bppt-ft-karpathy/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Works Like a Charm</title>
       <link>https://skandavaidyanath.github.io/post/works-like-a-charm/</link>
       <pubDate>Mon, 04 Nov 2019 03:10:24 +0530</pubDate>
       <guid>https://skandavaidyanath.github.io/post/works-like-a-charm/</guid>
-      <description></description>
+      <description>&lt;p&gt;Coming soon&amp;hellip;&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -41,8 +34,16 @@
       <link>https://skandavaidyanath.github.io/project/bug-prediction/</link>
       <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
       <guid>https://skandavaidyanath.github.io/project/bug-prediction/</guid>
-      <description>&lt;p&gt;CONTENT HERE&lt;/p&gt;
+      <description>&lt;p&gt;This project is currently in progress and a research paper is in preparation. I will attach the code, the dataset and the paper once it has been published. This project was done under the guidance of &lt;a href=&#34;https://www.bits-pilani.ac.in/hyderabad/bhanumurthy/Profile&#34; target=&#34;_blank&#34;&gt;Prof. N. L. Bhanu Murthy&lt;/a&gt;.&lt;/p&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>The Human-Swarm Project</title>
+      <link>https://skandavaidyanath.github.io/talk/usc-ict/</link>
+      <pubDate>Sun, 21 Jul 2019 00:00:00 +0000</pubDate>
+      <guid>https://skandavaidyanath.github.io/talk/usc-ict/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -50,7 +51,7 @@
       <link>https://skandavaidyanath.github.io/project/usc-ict/</link>
       <pubDate>Sat, 20 Jul 2019 00:00:00 +0000</pubDate>
       <guid>https://skandavaidyanath.github.io/project/usc-ict/</guid>
-      <description>&lt;p&gt;CONTENT HERE&lt;/p&gt;
+      <description>&lt;p&gt;This project is currently in progress and a research paper is in preparation. I will attach the code, the slides and the paper once it has been published. This project was done under the guidance of &lt;a href=&#34;http://people.ict.usc.edu/~kgeorgila/&#34; target=&#34;_blank&#34;&gt;Prof. Kallirroi Georgila&lt;/a&gt; and &lt;a href=&#34;http://ict.usc.edu/profile/david-traum/&#34; target=&#34;_blank&#34;&gt;Prof. David Traum&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
@@ -59,7 +60,7 @@
       <link>https://skandavaidyanath.github.io/project/brain-decoding/</link>
       <pubDate>Mon, 01 Jul 2019 00:00:00 +0000</pubDate>
       <guid>https://skandavaidyanath.github.io/project/brain-decoding/</guid>
-      <description>&lt;p&gt;CONTENT HERE&lt;/p&gt;
+      <description>&lt;p&gt;This &lt;a href=&#34;https://vamsi-aribandi.github.io/brain_decoding_1/&#34; target=&#34;_blank&#34;&gt;blog post&lt;/a&gt; has some interesting details. The code and a PDF report are available in links above. This project was done by &lt;a href=&#34;https://vamsi-aribandi.github.io/&#34; target=&#34;_blank&#34;&gt;Vamsi Aribandi&lt;/a&gt; and myself.&lt;/p&gt;
 </description>
     </item>
     
@@ -68,7 +69,7 @@
       <link>https://skandavaidyanath.github.io/project/cqa/</link>
       <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
       <guid>https://skandavaidyanath.github.io/project/cqa/</guid>
-      <description>&lt;p&gt;CONTENT HERE&lt;/p&gt;
+      <description>&lt;p&gt;This project is currently in progress and a research paper is in preparation. I will attach the code, the dataset and the paper once it has been published. This project was done under the guidance of &lt;a href=&#34;https://www.bits-pilani.ac.in/hyderabad/bhanumurthy/Profile&#34; target=&#34;_blank&#34;&gt;Prof. N. L. Bhanu Murthy&lt;/a&gt; and &lt;a href=&#34;https://universe.bits-pilani.ac.in/hyderabad/arunamalapati/Profile&#34; target=&#34;_blank&#34;&gt;Prof. Aruna Malapati&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
@@ -77,7 +78,7 @@
       <link>https://skandavaidyanath.github.io/project/mitacs/</link>
       <pubDate>Sat, 20 Oct 2018 00:00:00 +0000</pubDate>
       <guid>https://skandavaidyanath.github.io/project/mitacs/</guid>
-      <description>&lt;p&gt;CONTENT HERE&lt;/p&gt;
+      <description>&lt;p&gt;Python notebook and slides for the project are linked above. This project was done as a part of the applications for the MITACS Globalink programme.&lt;/p&gt;
 </description>
     </item>
     
@@ -86,8 +87,16 @@
       <link>https://skandavaidyanath.github.io/project/igcar/</link>
       <pubDate>Tue, 31 Jul 2018 00:00:00 +0000</pubDate>
       <guid>https://skandavaidyanath.github.io/project/igcar/</guid>
-      <description>&lt;p&gt;CONTENT HERE&lt;/p&gt;
+      <description>&lt;p&gt;The code for this project cannot be made public. However, you can find a technical report and some slides in the links above. This project was done at the Indira Gandhi Centre for Atomic Research (IGCAR).&lt;/p&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>Developing a Search Engine on a nuclear corpus and outlining a semantic based approach to Entity Profiling from raw text to build a Question Answering system</title>
+      <link>https://skandavaidyanath.github.io/talk/igcar/</link>
+      <pubDate>Wed, 25 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>https://skandavaidyanath.github.io/talk/igcar/</guid>
+      <description></description>
     </item>
     
   </channel>
