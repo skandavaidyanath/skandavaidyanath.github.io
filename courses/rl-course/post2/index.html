@@ -587,12 +587,18 @@ Notationally, we index the sequence of state-action pairs in an episode with a t
 <ul>
 <li><em>P</em> : Now P is the probability function defined as <em>P</em>(s<sup>&lsquo;</sup>| s, a) which is read as the probability of moving to &ldquo;state s&rsquo;&rdquo; from &ldquo;state s&rdquo; if the agent plays &ldquo;action a&rdquo;. So for example, <em>P</em>(<em>S</em><sub>2</sub>|<em>S</em><sub>0</sub>,<em>a</em><sub>0</sub>) = 0.5</li>
 <li><em>R</em> : This is the reward function and is defined as <em>R</em>(s<sup>&lsquo;</sup>| s, a) which is the reward the agent gets for moving to &ldquo;state s&rsquo;&rdquo; from &ldquo;state s&rdquo; if the agent plays &ldquo;action a&rdquo;. So for example, <em>R</em>(<em>S</em><sub>0</sub>|<em>S</em><sub>1</sub>,<em>a</em><sub>0</sub>) = +5</li>
-<li>$\gamma$ : We spoke about the concept of delayed rewards earlier in the post and we wanted a way to accound for delayed effects of actions. This is where $\gamma$ helps. We define the <em>returns</em> of an action from a given state as the sum of the <em>discounted rewards</em> we receive from that state for playing that action. If we started from the state <em>s</em><sub>0</sub>, the returns would be defined as <em>r</em><sub>1</sub> + $\gamma$ <em>r</em><sub>2</sub> + $\gamma$<sup>2</sup> <em>r</em></sub>3</sub> + &hellip; $\gamma$ <sup><em>T-1</em></sup> <em>r</em><sub><em>T</em></sub>. The symbol we use for returns from a state <em>s</em> is usually <em>G</em><sub><em>s</em></sub> although some people like using <em>R</em> as well (<em>r</em> for reward and <em>R</em> for returns). We will stick to the former notation. Now going back to the queen sacrifice example, if we were to consider the returns in our algorithm instead of just the immediate reward, we will be able to account for the delayed positive effect and not just the immediate negative effect.</li>
+<li>$\gamma$ : We spoke about the concept of delayed rewards earlier in the post and we wanted a way to accound for delayed effects of actions. This is where $\gamma$ helps. We define the <em>returns</em> of an action from a given state as the sum of the <em>discounted rewards</em> we receive from that state for playing that action. If we started from the state <em>s</em><sub>0</sub>, the returns would be defined as <em>r</em><sub>1</sub> + $\gamma$ <em>r</em><sub>2</sub> + $\gamma$<sup>2</sup> <em>r</em></sub>3</sub> + &hellip; $\gamma$ <sup><em>T-1</em></sup> <em>r</em><sub><em>T</em></sub>. We use the word &ldquo;discounted&rdquo; because $\gamma$ is usually a number between 0 and 1 and with the increasing powers, we give more weight to the immediate rewards than the delayed rewards. Hence, $\gamma$ is also called the discounting factor. The symbol we use for returns from timestep <em>t</em> is usually <em>G</em><sub><em>t</em></sub> although some people like using <em>R</em> as well (<em>r</em> for reward and <em>R</em> for returns). We will stick to the former notation. Now going back to the queen sacrifice example, if we were to consider the returns in our algorithm instead of just the immediate reward, we will be able to account for the delayed positive effect and not just the immediate negative effect.</li>
 </ul>
 
 <p>And with that, we&rsquo;ve covered MDPs and how to model RL problems. But with that definition, we still haven&rsquo;t accounted for the exploration-exploitation tradeoff. So in the <a href="https://skandavaidyanath.github.io/courses/rl-course/post2/" target="_blank">next post</a>, we&rsquo;ll introduce a few more symbols and definitions and get cracking with our very first RL algorithm!</p>
 
 <p>Once again, let me know if you have any feedback or suggestions.</p>
+
+<h3 id="references">References</h3>
+
+<ol>
+<li><a href="https://lilianweng.github.io/lil-log/2018/02/19/a-long-peek-into-reinforcement-learning.html" target="_blank">A (Long) Peek into Reinforcement Learning by Lilian Weng</a></li>
+</ol>
 
           </div>
 
