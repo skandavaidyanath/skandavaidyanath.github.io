@@ -312,7 +312,7 @@ Reinforcement learning is like that little-known cousin of supervised learning a
         
 
         <li class="nav-item">
-          <a class="nav-link " href="/#publications"><span>Publications</span></a>
+          <a class="nav-link " href="/#talks"><span>Talks</span></a>
         </li>
 
         
@@ -341,7 +341,29 @@ Reinforcement learning is like that little-known cousin of supervised learning a
         
 
         <li class="nav-item">
-          <a class="nav-link " href="/#courses"><span>Courses</span></a>
+          <a class="nav-link " href="/#publications"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/courses/"><span>Courses</span></a>
         </li>
 
         
@@ -404,33 +426,32 @@ Reinforcement learning is like that little-known cousin of supervised learning a
 
   </div>
   
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/rl-course/post1/">The RL Course</a>
+    <ul class="nav docs-sidenav">
+      
+      <li class="active">
+        <a href="/courses/rl-course/post1/">Introduction: Why RL?</a>
+      </li>
+      
+      <li >
+        <a href="/courses/rl-course/post2/">RL Fundamentals</a>
+      </li>
+      
+      <li >
+        <a href="/courses/rl-course/post3/">The Bellman Equation and Dynamic Programming</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
   
 </nav>
 
     </div>
 
-    
-    <div class="d-none d-xl-block col-xl-2 docs-toc">
-      <ul class="nav toc-top">
-        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
-      </ul>
-
-      <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#what-is-reinforcement-learning">What is Reinforcement Learning?</a></li>
-<li><a href="#how-is-it-different-from-supervised-learning-or-unsupervised-learning">How is it different from Supervised learning or Unsupervised learning?</a></li>
-<li><a href="#what-problems-can-it-solve">What problems can it solve?</a></li>
-</ul></li>
-</ul></li>
-</ul>
-</nav>
-
-      
-    </div>
     
 
     <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
@@ -476,6 +497,8 @@ The definition speaks about &ldquo;agents&rdquo; taking &ldquo;actions&rdquo; in
 
 
 
+  
+
 
 
 
@@ -489,14 +512,14 @@ The definition speaks about &ldquo;agents&rdquo; taking &ldquo;actions&rdquo; in
 <figure>
 
 
-  <a data-fancybox="" href="post1_rl.png" data-caption="The RL Setup">
-<img src="post1_rl.png" alt="" ></a>
+  <a data-fancybox="" href="/img/post1_rl.png" data-caption="The RL Setup. Source: Google Images">
+<img src="/img/post1_rl.png" alt="" ></a>
 
 
   
   
   <figcaption>
-    The RL Setup
+    The RL Setup. Source: Google Images
   </figcaption>
 
 
@@ -505,7 +528,9 @@ The definition speaks about &ldquo;agents&rdquo; taking &ldquo;actions&rdquo; in
 
 <p>Think about how you started learning to ride a bike. You probably tried a bunch of different things and continued doing more of what worked (&ldquo;worked&rdquo; in this context probably means &ldquo;did not fall and moved in the intended direction&rdquo;) and less of what didn&rsquo;t. Nobody gave you clear instructions on what to do at each step, you just tried things and they worked. In fact, humans gain several skills in the same fashion. Imagine you&rsquo;re playing a brand new video game without reading the instructions or picking up a new sport. Humans learn several tasks by trial and error and that&rsquo;s exactly what we&rsquo;re trying to emulate with RL. Trying to get as close as possible to the way humans learn.</p>
 
-<p>With that intuition, lets take a jab at the Wikipedia definition again. The &ldquo;agent&rdquo; in our biker example is the person trying to learn to ride a bike. The &ldquo;environment&rdquo; is everything that may affect the person riding the bike &ndash; so this could be the road, the traffic, the weather, etc. As for &ldquo;actions&rdquo;, these are the different decisions the agent can make &ndash; for example, they could be &ldquo;turn left&rdquo;, &ldquo;turn right&rdquo;, etc. And finally &ldquo;rewards&rdquo; is some sort of feedback we get for the series of actions we just took. So we would get a positive reward if we reached our destination and negative if we fell down for example. All these terms will be dealt with more formally in the <a href="courses/rl-course/post2.md" target="_blank">next post</a>. For now, just make sure you get the intuition.</p>
+<p>With that intuition, lets take a jab at the Wikipedia definition again. The &ldquo;agent&rdquo; in our biker example is the person trying to learn to ride a bike. The &ldquo;environment&rdquo; is everything that may affect the person riding the bike &ndash; so this could be the road, the traffic, the weather, etc. As for &ldquo;actions&rdquo;, these are the different decisions the agent can make &ndash; for example, they could be &ldquo;turn left&rdquo;, &ldquo;turn right&rdquo;, etc. The agent must decide based on the state of the environment, what the right action to play is at a given point. And finally &ldquo;rewards&rdquo; is some sort of feedback we get for the series of actions we just took. So we would get a positive reward if we reached our destination and negative if we fell down for example. All these terms will be dealt with more formally in the next post. For now, just make sure you get the intuition.</p>
+
+<p><strong>Bottomline: RL is just learning by trial and error to pick the right actions depending on the state of the environment.</strong></p>
 
 <h3 id="how-is-it-different-from-supervised-learning-or-unsupervised-learning">How is it different from Supervised learning or Unsupervised learning?</h3>
 
@@ -534,6 +559,8 @@ The definition speaks about &ldquo;agents&rdquo; taking &ldquo;actions&rdquo; in
 <p>
 
 
+  
+
 
 
 
@@ -547,14 +574,14 @@ The definition speaks about &ldquo;agents&rdquo; taking &ldquo;actions&rdquo; in
 <figure>
 
 
-  <a data-fancybox="" href="post1_pong.jpg" data-caption="Atari Games: Pong">
-<img src="post1_pong.jpg" alt="" ></a>
+  <a data-fancybox="" href="/img/post1_pong.jpg" data-caption="Atari Games: Pong. Source: Google Images">
+<img src="/img/post1_pong.jpg" alt="" ></a>
 
 
   
   
   <figcaption>
-    Atari Games: Pong
+    Atari Games: Pong. Source: Google Images
   </figcaption>
 
 
@@ -563,6 +590,8 @@ The definition speaks about &ldquo;agents&rdquo; taking &ldquo;actions&rdquo; in
 
 
 
+  
+
 
 
 
@@ -576,14 +605,14 @@ The definition speaks about &ldquo;agents&rdquo; taking &ldquo;actions&rdquo; in
 <figure>
 
 
-  <a data-fancybox="" href="post1_alphazero.jpg" data-caption="AlphaZero: Chess">
-<img src="post1_alphazero.jpg" alt="" ></a>
+  <a data-fancybox="" href="/img/post1_alphazero.jpg" data-caption="AlphaZero: Chess. Source: Google Images">
+<img src="/img/post1_alphazero.jpg" alt="" ></a>
 
 
   
   
   <figcaption>
-    AlphaZero: Chess
+    AlphaZero: Chess. Source: Google Images
   </figcaption>
 
 
@@ -599,6 +628,8 @@ The definition speaks about &ldquo;agents&rdquo; taking &ldquo;actions&rdquo; in
 
 
 
+  
+
 
 
 
@@ -612,14 +643,14 @@ The definition speaks about &ldquo;agents&rdquo; taking &ldquo;actions&rdquo; in
 <figure>
 
 
-  <a data-fancybox="" href="post1_robotics.jpg" data-caption="Robotics">
-<img src="post1_robotics.jpg" alt="" ></a>
+  <a data-fancybox="" href="/img/post1_robotics.jpg" data-caption="Robotics. Source: Google Images">
+<img src="/img/post1_robotics.jpg" alt="" ></a>
 
 
   
   
   <figcaption>
-    Robotics
+    Robotics. Source: Google Images
   </figcaption>
 
 
@@ -628,7 +659,7 @@ The definition speaks about &ldquo;agents&rdquo; taking &ldquo;actions&rdquo; in
 
 <p>And so there are a ton of different applications you can make using RL. There are also other slightly different uses, for example, RL can be used to <a href="post/bridging-the-gaps-with-RL/index.md" target="_blank">overcome non-differentiable steps in deep learning</a>.</p>
 
-<p>And with that, we&rsquo;ve answered all the questions that we set out to! We get into a lot more details in the <a href="courses/rl-course/post2.md" target="_blank">next post</a> so make sure you take a look at that as well.</p>
+<p>And with that, we&rsquo;ve answered all the questions that we set out to! We get into a lot more details in the <a href="https://skandavaidyanath.github.io/courses/rl-course/post2/" target="_blank">next post</a> so make sure you take a look at that as well.</p>
 
 <p>Feel free to let me know if you have any feedback!</p>
 
@@ -647,7 +678,7 @@ The definition speaks about &ldquo;agents&rdquo; taking &ldquo;actions&rdquo; in
   
   <div class="post-nav-item">
     <div class="meta-nav">Next</div>
-    <a href="/courses/rl-course/post2/" rel="prev">RL Jargon</a>
+    <a href="/courses/rl-course/post2/" rel="prev">RL Fundamentals</a>
   </div>
   
 </div>
@@ -698,6 +729,9 @@ The definition speaks about &ldquo;agents&rdquo; taking &ldquo;actions&rdquo; in
 
     
     
+    
+    <script src="/js/mathjax-config.js"></script>
+    
 
     
     
@@ -718,6 +752,8 @@ The definition speaks about &ldquo;agents&rdquo; taking &ldquo;actions&rdquo; in
       
 
       
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML-full" integrity="sha256-GhM+5JHb6QUzOQPXSJLEWP7R73CbkisjzK5Eyij4U9w=" crossorigin="anonymous" async></script>
       
     
 

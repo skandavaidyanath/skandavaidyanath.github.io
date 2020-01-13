@@ -28,7 +28,7 @@
   
     
   
-  <meta name="description" content="">
+  <meta name="description" content="In this post, we&rsquo;ll try to get into the real nitty-gritties of RL and build on the intuition that we gained from the last article. So we&rsquo;ll bring in some mathematical foundation and then introduce some RL parlance that we will use for the rest of this course. I strongly recommend that you keep referring back to this post in case you need a refresher on RL terms and symbols.">
 
   
   <link rel="alternate" hreflang="en-us" href="https://skandavaidyanath.github.io/courses/rl-course/post2/">
@@ -115,8 +115,8 @@
   
   <meta property="og:site_name" content="Skanda Vaidyanath">
   <meta property="og:url" content="https://skandavaidyanath.github.io/courses/rl-course/post2/">
-  <meta property="og:title" content="RL Jargon | Skanda Vaidyanath">
-  <meta property="og:description" content=""><meta property="og:image" content="https://skandavaidyanath.github.io/img/icon-192.png">
+  <meta property="og:title" content="RL Fundamentals | Skanda Vaidyanath">
+  <meta property="og:description" content="In this post, we&rsquo;ll try to get into the real nitty-gritties of RL and build on the intuition that we gained from the last article. So we&rsquo;ll bring in some mathematical foundation and then introduce some RL parlance that we will use for the rest of this course. I strongly recommend that you keep referring back to this post in case you need a refresher on RL terms and symbols."><meta property="og:image" content="https://skandavaidyanath.github.io/img/icon-192.png">
   <meta property="twitter:image" content="https://skandavaidyanath.github.io/img/icon-192.png"><meta property="og:locale" content="en-us">
   
     
@@ -141,7 +141,7 @@
 
 
 
-  <title>RL Jargon | Skanda Vaidyanath</title>
+  <title>RL Fundamentals | Skanda Vaidyanath</title>
 
 </head>
 
@@ -310,7 +310,7 @@
         
 
         <li class="nav-item">
-          <a class="nav-link " href="/#publications"><span>Publications</span></a>
+          <a class="nav-link " href="/#talks"><span>Talks</span></a>
         </li>
 
         
@@ -339,7 +339,29 @@
         
 
         <li class="nav-item">
-          <a class="nav-link " href="/#courses"><span>Courses</span></a>
+          <a class="nav-link " href="/#publications"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/courses/"><span>Courses</span></a>
         </li>
 
         
@@ -402,21 +424,32 @@
 
   </div>
   
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/courses/rl-course/post1/">The RL Course</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/courses/rl-course/post1/">Introduction: Why RL?</a>
+      </li>
+      
+      <li class="active">
+        <a href="/courses/rl-course/post2/">RL Fundamentals</a>
+      </li>
+      
+      <li >
+        <a href="/courses/rl-course/post3/">The Bellman Equation and Dynamic Programming</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
   
 </nav>
 
     </div>
 
-    
-    <div class="d-none d-xl-block col-xl-2 docs-toc">
-      <ul class="nav toc-top">
-        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
-      </ul>
-
-      
-
-      
-    </div>
     
 
     <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
@@ -424,10 +457,143 @@
       <article class="article">
 
         <div class="docs-article-container">
-          <h1>RL Jargon</h1>
+          <h1>RL Fundamentals</h1>
 
           <div class="article-style">
             
+
+<p>In this post, we&rsquo;ll try to get into the real nitty-gritties of RL and build on the intuition that we gained from the <a href="https://skandavaidyanath.github.io/courses/rl-course/post1/" target="_blank">last article</a>. So we&rsquo;ll bring in some mathematical foundation and then introduce some RL parlance that we will use for the rest of this course. I strongly recommend that you keep referring back to this post in case you need a refresher on RL terms and symbols. I&rsquo;ll stick to the standard notation from the RL book.</p>
+
+<p>Before we begin with the mathematical foundations of RL, I&rsquo;d like to point out some issues with RL and what kinds of problems we need to account for if we were to come up with RL algorithms of our own. Once again, I&rsquo;m going to move on to a new example so lets take Chess this time.
+So we want to teach our agent (recall what this means from the previous post) how to play the game of chess. Lets assume we have some sort of reward function in place where we get some small positive rewards for capturing a piece and small negative rewards for losing a piece depending on the importance of the piece (so losing a queen would lead to a negative reward of larger magnitude than losing a pawn). We also have some large positive final reward for winning the game and a large positive negative reward for losing. If you&rsquo;re wondering whether just ths large final reward is a sufficient reward function on its own, you&rsquo;re probably right and it probably is, but lets stick to this for the sake of illustration.
+Now assume we have an RL algorithm that can look at several games of Chess and the rewards and learn to play Chess on its own. What would this algorithm need to account for? We spoke about trial and error being the basis of any RL algorithm in the previous post that is exactly what our algorithm would do as well. It starts playing random moves and when it plays a good move (positive reward), it remembers to play that move the next time it is in a similar situation. This seems fine on the face of it, but there is an issue. Maybe the algorithm found a good move to play at a given position, <em>but what if there was a better move?</em>
+We need some way for the algorithm to account for the possibility of there being a better move than the one it has found already. So when we train our agent we need to make sure the agent doesn&rsquo;t greedily play the best move it knows all the time but also plays some different moves, hoping that they may be better than the one it already found. This is called the <em>exploration-exploitation tradeoff</em> in RL. Usually, RL algorithms tend to explore i.e. play many random moves initially and when the agent is more sure about the best moves under different circumstances, it starts exploiting that knowledge.</p>
+
+<p>Lets move on to the next issue that our RL algorithm will have to account for. Lets say our RL algorithm is learning from a game of Chess again where the player sacrifices the queen but goes on to win the game. The RL agent immediately registers a negative reward for the loss of the queen but the large positive reward for winning the game only comes much later. But it is entirely possible that the very queen sacrifice that the RL agent probably classified as a bad move, was the reason for the player winning the game. How do we account for this in our algorithm? This is the concept of <em>delayed rewards</em> and we will deal with a simple yet elegant solution for this as well as we go through this post.</p>
+
+<p>With that background, lets talk about how RL problems are modeled and get into some math.</p>
+
+<h2 id="markov-decision-processes">Markov Decision Processes</h2>
+
+<p>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure>
+
+
+  <a data-fancybox="" href="/img/post2_mdp_example.jpg" data-caption="A Markov Decision Process. Source: here">
+<img src="/img/post2_mdp_example.jpg" alt="" ></a>
+
+
+  
+  
+  <figcaption>
+    A Markov Decision Process. Source: <a href="https://randomant.net/reinforcement-learning-concepts/" target="_blank">here</a>
+  </figcaption>
+
+
+</figure>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure>
+
+
+  <a data-fancybox="" href="/img/post2_rl_with_not.jpg" data-caption="The RL Framework (with some additional details). Source: Google Images">
+<img src="/img/post2_rl_with_not.jpg" alt="" ></a>
+
+
+  
+  
+  <figcaption>
+    The RL Framework (with some additional details). Source: Google Images
+  </figcaption>
+
+
+</figure>
+</p>
+
+<p>Almost all RL problems can be modeled as a Markov Decision Process (MDP). So what is an MDP? An MDP can be defined as a five tuple $$\langle \mathcal{S}, \mathcal{A}, \mathcal{P}, \mathcal{R}, \gamma \rangle$$
+Lets take a closer look at what all of this means.</p>
+
+<ul>
+<li><em>S</em> : This is the set of states of the MDP. In an RL setting, this would correspond to different settings of the environment. In the previous post, we spoke about how RL was all about choosing the right actions at the right times i.e. depending on the state of the environment. This is the state we were talking about. A state in chess or tic-tac-toe cpuld be the board positions or while riding a bike could be some combination of the pertinent variables like the angle of the bike with thr ground, the wind speed, etc. The S variable represents the set of all unique states in the MDP.</li>
+<li><em>A</em> : This is the set of all actions of the MDP. We already spoke about actions briefly. Actions describe the possible moves in a game of Chess or tic-tac-toe or different arrow keys or buttons in a video game, etc. It represents the different options the agent has and can play at a given point in time. A represents the set of all unique actions available to the agent.</li>
+</ul>
+
+<p>Before we move on to the other symbols, lets get some things clear. Here is another more compilacted MDP for your reference.</p>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure>
+
+
+  <a data-fancybox="" href="/img/post2_mdp.png" data-caption="Another MDP. Source: Google Images">
+<img src="/img/post2_mdp.png" alt="" ></a>
+
+
+  
+  
+  <figcaption>
+    Another MDP. Source: Google Images
+  </figcaption>
+
+
+</figure>
+
+
+<p>Some of the states of the MDP are designated as start states or initial states and end states or terminal states. An <em>episode</em> in RL is a sequence of state-action pairs that take the agent from a start state to a terminal state. So the agent starts from one of the intial states, plays an action, goes to the next state and so on until it hits a terminal state and the episode ends.
+Now lets take a look at this MDP in the diagram above. Assume <em>S</em><sub>0</sub> is your initial state. Notice that <em>a</em><sub>0</sub> from <em>S</em><sub>0</sub> has two arrows, one going into <em>S</em><sub>0</sub> again and another going into <em>S</em><sub>2</sub>. The numbers on the arrows indicate 0.5 and 0.5 respectively. This means that if an agent plays the action <em>a</em><sub>0</sub> from <em>S</em><sub>0</sub>, it has a 0.5 probability that it ends up back in <em>S</em><sub>0</sub> and a 0.5 probability that it ends up in <em>S</em><sub>2</sub>. And similarly we have arrows going all over the diagram. Also notice the wiggly arrows &ndash; they&rsquo;re rewards.
+Notationally, we index the sequence of state-action pairs in an episode with a time variable <em>t</em> so we say an agent plays action <em>a</em><sub>t</sub> from state <em>s</em><sub>t</sub> abnd gets reward <em>r</em><sub>t+1</sub> for doing so (the reward can be 0). Here, <em>t</em> starts from 0 and we represent the terminal time-step as <em>T</em>.</p>
+
+<ul>
+<li><em>P</em> : Now P is the probability function defined as <em>P</em>(s<sup>&lsquo;</sup>| s, a) which is read as the probability of moving to &ldquo;state s&rsquo;&rdquo; from &ldquo;state s&rdquo; if the agent plays &ldquo;action a&rdquo;. So for example, <em>P</em>(<em>S</em><sub>2</sub>|<em>S</em><sub>0</sub>,<em>a</em><sub>0</sub>) = 0.5</li>
+<li><em>R</em> : This is the reward function and is defined as <em>R</em>(s<sup>&lsquo;</sup>| s, a) which is the reward the agent gets for moving to &ldquo;state s&rsquo;&rdquo; from &ldquo;state s&rdquo; if the agent plays &ldquo;action a&rdquo;. So for example, <em>R</em>(<em>S</em><sub>0</sub>|<em>S</em><sub>1</sub>,<em>a</em><sub>0</sub>) = +5</li>
+<li>$\gamma$ : We spoke about the concept of delayed rewards earlier in the post and we wanted a way to accound for delayed effects of actions. This is where $\gamma$ helps. We define the <em>returns</em> of an action from a given state as the sum of the <em>discounted rewards</em> we receive from that state for playing that action. If we started from the state <em>s</em><sub>0</sub>, the returns would be defined as <em>r</em><sub>1</sub> + $\gamma$ <em>r</em><sub>2</sub> + $\gamma$<sup>2</sup> <em>r</em></sub>3</sub> + &hellip; $\gamma$ <sup><em>T-1</em></sup> <em>r</em><sub><em>T</em></sub>. The symbol we use for returns from a state <em>s</em> is usually <em>G</em><sub><em>s</em></sub> although some people like using <em>R</em> as well (<em>r</em> for reward and <em>R</em> for returns). We will stick to the former notation. Now going back to the queen sacrifice example, if we were to consider the returns in our algorithm instead of just the immediate reward, we will be able to account for the delayed positive effect and not just the immediate negative effect.</li>
+</ul>
+
+<p>And with that, we&rsquo;ve covered MDPs and how to model RL problems. But with that definition, we still haven&rsquo;t accounted for the exploration-exploitation tradeoff. So in the <a href="https://skandavaidyanath.github.io/courses/rl-course/post2/" target="_blank">next post</a>, we&rsquo;ll introduce a few more symbols and definitions and get cracking with our very first RL algorithm!</p>
+
+<p>Once again, let me know if you have any feedback or suggestions.</p>
+
           </div>
 
           
@@ -446,6 +612,12 @@
     <a href="/courses/rl-course/post1/" rel="next">Introduction: Why RL?</a>
   </div>
   
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/courses/rl-course/post3/" rel="prev">The Bellman Equation and Dynamic Programming</a>
+  </div>
   
 </div>
 
@@ -495,6 +667,9 @@
 
     
     
+    
+    <script src="/js/mathjax-config.js"></script>
+    
 
     
     
@@ -515,6 +690,8 @@
       
 
       
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML-full" integrity="sha256-GhM+5JHb6QUzOQPXSJLEWP7R73CbkisjzK5Eyij4U9w=" crossorigin="anonymous" async></script>
       
     
 

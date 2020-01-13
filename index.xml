@@ -52,6 +52,8 @@ The definition speaks about &amp;ldquo;agents&amp;rdquo; taking &amp;ldquo;actio
 
 
 
+  
+
 
 
 
@@ -65,14 +67,14 @@ The definition speaks about &amp;ldquo;agents&amp;rdquo; taking &amp;ldquo;actio
 &lt;figure&gt;
 
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;post1_rl.png&#34; data-caption=&#34;The RL Setup&#34;&gt;
-&lt;img src=&#34;post1_rl.png&#34; alt=&#34;&#34; &gt;&lt;/a&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://skandavaidyanath.github.io/img/post1_rl.png&#34; data-caption=&#34;The RL Setup. Source: Google Images&#34;&gt;
+&lt;img src=&#34;https://skandavaidyanath.github.io/img/post1_rl.png&#34; alt=&#34;&#34; &gt;&lt;/a&gt;
 
 
   
   
   &lt;figcaption&gt;
-    The RL Setup
+    The RL Setup. Source: Google Images
   &lt;/figcaption&gt;
 
 
@@ -81,7 +83,9 @@ The definition speaks about &amp;ldquo;agents&amp;rdquo; taking &amp;ldquo;actio
 
 &lt;p&gt;Think about how you started learning to ride a bike. You probably tried a bunch of different things and continued doing more of what worked (&amp;ldquo;worked&amp;rdquo; in this context probably means &amp;ldquo;did not fall and moved in the intended direction&amp;rdquo;) and less of what didn&amp;rsquo;t. Nobody gave you clear instructions on what to do at each step, you just tried things and they worked. In fact, humans gain several skills in the same fashion. Imagine you&amp;rsquo;re playing a brand new video game without reading the instructions or picking up a new sport. Humans learn several tasks by trial and error and that&amp;rsquo;s exactly what we&amp;rsquo;re trying to emulate with RL. Trying to get as close as possible to the way humans learn.&lt;/p&gt;
 
-&lt;p&gt;With that intuition, lets take a jab at the Wikipedia definition again. The &amp;ldquo;agent&amp;rdquo; in our biker example is the person trying to learn to ride a bike. The &amp;ldquo;environment&amp;rdquo; is everything that may affect the person riding the bike &amp;ndash; so this could be the road, the traffic, the weather, etc. As for &amp;ldquo;actions&amp;rdquo;, these are the different decisions the agent can make &amp;ndash; for example, they could be &amp;ldquo;turn left&amp;rdquo;, &amp;ldquo;turn right&amp;rdquo;, etc. And finally &amp;ldquo;rewards&amp;rdquo; is some sort of feedback we get for the series of actions we just took. So we would get a positive reward if we reached our destination and negative if we fell down for example. All these terms will be dealt with more formally in the &lt;a href=&#34;courses/rl-course/post2.md&#34; target=&#34;_blank&#34;&gt;next post&lt;/a&gt;. For now, just make sure you get the intuition.&lt;/p&gt;
+&lt;p&gt;With that intuition, lets take a jab at the Wikipedia definition again. The &amp;ldquo;agent&amp;rdquo; in our biker example is the person trying to learn to ride a bike. The &amp;ldquo;environment&amp;rdquo; is everything that may affect the person riding the bike &amp;ndash; so this could be the road, the traffic, the weather, etc. As for &amp;ldquo;actions&amp;rdquo;, these are the different decisions the agent can make &amp;ndash; for example, they could be &amp;ldquo;turn left&amp;rdquo;, &amp;ldquo;turn right&amp;rdquo;, etc. The agent must decide based on the state of the environment, what the right action to play is at a given point. And finally &amp;ldquo;rewards&amp;rdquo; is some sort of feedback we get for the series of actions we just took. So we would get a positive reward if we reached our destination and negative if we fell down for example. All these terms will be dealt with more formally in the next post. For now, just make sure you get the intuition.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Bottomline: RL is just learning by trial and error to pick the right actions depending on the state of the environment.&lt;/strong&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;how-is-it-different-from-supervised-learning-or-unsupervised-learning&#34;&gt;How is it different from Supervised learning or Unsupervised learning?&lt;/h3&gt;
 
@@ -110,6 +114,8 @@ The definition speaks about &amp;ldquo;agents&amp;rdquo; taking &amp;ldquo;actio
 &lt;p&gt;
 
 
+  
+
 
 
 
@@ -123,14 +129,14 @@ The definition speaks about &amp;ldquo;agents&amp;rdquo; taking &amp;ldquo;actio
 &lt;figure&gt;
 
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;post1_pong.jpg&#34; data-caption=&#34;Atari Games: Pong&#34;&gt;
-&lt;img src=&#34;post1_pong.jpg&#34; alt=&#34;&#34; &gt;&lt;/a&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://skandavaidyanath.github.io/img/post1_pong.jpg&#34; data-caption=&#34;Atari Games: Pong. Source: Google Images&#34;&gt;
+&lt;img src=&#34;https://skandavaidyanath.github.io/img/post1_pong.jpg&#34; alt=&#34;&#34; &gt;&lt;/a&gt;
 
 
   
   
   &lt;figcaption&gt;
-    Atari Games: Pong
+    Atari Games: Pong. Source: Google Images
   &lt;/figcaption&gt;
 
 
@@ -139,6 +145,8 @@ The definition speaks about &amp;ldquo;agents&amp;rdquo; taking &amp;ldquo;actio
 
 
 
+  
+
 
 
 
@@ -152,14 +160,14 @@ The definition speaks about &amp;ldquo;agents&amp;rdquo; taking &amp;ldquo;actio
 &lt;figure&gt;
 
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;post1_alphazero.jpg&#34; data-caption=&#34;AlphaZero: Chess&#34;&gt;
-&lt;img src=&#34;post1_alphazero.jpg&#34; alt=&#34;&#34; &gt;&lt;/a&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://skandavaidyanath.github.io/img/post1_alphazero.jpg&#34; data-caption=&#34;AlphaZero: Chess. Source: Google Images&#34;&gt;
+&lt;img src=&#34;https://skandavaidyanath.github.io/img/post1_alphazero.jpg&#34; alt=&#34;&#34; &gt;&lt;/a&gt;
 
 
   
   
   &lt;figcaption&gt;
-    AlphaZero: Chess
+    AlphaZero: Chess. Source: Google Images
   &lt;/figcaption&gt;
 
 
@@ -175,6 +183,8 @@ The definition speaks about &amp;ldquo;agents&amp;rdquo; taking &amp;ldquo;actio
 
 
 
+  
+
 
 
 
@@ -188,14 +198,14 @@ The definition speaks about &amp;ldquo;agents&amp;rdquo; taking &amp;ldquo;actio
 &lt;figure&gt;
 
 
-  &lt;a data-fancybox=&#34;&#34; href=&#34;post1_robotics.jpg&#34; data-caption=&#34;Robotics&#34;&gt;
-&lt;img src=&#34;post1_robotics.jpg&#34; alt=&#34;&#34; &gt;&lt;/a&gt;
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://skandavaidyanath.github.io/img/post1_robotics.jpg&#34; data-caption=&#34;Robotics. Source: Google Images&#34;&gt;
+&lt;img src=&#34;https://skandavaidyanath.github.io/img/post1_robotics.jpg&#34; alt=&#34;&#34; &gt;&lt;/a&gt;
 
 
   
   
   &lt;figcaption&gt;
-    Robotics
+    Robotics. Source: Google Images
   &lt;/figcaption&gt;
 
 
@@ -204,17 +214,158 @@ The definition speaks about &amp;ldquo;agents&amp;rdquo; taking &amp;ldquo;actio
 
 &lt;p&gt;And so there are a ton of different applications you can make using RL. There are also other slightly different uses, for example, RL can be used to &lt;a href=&#34;post/bridging-the-gaps-with-RL/index.md&#34; target=&#34;_blank&#34;&gt;overcome non-differentiable steps in deep learning&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;And with that, we&amp;rsquo;ve answered all the questions that we set out to! We get into a lot more details in the &lt;a href=&#34;courses/rl-course/post2.md&#34; target=&#34;_blank&#34;&gt;next post&lt;/a&gt; so make sure you take a look at that as well.&lt;/p&gt;
+&lt;p&gt;And with that, we&amp;rsquo;ve answered all the questions that we set out to! We get into a lot more details in the &lt;a href=&#34;https://skandavaidyanath.github.io/courses/rl-course/post2/&#34; target=&#34;_blank&#34;&gt;next post&lt;/a&gt; so make sure you take a look at that as well.&lt;/p&gt;
 
 &lt;p&gt;Feel free to let me know if you have any feedback!&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>RL Jargon</title>
+      <title>RL Fundamentals</title>
       <link>https://skandavaidyanath.github.io/courses/rl-course/post2/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       <guid>https://skandavaidyanath.github.io/courses/rl-course/post2/</guid>
+      <description>
+
+&lt;p&gt;In this post, we&amp;rsquo;ll try to get into the real nitty-gritties of RL and build on the intuition that we gained from the &lt;a href=&#34;https://skandavaidyanath.github.io/courses/rl-course/post1/&#34; target=&#34;_blank&#34;&gt;last article&lt;/a&gt;. So we&amp;rsquo;ll bring in some mathematical foundation and then introduce some RL parlance that we will use for the rest of this course. I strongly recommend that you keep referring back to this post in case you need a refresher on RL terms and symbols. I&amp;rsquo;ll stick to the standard notation from the RL book.&lt;/p&gt;
+
+&lt;p&gt;Before we begin with the mathematical foundations of RL, I&amp;rsquo;d like to point out some issues with RL and what kinds of problems we need to account for if we were to come up with RL algorithms of our own. Once again, I&amp;rsquo;m going to move on to a new example so lets take Chess this time.
+So we want to teach our agent (recall what this means from the previous post) how to play the game of chess. Lets assume we have some sort of reward function in place where we get some small positive rewards for capturing a piece and small negative rewards for losing a piece depending on the importance of the piece (so losing a queen would lead to a negative reward of larger magnitude than losing a pawn). We also have some large positive final reward for winning the game and a large positive negative reward for losing. If you&amp;rsquo;re wondering whether just ths large final reward is a sufficient reward function on its own, you&amp;rsquo;re probably right and it probably is, but lets stick to this for the sake of illustration.
+Now assume we have an RL algorithm that can look at several games of Chess and the rewards and learn to play Chess on its own. What would this algorithm need to account for? We spoke about trial and error being the basis of any RL algorithm in the previous post that is exactly what our algorithm would do as well. It starts playing random moves and when it plays a good move (positive reward), it remembers to play that move the next time it is in a similar situation. This seems fine on the face of it, but there is an issue. Maybe the algorithm found a good move to play at a given position, &lt;em&gt;but what if there was a better move?&lt;/em&gt;
+We need some way for the algorithm to account for the possibility of there being a better move than the one it has found already. So when we train our agent we need to make sure the agent doesn&amp;rsquo;t greedily play the best move it knows all the time but also plays some different moves, hoping that they may be better than the one it already found. This is called the &lt;em&gt;exploration-exploitation tradeoff&lt;/em&gt; in RL. Usually, RL algorithms tend to explore i.e. play many random moves initially and when the agent is more sure about the best moves under different circumstances, it starts exploiting that knowledge.&lt;/p&gt;
+
+&lt;p&gt;Lets move on to the next issue that our RL algorithm will have to account for. Lets say our RL algorithm is learning from a game of Chess again where the player sacrifices the queen but goes on to win the game. The RL agent immediately registers a negative reward for the loss of the queen but the large positive reward for winning the game only comes much later. But it is entirely possible that the very queen sacrifice that the RL agent probably classified as a bad move, was the reason for the player winning the game. How do we account for this in our algorithm? This is the concept of &lt;em&gt;delayed rewards&lt;/em&gt; and we will deal with a simple yet elegant solution for this as well as we go through this post.&lt;/p&gt;
+
+&lt;p&gt;With that background, lets talk about how RL problems are modeled and get into some math.&lt;/p&gt;
+
+&lt;h2 id=&#34;markov-decision-processes&#34;&gt;Markov Decision Processes&lt;/h2&gt;
+
+&lt;p&gt;
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://skandavaidyanath.github.io/img/post2_mdp_example.jpg&#34; data-caption=&#34;A Markov Decision Process. Source: here&#34;&gt;
+&lt;img src=&#34;https://skandavaidyanath.github.io/img/post2_mdp_example.jpg&#34; alt=&#34;&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    A Markov Decision Process. Source: &lt;a href=&#34;https://randomant.net/reinforcement-learning-concepts/&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://skandavaidyanath.github.io/img/post2_rl_with_not.jpg&#34; data-caption=&#34;The RL Framework (with some additional details). Source: Google Images&#34;&gt;
+&lt;img src=&#34;https://skandavaidyanath.github.io/img/post2_rl_with_not.jpg&#34; alt=&#34;&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    The RL Framework (with some additional details). Source: Google Images
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Almost all RL problems can be modeled as a Markov Decision Process (MDP). So what is an MDP? An MDP can be defined as a five tuple $$\langle \mathcal{S}, \mathcal{A}, \mathcal{P}, \mathcal{R}, \gamma \rangle$$
+Lets take a closer look at what all of this means.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;S&lt;/em&gt; : This is the set of states of the MDP. In an RL setting, this would correspond to different settings of the environment. In the previous post, we spoke about how RL was all about choosing the right actions at the right times i.e. depending on the state of the environment. This is the state we were talking about. A state in chess or tic-tac-toe cpuld be the board positions or while riding a bike could be some combination of the pertinent variables like the angle of the bike with thr ground, the wind speed, etc. The S variable represents the set of all unique states in the MDP.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;A&lt;/em&gt; : This is the set of all actions of the MDP. We already spoke about actions briefly. Actions describe the possible moves in a game of Chess or tic-tac-toe or different arrow keys or buttons in a video game, etc. It represents the different options the agent has and can play at a given point in time. A represents the set of all unique actions available to the agent.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Before we move on to the other symbols, lets get some things clear. Here is another more compilacted MDP for your reference.&lt;/p&gt;
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://skandavaidyanath.github.io/img/post2_mdp.png&#34; data-caption=&#34;Another MDP. Source: Google Images&#34;&gt;
+&lt;img src=&#34;https://skandavaidyanath.github.io/img/post2_mdp.png&#34; alt=&#34;&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Another MDP. Source: Google Images
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+&lt;p&gt;Some of the states of the MDP are designated as start states or initial states and end states or terminal states. An &lt;em&gt;episode&lt;/em&gt; in RL is a sequence of state-action pairs that take the agent from a start state to a terminal state. So the agent starts from one of the intial states, plays an action, goes to the next state and so on until it hits a terminal state and the episode ends.
+Now lets take a look at this MDP in the diagram above. Assume &lt;em&gt;S&lt;/em&gt;&lt;sub&gt;0&lt;/sub&gt; is your initial state. Notice that &lt;em&gt;a&lt;/em&gt;&lt;sub&gt;0&lt;/sub&gt; from &lt;em&gt;S&lt;/em&gt;&lt;sub&gt;0&lt;/sub&gt; has two arrows, one going into &lt;em&gt;S&lt;/em&gt;&lt;sub&gt;0&lt;/sub&gt; again and another going into &lt;em&gt;S&lt;/em&gt;&lt;sub&gt;2&lt;/sub&gt;. The numbers on the arrows indicate 0.5 and 0.5 respectively. This means that if an agent plays the action &lt;em&gt;a&lt;/em&gt;&lt;sub&gt;0&lt;/sub&gt; from &lt;em&gt;S&lt;/em&gt;&lt;sub&gt;0&lt;/sub&gt;, it has a 0.5 probability that it ends up back in &lt;em&gt;S&lt;/em&gt;&lt;sub&gt;0&lt;/sub&gt; and a 0.5 probability that it ends up in &lt;em&gt;S&lt;/em&gt;&lt;sub&gt;2&lt;/sub&gt;. And similarly we have arrows going all over the diagram. Also notice the wiggly arrows &amp;ndash; they&amp;rsquo;re rewards.
+Notationally, we index the sequence of state-action pairs in an episode with a time variable &lt;em&gt;t&lt;/em&gt; so we say an agent plays action &lt;em&gt;a&lt;/em&gt;&lt;sub&gt;t&lt;/sub&gt; from state &lt;em&gt;s&lt;/em&gt;&lt;sub&gt;t&lt;/sub&gt; abnd gets reward &lt;em&gt;r&lt;/em&gt;&lt;sub&gt;t+1&lt;/sub&gt; for doing so (the reward can be 0). Here, &lt;em&gt;t&lt;/em&gt; starts from 0 and we represent the terminal time-step as &lt;em&gt;T&lt;/em&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;P&lt;/em&gt; : Now P is the probability function defined as &lt;em&gt;P&lt;/em&gt;(s&lt;sup&gt;&amp;lsquo;&lt;/sup&gt;| s, a) which is read as the probability of moving to &amp;ldquo;state s&amp;rsquo;&amp;rdquo; from &amp;ldquo;state s&amp;rdquo; if the agent plays &amp;ldquo;action a&amp;rdquo;. So for example, &lt;em&gt;P&lt;/em&gt;(&lt;em&gt;S&lt;/em&gt;&lt;sub&gt;2&lt;/sub&gt;|&lt;em&gt;S&lt;/em&gt;&lt;sub&gt;0&lt;/sub&gt;,&lt;em&gt;a&lt;/em&gt;&lt;sub&gt;0&lt;/sub&gt;) = 0.5&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;R&lt;/em&gt; : This is the reward function and is defined as &lt;em&gt;R&lt;/em&gt;(s&lt;sup&gt;&amp;lsquo;&lt;/sup&gt;| s, a) which is the reward the agent gets for moving to &amp;ldquo;state s&amp;rsquo;&amp;rdquo; from &amp;ldquo;state s&amp;rdquo; if the agent plays &amp;ldquo;action a&amp;rdquo;. So for example, &lt;em&gt;R&lt;/em&gt;(&lt;em&gt;S&lt;/em&gt;&lt;sub&gt;0&lt;/sub&gt;|&lt;em&gt;S&lt;/em&gt;&lt;sub&gt;1&lt;/sub&gt;,&lt;em&gt;a&lt;/em&gt;&lt;sub&gt;0&lt;/sub&gt;) = +5&lt;/li&gt;
+&lt;li&gt;$\gamma$ : We spoke about the concept of delayed rewards earlier in the post and we wanted a way to accound for delayed effects of actions. This is where $\gamma$ helps. We define the &lt;em&gt;returns&lt;/em&gt; of an action from a given state as the sum of the &lt;em&gt;discounted rewards&lt;/em&gt; we receive from that state for playing that action. If we started from the state &lt;em&gt;s&lt;/em&gt;&lt;sub&gt;0&lt;/sub&gt;, the returns would be defined as &lt;em&gt;r&lt;/em&gt;&lt;sub&gt;1&lt;/sub&gt; + $\gamma$ &lt;em&gt;r&lt;/em&gt;&lt;sub&gt;2&lt;/sub&gt; + $\gamma$&lt;sup&gt;2&lt;/sup&gt; &lt;em&gt;r&lt;/em&gt;&lt;/sub&gt;3&lt;/sub&gt; + &amp;hellip; $\gamma$ &lt;sup&gt;&lt;em&gt;T-1&lt;/em&gt;&lt;/sup&gt; &lt;em&gt;r&lt;/em&gt;&lt;sub&gt;&lt;em&gt;T&lt;/em&gt;&lt;/sub&gt;. The symbol we use for returns from a state &lt;em&gt;s&lt;/em&gt; is usually &lt;em&gt;G&lt;/em&gt;&lt;sub&gt;&lt;em&gt;s&lt;/em&gt;&lt;/sub&gt; although some people like using &lt;em&gt;R&lt;/em&gt; as well (&lt;em&gt;r&lt;/em&gt; for reward and &lt;em&gt;R&lt;/em&gt; for returns). We will stick to the former notation. Now going back to the queen sacrifice example, if we were to consider the returns in our algorithm instead of just the immediate reward, we will be able to account for the delayed positive effect and not just the immediate negative effect.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;And with that, we&amp;rsquo;ve covered MDPs and how to model RL problems. But with that definition, we still haven&amp;rsquo;t accounted for the exploration-exploitation tradeoff. So in the &lt;a href=&#34;https://skandavaidyanath.github.io/courses/rl-course/post2/&#34; target=&#34;_blank&#34;&gt;next post&lt;/a&gt;, we&amp;rsquo;ll introduce a few more symbols and definitions and get cracking with our very first RL algorithm!&lt;/p&gt;
+
+&lt;p&gt;Once again, let me know if you have any feedback or suggestions.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The Bellman Equation and Dynamic Programming</title>
+      <link>https://skandavaidyanath.github.io/courses/rl-course/post3/</link>
+      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
+      <guid>https://skandavaidyanath.github.io/courses/rl-course/post3/</guid>
       <description></description>
     </item>
     
