@@ -28,7 +28,8 @@
   
     
   
-  <meta name="description" content="">
+  <meta name="description" content="Hi and welcome to the first post of this RL course. In this post, my aim will be to introduce the idea of RL to you and talk about the problems it solves and why its important.
+Reinforcement learning is like that little-known cousin of supervised learning and unsupervised learning. Or at least it was for the longest time. In recent times though, its been gaining a lot of attention, mainly due to DeepMind&rsquo;s AlphaZero.">
 
   
   <link rel="alternate" hreflang="en-us" href="https://skandavaidyanath.github.io/courses/rl-course/post1/">
@@ -116,7 +117,8 @@
   <meta property="og:site_name" content="Skanda Vaidyanath">
   <meta property="og:url" content="https://skandavaidyanath.github.io/courses/rl-course/post1/">
   <meta property="og:title" content="Introduction: Why RL? | Skanda Vaidyanath">
-  <meta property="og:description" content=""><meta property="og:image" content="https://skandavaidyanath.github.io/img/icon-192.png">
+  <meta property="og:description" content="Hi and welcome to the first post of this RL course. In this post, my aim will be to introduce the idea of RL to you and talk about the problems it solves and why its important.
+Reinforcement learning is like that little-known cousin of supervised learning and unsupervised learning. Or at least it was for the longest time. In recent times though, its been gaining a lot of attention, mainly due to DeepMind&rsquo;s AlphaZero."><meta property="og:image" content="https://skandavaidyanath.github.io/img/icon-192.png">
   <meta property="twitter:image" content="https://skandavaidyanath.github.io/img/icon-192.png"><meta property="og:locale" content="en-us">
   
     
@@ -413,7 +415,19 @@
         <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
       </ul>
 
-      
+      <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#what-is-reinforcement-learning">What is Reinforcement Learning?</a></li>
+<li><a href="#how-is-it-different-from-supervised-learning-or-unsupervised-learning">How is it different from Supervised learning or Unsupervised learning?</a></li>
+<li><a href="#what-problems-can-it-solve">What problems can it solve?</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
 
       
     </div>
@@ -428,6 +442,196 @@
 
           <div class="article-style">
             
+
+<p>Hi and welcome to the first post of this RL course. In this post, my aim will be to introduce the idea of RL to you and talk about the problems it solves and why its important.</p>
+
+<p>Reinforcement learning is like that little-known cousin of supervised learning and unsupervised learning. Or at least it was for the longest time. In recent times though, its been gaining a lot of attention, mainly due to <a href="https://deepmind.com/blog/article/alphazero-shedding-new-light-grand-games-chess-shogi-and-go" target="_blank">DeepMind&rsquo;s AlphaZero</a>.</p>
+
+<p>But having said that, people still don&rsquo;t quite know what RL is yet and don&rsquo;t know how and when to use it. So as a part of this introductory blog, I will try to answer three questions that people often ask me about RL</p>
+
+<ol>
+<li>What is Reinforcement Learning?</li>
+<li>How is it different from Supervised learning or Unsupervised learning?</li>
+<li>What problems can it solve?</li>
+</ol>
+
+<p>And lets begin!</p>
+
+<h3 id="what-is-reinforcement-learning">What is Reinforcement Learning?</h3>
+
+<p>Reinforcement learning is a sub-part of Machine Learning (ML). The most general way to divide ML into three parts would be as Supervised learning (SL), Unsupervised learning (USL) and Reinforcement Learning. But most people only talk about SL and USL when they talk about ML.
+So my first job is to explain why the third paradigm is important and how it is different from the first two.</p>
+
+<blockquote>
+<p>Reinforcement learning is an area of machine learning concerned with how software agents ought to take actions in an environment in order to maximize some notion of cumulative reward.</p>
+</blockquote>
+
+<p>The above definition is taken from Wikipedia.
+The definition speaks about &ldquo;agents&rdquo; taking &ldquo;actions&rdquo; in &ldquo;environments&rdquo; to maximize &ldquo;rewards&rdquo;. But what does all this mean? Lets break it down, but before that, here is a simpler definition.</p>
+
+<blockquote>
+<p>Reinforcement learning is simply learning by trial and error.</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure>
+
+
+  <a data-fancybox="" href="post1_rl.png" data-caption="The RL Setup">
+<img src="post1_rl.png" alt="" ></a>
+
+
+  
+  
+  <figcaption>
+    The RL Setup
+  </figcaption>
+
+
+</figure>
+
+
+<p>Think about how you started learning to ride a bike. You probably tried a bunch of different things and continued doing more of what worked (&ldquo;worked&rdquo; in this context probably means &ldquo;did not fall and moved in the intended direction&rdquo;) and less of what didn&rsquo;t. Nobody gave you clear instructions on what to do at each step, you just tried things and they worked. In fact, humans gain several skills in the same fashion. Imagine you&rsquo;re playing a brand new video game without reading the instructions or picking up a new sport. Humans learn several tasks by trial and error and that&rsquo;s exactly what we&rsquo;re trying to emulate with RL. Trying to get as close as possible to the way humans learn.</p>
+
+<p>With that intuition, lets take a jab at the Wikipedia definition again. The &ldquo;agent&rdquo; in our biker example is the person trying to learn to ride a bike. The &ldquo;environment&rdquo; is everything that may affect the person riding the bike &ndash; so this could be the road, the traffic, the weather, etc. As for &ldquo;actions&rdquo;, these are the different decisions the agent can make &ndash; for example, they could be &ldquo;turn left&rdquo;, &ldquo;turn right&rdquo;, etc. And finally &ldquo;rewards&rdquo; is some sort of feedback we get for the series of actions we just took. So we would get a positive reward if we reached our destination and negative if we fell down for example. All these terms will be dealt with more formally in the <a href="courses/rl-course/post2.md" target="_blank">next post</a>. For now, just make sure you get the intuition.</p>
+
+<h3 id="how-is-it-different-from-supervised-learning-or-unsupervised-learning">How is it different from Supervised learning or Unsupervised learning?</h3>
+
+<p>This is the question I get asked the most about RL. The difference between RL and USL is quite clear. In USL, there is absolutely no form of feedback or supervision whereas in RL we do get some sort of feedback in the form of a reward signal.</p>
+
+<p><strong>So Reinforcement Learning is not Unsupervised learning.</strong></p>
+
+<p>The more pertinent question is &ndash; how is it different from supervised learning? Is RL just SL with class labels given in a different manner?</p>
+
+<p>Lets look at another very common example. We want to teach our computer to play Tic-Tac-Toe. Our data is in the form of several games that have been played from start to finish. If we consider this as training data for our SL model, the only labels we could possibly decipher from these games would be the final outcome &ndash; the winner of the game or if it was a draw. If we are able to somehow encode the game and train a classifier on the data, this SL model would be able to predict the outcome of a game (which is not very useful) but not <em>how to play the game</em>.</p>
+
+<p>If we wanted to train a SL model to learn <em>how to play the game</em>, we would need training data in the form of <em>the best move to play at every board position</em>. But alas, we do not have such information and this is the case in most problems (think about riding a cycle or playing chess or a video game).</p>
+
+<p>So what do we do now? For now, take it for granted that RL can solve the problem with the same data and teach a computer how to play Tic-Tac-Toe. We&rsquo;ll talk about how it does it soon enough.</p>
+
+<p>But since our aim was just to show that RL and SL are not the same, we are done here. SL requires &ldquo;step-wise&rdquo; (this is not a technical term and hence is in quotes, but you get the idea) labels to learn <em>how to do a task</em>. It requires &ldquo;strong&rdquo; supervision. RL can do the same thing with some sort of &ldquo;weak&rdquo;/&ldquo;distant&rdquo;/&ldquo;semi&rdquo;-supervision.</p>
+
+<p><strong>So Reinforcement Learning is not Supervised learning either.</strong></p>
+
+<h3 id="what-problems-can-it-solve">What problems can it solve?</h3>
+
+<p>All this sounds great but what problems can RL solve? So far we&rsquo;ve spoken about riding bikes and playing chess and video games but are there any significant real-world problems RL can solve?</p>
+
+<p>As it turns out there are several. RL is also commonly referred to as <strong>Sequential Decision Making</strong> or <strong>Decision Making under Uncertainty</strong>. When we put it this way, we can think of several applications for RL in the real-world. I&rsquo;ll talk about a few here.</p>
+
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+<figure>
+
+
+  <a data-fancybox="" href="post1_pong.jpg" data-caption="Atari Games: Pong">
+<img src="post1_pong.jpg" alt="" ></a>
+
+
+  
+  
+  <figcaption>
+    Atari Games: Pong
+  </figcaption>
+
+
+</figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure>
+
+
+  <a data-fancybox="" href="post1_alphazero.jpg" data-caption="AlphaZero: Chess">
+<img src="post1_alphazero.jpg" alt="" ></a>
+
+
+  
+  
+  <figcaption>
+    AlphaZero: Chess
+  </figcaption>
+
+
+</figure>
+</p>
+
+<p>RL gained massive popularity because of its success at playing Go and Chess and <a href="https://arxiv.org/abs/1312.5602" target="_blank">Atari Games</a> as well but there are several other applications of RL.</p>
+
+<p>RL is extremely versatile and can be used along with several other common ML areas like Computer Vision (CV) and Natural Language Processing (NLP).</p>
+
+<p>The best example of using RL with CV is probably self-driving cars. With NLP, it can be used in dialogue systems (I recommend you Google how both of this is done to get a better idea). Another massive application area is in robotics and control. It can be used to train multi-agent systems, for example, a swarm of drones communicating with each other. One of my favourite applications of RL is personalized learning where an RL agent can design an optimal course for a student with the right number of tests/assignments administered at the right time to encourage maximum learning. There is similar work being done on personalized healthcare as well.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure>
+
+
+  <a data-fancybox="" href="post1_robotics.jpg" data-caption="Robotics">
+<img src="post1_robotics.jpg" alt="" ></a>
+
+
+  
+  
+  <figcaption>
+    Robotics
+  </figcaption>
+
+
+</figure>
+
+
+<p>And so there are a ton of different applications you can make using RL. There are also other slightly different uses, for example, RL can be used to <a href="post/bridging-the-gaps-with-RL/index.md" target="_blank">overcome non-differentiable steps in deep learning</a>.</p>
+
+<p>And with that, we&rsquo;ve answered all the questions that we set out to! We get into a lot more details in the <a href="courses/rl-course/post2.md" target="_blank">next post</a> so make sure you take a look at that as well.</p>
+
+<p>Feel free to let me know if you have any feedback!</p>
+
           </div>
 
           
