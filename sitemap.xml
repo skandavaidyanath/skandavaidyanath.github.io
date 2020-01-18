@@ -23,22 +23,57 @@
   </url>
   
   <url>
-    <loc>https://skandavaidyanath.github.io/authors/admin/</loc>
-    <lastmod>2019-11-04T03:10:24+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skandavaidyanath.github.io/authors/</loc>
-    <lastmod>2019-11-04T03:10:24+05:30</lastmod>
-  </url>
-  
-  <url>
     <loc>https://skandavaidyanath.github.io/post/</loc>
-    <lastmod>2019-11-04T03:10:24+05:30</lastmod>
+    <lastmod>2020-01-19T00:17:50+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://skandavaidyanath.github.io/categories/</loc>
+    <lastmod>2020-01-19T00:17:50+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skandavaidyanath.github.io/tags/reinforcement-learning/</loc>
+    <lastmod>2020-01-19T00:17:50+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skandavaidyanath.github.io/categories/reinforcement-learning/</loc>
+    <lastmod>2020-01-19T00:17:50+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skandavaidyanath.github.io/</loc>
+    <lastmod>2020-01-19T00:17:50+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skandavaidyanath.github.io/tags/</loc>
+    <lastmod>2020-01-19T00:17:50+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skandavaidyanath.github.io/post/inverse-rl-paper/</loc>
+    <lastmod>2020-01-19T00:17:50+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skandavaidyanath.github.io/authors/admin/</loc>
+    <lastmod>2020-01-16T22:12:05+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skandavaidyanath.github.io/authors/</loc>
+    <lastmod>2020-01-16T22:12:05+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skandavaidyanath.github.io/post/modeling-rl-problems/</loc>
+    <lastmod>2020-01-16T22:12:05+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skandavaidyanath.github.io/tags/deep-learning/</loc>
     <lastmod>2019-11-04T03:10:24+05:30</lastmod>
   </url>
   
@@ -48,37 +83,12 @@
   </url>
   
   <url>
-    <loc>https://skandavaidyanath.github.io/tags/deep-learning/</loc>
-    <lastmod>2019-11-04T03:10:24+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skandavaidyanath.github.io/tags/information-retrieval/</loc>
-    <lastmod>2019-11-04T03:10:24+05:30</lastmod>
-  </url>
-  
-  <url>
     <loc>https://skandavaidyanath.github.io/categories/information-retrieval/</loc>
     <lastmod>2019-11-04T03:10:24+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://skandavaidyanath.github.io/tags/reinforcement-learning/</loc>
-    <lastmod>2019-11-04T03:10:24+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skandavaidyanath.github.io/categories/reinforcement-learning/</loc>
-    <lastmod>2019-11-04T03:10:24+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skandavaidyanath.github.io/</loc>
-    <lastmod>2019-11-04T03:10:24+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skandavaidyanath.github.io/tags/</loc>
+    <loc>https://skandavaidyanath.github.io/tags/information-retrieval/</loc>
     <lastmod>2019-11-04T03:10:24+05:30</lastmod>
   </url>
   
@@ -93,12 +103,12 @@
   </url>
   
   <url>
-    <loc>https://skandavaidyanath.github.io/project/</loc>
+    <loc>https://skandavaidyanath.github.io/project/mpii/</loc>
     <lastmod>2019-11-01T04:46:38+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://skandavaidyanath.github.io/project/mpii/</loc>
+    <loc>https://skandavaidyanath.github.io/project/</loc>
     <lastmod>2019-11-01T04:46:38+05:30</lastmod>
   </url>
   
@@ -108,12 +118,12 @@
   </url>
   
   <url>
-    <loc>https://skandavaidyanath.github.io/categories/natural-language-processing/</loc>
+    <loc>https://skandavaidyanath.github.io/tags/natural-language-processing/</loc>
     <lastmod>2019-10-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://skandavaidyanath.github.io/tags/natural-language-processing/</loc>
+    <loc>https://skandavaidyanath.github.io/categories/natural-language-processing/</loc>
     <lastmod>2019-10-01T00:00:00+00:00</lastmod>
   </url>
   

@@ -5,12 +5,106 @@
     <link>https://skandavaidyanath.github.io/categories/reinforcement-learning/</link>
       <atom:link href="https://skandavaidyanath.github.io/categories/reinforcement-learning/index.xml" rel="self" type="application/rss+xml" />
     <description>Reinforcement Learning</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 04 Nov 2019 03:10:24 +0530</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 19 Jan 2020 00:17:50 +0530</lastBuildDate>
     <image>
       <url>https://skandavaidyanath.github.io/img/icon-192.png</url>
       <title>Reinforcement Learning</title>
       <link>https://skandavaidyanath.github.io/categories/reinforcement-learning/</link>
     </image>
+    
+    <item>
+      <title>The Inverse Problem</title>
+      <link>https://skandavaidyanath.github.io/post/inverse-rl-paper/</link>
+      <pubDate>Sun, 19 Jan 2020 00:17:50 +0530</pubDate>
+      <guid>https://skandavaidyanath.github.io/post/inverse-rl-paper/</guid>
+      <description>&lt;p&gt;Coming soon&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Modeling RL Problems</title>
+      <link>https://skandavaidyanath.github.io/post/modeling-rl-problems/</link>
+      <pubDate>Thu, 16 Jan 2020 22:12:05 +0530</pubDate>
+      <guid>https://skandavaidyanath.github.io/post/modeling-rl-problems/</guid>
+      <description>
+
+&lt;p&gt;I recommend that you gather some RL basics before you proceed to read this article. The first few posts from &lt;a href=&#34;https://skandavaidyanath.github.io/courses/rl-course/&#34; target=&#34;_blank&#34;&gt;the course&lt;/a&gt; on my page could be a good start.&lt;/p&gt;
+
+&lt;p&gt;In this article, I&amp;rsquo;m going to talk about something that I haven&amp;rsquo;t seen anywhere before and nobody really talks about it but I&amp;rsquo;m going to take a shot at it. I&amp;rsquo;ve learned RL on my own and hence I&amp;rsquo;ve read several articles on the internet about RL but most of them are about the different algorithms starting from the most basic dynamic programming and going on till the most complex Soft Actor Critic. But having spent some time conducting RL research, I find that nobody really talks about, according to me, the most challenging and interesting problem in RL &amp;ndash; the actual &lt;em&gt;modeling of the problem&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;So what do we mean by &amp;ldquo;modeling the problem&amp;rdquo;? If someone told you to solve the problem of self-driving cars using RL, how would you start? Lets say you decide to go ahead with some MDP framework, what would your states be? What would your actions be? What reward signal would you use? Would you solve the entire &amp;ldquo;self-driving&amp;rdquo; problem at once or would you want to break it down into smaller components? This is what I mean by &amp;ldquo;modeling a problem&amp;rdquo; and in my experience, has turned out to be the most important and challenging part of the bigger problem. Its something that sounds so simple but these early decisions are so important and I strongly believe that solid modeling could lead to better performance than using complex algorithms on weakly structured problems.&lt;/p&gt;
+
+&lt;p&gt;This is in fact one of the things that drew me to RL because I thought modeling problems was extremely interesting and difficult as well. I also couldn&amp;rsquo;t find anything quite similar to this in other domains. Feature selection in supervised learning comes close but there are specific techniques and tests you can conduct to come up with the best set of features given a large feature set. So this seemed like a unique problem specific to the RL world. But if it is such an exciting problem why hasn&amp;rsquo;t anyone written about it? My guess is that there is no simple answer to the question of &amp;ldquo;How to model an RL problem?&amp;rdquo;. The answer is that &amp;ldquo;It depends on the problem&amp;rdquo;. But I do believe there are some very simple guidelines you can follow or rather questions you can ask yourself when you&amp;rsquo;re modeling your problem. So here we go! Five questions that will help you model RL problems. There&amp;rsquo;s one additional question I guess that I&amp;rsquo;m implicitly answering; we will stick to the MDP framework and not talk about SMDPs or POMDPs for now.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;What are the actions I need?&lt;/li&gt;
+&lt;li&gt;Are my actions instantaneous?&lt;/li&gt;
+&lt;li&gt;What is my state space and &lt;em&gt;can I make it smaller&lt;/em&gt;?&lt;/li&gt;
+&lt;li&gt;How complex is my problem and can I split it into smaller and easier problems?&lt;/li&gt;
+&lt;li&gt;What is the simplest reward function I can use?&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;So let&amp;rsquo;s go through them one by one.&lt;/p&gt;
+
+&lt;h2 id=&#34;what-are-the-actions-i-need&#34;&gt;What are the actions I need?&lt;/h2&gt;
+
+&lt;p&gt;This is the first question you need to ask yourself when you&amp;rsquo;re handed a problem. What is the agent going to achieve and what actions will it need to achieve that task? This decision is often the easiest to make because this comes along with the problem description. So if the task is to navigate a car from one position of a square grid to another, the directions of movement would probably be the most natural choice for actions. Although this is much harder to see in a problem like Chess or self-driving cars, with a little bit of effort, we can think about all the different actions we have at our disposal. The important thing to keep track of however, is whether the action space is continuous or discrete and if discrete, how many actions you have. This information could be useful to decide if you maybe want to split the problem up into smaller easier problems.
+&lt;em&gt;Remember learning with multiple actions is tough!&lt;/em&gt;&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;taxi.png&#34; data-caption=&#34;The Taxi Problem. Source: Google Images&#34;&gt;
+&lt;img src=&#34;taxi.png&#34; alt=&#34;&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    The Taxi Problem. Source: Google Images
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+&lt;h2 id=&#34;are-my-actions-instantaneous&#34;&gt;Are my actions instantaneous?&lt;/h2&gt;
+
+&lt;p&gt;Once you&amp;rsquo;ve figured out what your actions are, we can take a closer look at them now. One thing we want to look for is whether the actions are instantaenous or not. Sometimes there could be actions that realistically take time to execute. For example, in the above car-grid problem, if your actions were &amp;ldquo;move the car to the green square&amp;rdquo;, this action could take time to execute realitically. Modeling them as instantaneous actions wouldn&amp;rsquo;t be accurate. In the MDP framework, we need all actions to be instanteneous. So what do we do when we have actions that take time? First, try to get rid of them or replace them with simpler instantaneous actions. But this is a trade-off because this could increase the number of actions. Next, think about whether the &amp;ldquo;long&amp;rdquo; action could be a separate problem on its own and that could be modeled as a separate smaller RL problem. But this starts getting into hierarchical RL and I wouldn&amp;rsquo;t get into it unless you&amp;rsquo;re sure about what I&amp;rsquo;m doing.
+One thing that I&amp;rsquo;ve done in the past to model actions that take time (that could even vary, every time the action is played) is to model time using probabilities and put a variable in the state space (we&amp;rsquo;ll get to this) indicating that the crrent action is in progress. So where do the probabilities come into play? Lets say a &amp;ldquo;long&amp;rdquo; action is in progress. Now we keep playing an extra &amp;ldquo;WAIT&amp;rdquo; action or &amp;ldquo;NOP&amp;rdquo; action and flip a coin (not a fair one) and if its heads, the &amp;ldquo;long&amp;rdquo; action ends. This seems convoluted but I&amp;rsquo;ve found that sometimes it could make life a lot simpler by introducing not too much complexity into the state space or action space. Otherwise, simply foraying into SMDPs and hierarchical RL is fine as well if you&amp;rsquo;re confident.&lt;/p&gt;
+
+&lt;h2 id=&#34;what-is-my-state-space-and-can-i-make-it-smaller&#34;&gt;What is my state space and can I make it smaller?&lt;/h2&gt;
+
+&lt;p&gt;So what variables are important for my problem and what goes into my state space? The crucial step here is to think about your actions. What variables do you need to decide what action you want to play in each state? Even thinking about what information a human might need could be useful.
+The key is to be minimalistic. Use as few variables as possible and use variables that don&amp;rsquo;t take too many values. Try to maintain a small, discrete state space. This is almost always never possible but its definitely worth the shot. If you can model a problem that you can solve with one of the basic RL algorithms without getting into function approximation (for the uninitiated, think of it as using deep learning), there&amp;rsquo;s nothing like it. But this is difficult and one of the hardest parts of the modeling problem.
+It takes a long time at the start of your project and it could get frustrating because you&amp;rsquo;re working with a white board and a marker and not a keyboard and a monitor. But trust me, the effort will be worth it. If you can design a small, simple state space then half the battle is won. At USC, when I was modeling my problem, it took over two weeks but we reduced our state space from over 33 billion to just 1440!&lt;/p&gt;
+
+&lt;h2 id=&#34;how-complex-is-my-problem-and-can-i-split-it-into-smaller-and-easier-problems&#34;&gt;How complex is my problem and can I split it into smaller and easier problems?&lt;/h2&gt;
+
+&lt;p&gt;I&amp;rsquo;m afraid there is no easy way to answer this that applies to all RL problems. But let me give you an example that might help. If I&amp;rsquo;m trying to make a robot learn to play tennis, I might want to split the big problem into smaller problems of &amp;ldquo;learning how to serve&amp;rdquo; or &amp;ldquo;learning how to play a forehand&amp;rdquo;, etc. One way of figuring out whether your problem needs breaking down is to check if all the actions make sense with each other i.e. can you play all actions at almost all states? Do you need all the state variables to make a call on whether you want to play an action or can I judge some actions just based on a subset of state variables?
+These questions may help you partition your state space and action space into multiple simpler problems that will make it easy to learn. Its not always easy to find these patterns and partitions though. And you also need to make sure there is an easy way to put these sub-problems back together. Nevertheless, if your problem is too complex i.e. too many states and/or too many actions then maybe it is worth spending the time solving multiple problems.&lt;/p&gt;
+
+&lt;h2 id=&#34;what-is-the-simplest-reward-function-i-can-use&#34;&gt;What is the simplest reward function I can use?&lt;/h2&gt;
+
+&lt;p&gt;And finally, my favourite question. Questions 3 and 5 are by far the hardest of the lot and this question is probably the hardest of the lot. Which makes writing the answer so much easier. Researchers have recognized the difficulty of crafting reward functions and created a new field called Inverse Reinforcement Learning just to address the issue. But once again, there are some guidelines you can follow.
+Usually, I try to stick to the simplest reward function possible. What do I mean by simplest? Small values and as sparse as possible. So if I&amp;rsquo;m designing a reward function for chess, my rewards would only be at the end of the game and would be a +1, 0, -1 for a win, draw and loss respectively. Another reward function could be for every move played but this would be harder to craft and there&amp;rsquo;s no reason for you to try this until you know the simple reward function doesn&amp;rsquo;t work. But in the problem of chess, it is qite straight-forward but there are other problems where finding an elegant reward fnction might not be as simple.&lt;/p&gt;
+
+&lt;p&gt;So there you have it. I hope that helped and hopefully when you model your next problem, these tips will help. But thinking about all of this modeling has made me think about inverse reinforcement learning and meta learning a lot more. Is it possible for RL models to learn the optimal design of a problem? Not just the reward function but also the state space and the action space? And if it can, can it learn some common properties that we can learn across all RL problems? These are tough questions that I hope to answer some day.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Works Like a Charm</title>
@@ -148,6 +242,15 @@ The most common policy gradient (PG) algorithm is the REINFORCE which is a Monte
 Note that in the diagrams above, there isn&amp;rsquo;t really a gap per-say because the blue arrows go all the way from start to finish. So there is a differentiable path and a non-differentiable path. A true gap would mean there would be no completely differentiable path at all. In this case, we need to make sure that the loss functions on either side of the gap are &amp;ldquo;in sync&amp;rdquo; and are being optimized in such a way that it facilitates joint training and achieves a common goal.&lt;/p&gt;
 
 &lt;p&gt;We can still look at this entire setup as a traditional RL problem if we think of the inputs to the neural network as the state and the sampling process as sampling different actions from that given state. Now what is the reward function? This depends on what comes after the gap and could be an output from the rest of the network or it could be a completely independent reward function that you came up with as well. So at the end of the day, it is still the same MDP with the traditional setup but just used in a very different way.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Deep RL for Conversational Recommender Systems</title>
+      <link>https://skandavaidyanath.github.io/project/mpii/</link>
+      <pubDate>Fri, 01 Nov 2019 04:46:38 +0530</pubDate>
+      <guid>https://skandavaidyanath.github.io/project/mpii/</guid>
+      <description>&lt;p&gt;This project is for my undergraduate thesis at the Max Planck Institute for Informatics under &lt;a href=&#34;https://andrewyates.net/&#34; target=&#34;_blank&#34;&gt;Dr. Andrew Yates&lt;/a&gt; and &lt;a href=&#34;https://paramitamirza.com/&#34; target=&#34;_blank&#34;&gt;Dr. Paramita Mirza&lt;/a&gt; and is currently in progress.&lt;/p&gt;
 </description>
     </item>
     
