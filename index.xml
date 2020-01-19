@@ -21,9 +21,9 @@
 
 &lt;p&gt;Hi and welcome to the first post of this RL course. In this post, my aim will be to introduce the idea of RL to you and talk about the problems it solves and why its important.&lt;/p&gt;
 
-&lt;p&gt;Reinforcement learning is like that little-known cousin of supervised learning and unsupervised learning. Or at least it was for the longest time. In recent times though, its been gaining a lot of attention, mainly due to &lt;a href=&#34;https://deepmind.com/blog/article/alphazero-shedding-new-light-grand-games-chess-shogi-and-go&#34; target=&#34;_blank&#34;&gt;DeepMind&amp;rsquo;s AlphaZero&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Reinforcement learning is like that little-known cousin of supervised learning and unsupervised learning. Or at least it was for the longest time. RL has actually been around a really long time and I would highly recommend reading the RL book for a detailed account on the history of RL. But in recent times, its been gaining a lot of attention, mainly due to the conquests of &lt;a href=&#34;https://deepmind.com/blog/article/alphazero-shedding-new-light-grand-games-chess-shogi-and-go&#34; target=&#34;_blank&#34;&gt;DeepMind&amp;rsquo;s AlphaZero&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;But having said that, people still don&amp;rsquo;t quite know what RL is yet and don&amp;rsquo;t know how and when to use it. So as a part of this introductory blog, I will try to answer three questions that people often ask me about RL&lt;/p&gt;
+&lt;p&gt;But having said that, people still don&amp;rsquo;t quite know what RL is yet and don&amp;rsquo;t know how and when to use it. So as a part of this introductory blog, I will try to answer three questions that are often asked about RL.&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;What is Reinforcement Learning?&lt;/li&gt;
@@ -33,9 +33,9 @@
 
 &lt;p&gt;And lets begin!&lt;/p&gt;
 
-&lt;h3 id=&#34;what-is-reinforcement-learning&#34;&gt;What is Reinforcement Learning?&lt;/h3&gt;
+&lt;h2 id=&#34;what-is-reinforcement-learning&#34;&gt;What is Reinforcement Learning?&lt;/h2&gt;
 
-&lt;p&gt;Reinforcement learning is a sub-part of Machine Learning (ML). The most general way to divide ML into three parts would be as Supervised learning (SL), Unsupervised learning (USL) and Reinforcement Learning. But most people only talk about SL and USL when they talk about ML.
+&lt;p&gt;Reinforcement learning is a paradigm of Machine Learning (ML). The most general way to divide ML into three parts would be as Supervised learning (SL), Unsupervised learning (USL) and Reinforcement Learning. But most people only talk about SL and USL when they talk about ML.
 So my first job is to explain why the third paradigm is important and how it is different from the first two.&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -81,35 +81,71 @@ The definition speaks about &amp;ldquo;agents&amp;rdquo; taking &amp;ldquo;actio
 &lt;/figure&gt;
 
 
-&lt;p&gt;Think about how you started learning to ride a bike. You probably tried a bunch of different things and continued doing more of what worked (&amp;ldquo;worked&amp;rdquo; in this context probably means &amp;ldquo;did not fall and moved in the intended direction&amp;rdquo;) and less of what didn&amp;rsquo;t. Nobody gave you clear instructions on what to do at each step, you just tried things and they worked. In fact, humans gain several skills in the same fashion. Imagine you&amp;rsquo;re playing a brand new video game without reading the instructions or picking up a new sport. Humans learn several tasks by trial and error and that&amp;rsquo;s exactly what we&amp;rsquo;re trying to emulate with RL. Trying to get as close as possible to the way humans learn.&lt;/p&gt;
+&lt;p&gt;Think about how you started learning to ride a bike. You probably tried a bunch of different things and continued doing more of what worked (&amp;ldquo;worked&amp;rdquo; in this context probably means &amp;ldquo;did not fall and moved in the intended direction&amp;rdquo;) and less of what didn&amp;rsquo;t. Nobody gave you clear instructions on what to do at each step, you just tried things and they worked (or didn&amp;rsquo;t). In fact, humans gain several skills in the same fashion. Imagine you&amp;rsquo;re playing a brand new video game without reading the instructions or picking up a new sport. Humans learn several tasks by trial and error and that&amp;rsquo;s exactly what we&amp;rsquo;re trying to emulate with RL. Trying to get as close as possible to the way humans learn.&lt;/p&gt;
 
-&lt;p&gt;With that intuition, lets take a jab at the Wikipedia definition again. The &amp;ldquo;agent&amp;rdquo; in our biker example is the person trying to learn to ride a bike. The &amp;ldquo;environment&amp;rdquo; is everything that may affect the person riding the bike &amp;ndash; so this could be the road, the traffic, the weather, etc. As for &amp;ldquo;actions&amp;rdquo;, these are the different decisions the agent can make &amp;ndash; for example, they could be &amp;ldquo;turn left&amp;rdquo;, &amp;ldquo;turn right&amp;rdquo;, etc. The agent must decide based on the state of the environment, what the right action to play is at a given point. And finally &amp;ldquo;rewards&amp;rdquo; is some sort of feedback we get for the series of actions we just took. So we would get a positive reward if we reached our destination and negative if we fell down for example. All these terms will be dealt with more formally in the next post. For now, just make sure you get the intuition.&lt;/p&gt;
+&lt;p&gt;With that intuition, lets take a jab at the Wikipedia definition again. The &amp;ldquo;agent&amp;rdquo; in our biker example is the person trying to learn to ride a bike. The &amp;ldquo;environment&amp;rdquo; is everything that may affect the person riding the bike &amp;ndash; so this could be the road, the traffic, the weather, etc. Remember the environment is dynamic &amp;ndash; the traffic could get heavier, the weather could get rainier, etc. So the agent has to account for the different settings of the environment. As for &amp;ldquo;actions&amp;rdquo;, these are the different decisions the agent can make &amp;ndash; for example, they could be &amp;ldquo;turn left&amp;rdquo;, &amp;ldquo;turn right&amp;rdquo;, etc. The agent must decide based on the state of the environment, what the right action to play is at a given point. And finally &amp;ldquo;rewards&amp;rdquo; is some sort of feedback we get for the series (coulde be singular) of actions we just took. So we would get a positive reward if we reached our destination and negative if we fell down for example. All these terms will be dealt with more formally in the next post. For now, just make sure you get the intuition.&lt;/p&gt;
+
+&lt;p&gt;So we have an agent that is going to try and take different possible actions in its environment (which is dynamic!) and learn the best actions under each setting of the environment in order to maximise some notion of a cumulative reward (a feedback signal). All this will get clearer as we go along but for now just remember this.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Bottomline: RL is just learning by trial and error to pick the right actions depending on the state of the environment.&lt;/strong&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;how-is-it-different-from-supervised-learning-or-unsupervised-learning&#34;&gt;How is it different from Supervised learning or Unsupervised learning?&lt;/h3&gt;
+&lt;h2 id=&#34;how-is-it-different-from-supervised-learning-or-unsupervised-learning&#34;&gt;How is it different from Supervised learning or Unsupervised learning?&lt;/h2&gt;
 
-&lt;p&gt;This is the question I get asked the most about RL. The difference between RL and USL is quite clear. In USL, there is absolutely no form of feedback or supervision whereas in RL we do get some sort of feedback in the form of a reward signal.&lt;/p&gt;
+&lt;p&gt;This is the question I get asked the most about RL. The difference between RL and USL is quite clear. In USL, there is absolutely no form of feedback or supervision whereas in RL we do get some sort of feedback in the form of a reward signal. USL is about finding some sort of structure or patterns in data with absolutely no supervision or feedback. This is not what we&amp;rsquo;re dealing with here.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;So Reinforcement Learning is not Unsupervised learning.&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;The more pertinent question is &amp;ndash; how is it different from supervised learning? Is RL just SL with class labels given in a different manner?&lt;/p&gt;
 
-&lt;p&gt;Lets look at another very common example. We want to teach our computer to play Tic-Tac-Toe. Our data is in the form of several games that have been played from start to finish. If we consider this as training data for our SL model, the only labels we could possibly decipher from these games would be the final outcome &amp;ndash; the winner of the game or if it was a draw. If we are able to somehow encode the game and train a classifier on the data, this SL model would be able to predict the outcome of a game (which is not very useful) but not &lt;em&gt;how to play the game&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Lets look at another very common example. We want to teach our computer to play Tic Tac Toe.&lt;/p&gt;
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://skandavaidyanath.github.io/img/post1_tic_tac_toe.png&#34; data-caption=&#34;Tic Tac Toe Game Tree. Source: Google Images&#34;&gt;
+&lt;img src=&#34;https://skandavaidyanath.github.io/img/post1_tic_tac_toe.png&#34; alt=&#34;&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Tic Tac Toe Game Tree. Source: Google Images
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+&lt;p&gt;Our data is in the form of several games that have been played from start to finish. If we consider this as training data for our SL model, the only labels we could possibly decipher from these games would be the final outcome &amp;ndash; the winner of the game or if it was a draw. If we are able to somehow encode the game and train a classifier on the data, this SL model would be able to predict the outcome of a game (which is not very useful) but not &lt;em&gt;how to play the game&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;If we wanted to train a SL model to learn &lt;em&gt;how to play the game&lt;/em&gt;, we would need training data in the form of &lt;em&gt;the best move to play at every board position&lt;/em&gt;. But alas, we do not have such information and this is the case in most problems (think about riding a cycle or playing chess or a video game).&lt;/p&gt;
 
-&lt;p&gt;So what do we do now? For now, take it for granted that RL can solve the problem with the same data and teach a computer how to play Tic-Tac-Toe. We&amp;rsquo;ll talk about how it does it soon enough.&lt;/p&gt;
+&lt;p&gt;So how does RL solve the problem? Think of the Tic Tac Toe board and the opponent as an environment now (we can convert our series of game descriptions to such a setup) and our agent is trying to learn how to play the game. If we have enough game descriptions or if the agent can experiment by trying different moves in different board positions through &lt;em&gt;trial and error&lt;/em&gt; and observes the final outcome, then the agent can learn the best moves in the different positions! We&amp;rsquo;ll look into how exactly this is possible over the next couple of lectures.&lt;/p&gt;
 
 &lt;p&gt;But since our aim was just to show that RL and SL are not the same, we are done here. SL requires &amp;ldquo;step-wise&amp;rdquo; (this is not a technical term and hence is in quotes, but you get the idea) labels to learn &lt;em&gt;how to do a task&lt;/em&gt;. It requires &amp;ldquo;strong&amp;rdquo; supervision. RL can do the same thing with some sort of &amp;ldquo;weak&amp;rdquo;/&amp;ldquo;distant&amp;rdquo;/&amp;ldquo;semi&amp;rdquo;-supervision.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;So Reinforcement Learning is not Supervised learning either.&lt;/strong&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;what-problems-can-it-solve&#34;&gt;What problems can it solve?&lt;/h3&gt;
+&lt;h2 id=&#34;what-problems-can-it-solve&#34;&gt;What problems can it solve?&lt;/h2&gt;
 
 &lt;p&gt;All this sounds great but what problems can RL solve? So far we&amp;rsquo;ve spoken about riding bikes and playing chess and video games but are there any significant real-world problems RL can solve?&lt;/p&gt;
 
-&lt;p&gt;As it turns out there are several. RL is also commonly referred to as &lt;strong&gt;Sequential Decision Making&lt;/strong&gt; or &lt;strong&gt;Decision Making under Uncertainty&lt;/strong&gt;. When we put it this way, we can think of several applications for RL in the real-world. I&amp;rsquo;ll talk about a few here.&lt;/p&gt;
+&lt;p&gt;As it turns out there are several. RL is also commonly referred to as &lt;strong&gt;Sequential Decision Making&lt;/strong&gt; or &lt;strong&gt;Decision Making under Uncertainty&lt;/strong&gt; or learning through &lt;strong&gt;Interactions&lt;/strong&gt;. This makes it abundantly clear as to why it is not the same as SL or USL. There is no interaction or sequential decision making in SL or USL. There is a need for a paradigm that learns through interactions and not direct class labels in &amp;ldquo;uncertain&amp;rdquo; conditions. When we put it this way, we can think of several applications for RL in the real-world. I&amp;rsquo;ll talk about a few here.&lt;/p&gt;
 
 &lt;p&gt;
 
@@ -174,7 +210,7 @@ The definition speaks about &amp;ldquo;agents&amp;rdquo; taking &amp;ldquo;actio
 &lt;/figure&gt;
 &lt;/p&gt;
 
-&lt;p&gt;RL gained massive popularity because of its success at playing Go and Chess and &lt;a href=&#34;https://arxiv.org/abs/1312.5602&#34; target=&#34;_blank&#34;&gt;Atari Games&lt;/a&gt; as well but there are several other applications of RL.&lt;/p&gt;
+&lt;p&gt;RL gained massive popularity because of &lt;a href=&#34;https://deepmind.com/&#34; target=&#34;_blank&#34;&gt;Google DeepMind&lt;/a&gt; and its success at playing Go and Chess and &lt;a href=&#34;https://arxiv.org/abs/1312.5602&#34; target=&#34;_blank&#34;&gt;Atari Games&lt;/a&gt; as well but there are several other applications of RL.&lt;/p&gt;
 
 &lt;p&gt;RL is extremely versatile and can be used along with several other common ML areas like Computer Vision (CV) and Natural Language Processing (NLP).&lt;/p&gt;
 
@@ -212,7 +248,7 @@ The definition speaks about &amp;ldquo;agents&amp;rdquo; taking &amp;ldquo;actio
 &lt;/figure&gt;
 
 
-&lt;p&gt;And so there are a ton of different applications you can make using RL. There are also other slightly different uses, for example, RL can be used to &lt;a href=&#34;post/bridging-the-gaps-with-RL/index.md&#34; target=&#34;_blank&#34;&gt;overcome non-differentiable steps in deep learning&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;And so there are a ton of different applications you can make using RL. There are also other slightly different uses, for example, RL can be used to &lt;a href=&#34;https://skandavaidyanath.github.io/post/bridging-the-gaps-with-rl/&#34; target=&#34;_blank&#34;&gt;overcome non-differentiable steps in deep learning&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;And with that, we&amp;rsquo;ve answered all the questions that we set out to! We get into a lot more details in the &lt;a href=&#34;https://skandavaidyanath.github.io/courses/rl-course/post2/&#34; target=&#34;_blank&#34;&gt;next post&lt;/a&gt; so make sure you take a look at that as well.&lt;/p&gt;
 
@@ -221,24 +257,30 @@ The definition speaks about &amp;ldquo;agents&amp;rdquo; taking &amp;ldquo;actio
     </item>
     
     <item>
-      <title>RL Fundamentals</title>
+      <title>RL Fundamentals and MDPs</title>
       <link>https://skandavaidyanath.github.io/courses/rl-course/post2/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       <guid>https://skandavaidyanath.github.io/courses/rl-course/post2/</guid>
       <description>
 
-&lt;p&gt;In this post, we&amp;rsquo;ll try to get into the real nitty-gritties of RL and build on the intuition that we gained from the &lt;a href=&#34;https://skandavaidyanath.github.io/courses/rl-course/post1/&#34; target=&#34;_blank&#34;&gt;last article&lt;/a&gt;. So we&amp;rsquo;ll bring in some mathematical foundation and then introduce some RL parlance that we will use for the rest of this course. I strongly recommend that you keep referring back to this post in case you need a refresher on RL terms and symbols. I&amp;rsquo;ll stick to the standard notation from the RL book.&lt;/p&gt;
+&lt;p&gt;In this post, we&amp;rsquo;ll try to get into the real nitty-gritties of RL and build on the intuition that we gained from the &lt;a href=&#34;https://skandavaidyanath.github.io/courses/rl-course/post1/&#34; target=&#34;_blank&#34;&gt;last article&lt;/a&gt;. So we&amp;rsquo;ll bring in some mathematical foundation and then introduce some RL parlance that we will use for the rest of this course. I&amp;rsquo;ll stick to the standard notation and jargon from the RL book.&lt;/p&gt;
+
+&lt;h2 id=&#34;two-issues&#34;&gt;Two Issues&lt;/h2&gt;
 
 &lt;p&gt;Before we begin with the mathematical foundations of RL, I&amp;rsquo;d like to point out some issues with RL and what kinds of problems we need to account for if we were to come up with RL algorithms of our own. Once again, I&amp;rsquo;m going to move on to a new example so lets take Chess this time.
 So we want to teach our agent (recall what this means from the previous post) how to play the game of chess. Lets assume we have some sort of reward function in place where we get some small positive rewards for capturing a piece and small negative rewards for losing a piece depending on the importance of the piece (so losing a queen would lead to a negative reward of larger magnitude than losing a pawn). We also have some large positive final reward for winning the game and a large positive negative reward for losing. If you&amp;rsquo;re wondering whether just ths large final reward is a sufficient reward function on its own, you&amp;rsquo;re probably right and it probably is, but lets stick to this for the sake of illustration.
 Now assume we have an RL algorithm that can look at several games of Chess and the rewards and learn to play Chess on its own. What would this algorithm need to account for? We spoke about trial and error being the basis of any RL algorithm in the previous post that is exactly what our algorithm would do as well. It starts playing random moves and when it plays a good move (positive reward), it remembers to play that move the next time it is in a similar situation. This seems fine on the face of it, but there is an issue. Maybe the algorithm found a good move to play at a given position, &lt;em&gt;but what if there was a better move?&lt;/em&gt;
-We need some way for the algorithm to account for the possibility of there being a better move than the one it has found already. So when we train our agent we need to make sure the agent doesn&amp;rsquo;t greedily play the best move it knows all the time but also plays some different moves, hoping that they may be better than the one it already found. This is called the &lt;em&gt;exploration-exploitation tradeoff&lt;/em&gt; in RL. Usually, RL algorithms tend to explore i.e. play many random moves initially and when the agent is more sure about the best moves under different circumstances, it starts exploiting that knowledge.&lt;/p&gt;
+We need some way for the algorithm to account for the possibility of there being a better move than the one it has found already. So when we train our agent we need to make sure the agent doesn&amp;rsquo;t greedily play the best move it knows all the time but also plays some different moves, hoping that they may be better than the one it already found. This is called the &lt;em&gt;exploration-exploitation tradeoff&lt;/em&gt; in RL. Usually, RL algorithms tend to explore i.e. play many random moves initially and when the agent is more sure about the best moves under different circumstances, it starts exploiting that knowledge. We will revisit this problem in the next post with another example.&lt;/p&gt;
 
-&lt;p&gt;Lets move on to the next issue that our RL algorithm will have to account for. Lets say our RL algorithm is learning from a game of Chess again where the player sacrifices the queen but goes on to win the game. The RL agent immediately registers a negative reward for the loss of the queen but the large positive reward for winning the game only comes much later. But it is entirely possible that the very queen sacrifice that the RL agent probably classified as a bad move, was the reason for the player winning the game. How do we account for this in our algorithm? This is the concept of &lt;em&gt;delayed rewards&lt;/em&gt; and we will deal with a simple yet elegant solution for this as well as we go through this post.&lt;/p&gt;
+&lt;p&gt;Lets move on to the next issue that our RL algorithm will have to account for. Lets say our RL algorithm is learning from a game of Chess again where the player sacrifices the queen but goes on to win the game. The RL agent immediately registers a negative reward for the loss of the queen but the large positive reward for winning the game only comes much later. But it is entirely possible that the very queen sacrifice that the RL agent probably classified as a bad move, was the reason for the player winning the game. So it is possible that a move seems like a &amp;ldquo;bad&amp;rdquo; one in the short term but in the long term, could be a very &amp;ldquo;good&amp;rdquo; move. How do we account for this in our algorithm? This is the concept of &lt;em&gt;delayed rewards&lt;/em&gt; and we will deal with a simple yet elegant solution for this as well as we go through this post.&lt;/p&gt;
 
 &lt;p&gt;With that background, lets talk about how RL problems are modeled and get into some math.&lt;/p&gt;
 
 &lt;h2 id=&#34;markov-decision-processes&#34;&gt;Markov Decision Processes&lt;/h2&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The future is independent of the past, given the present&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;
 
@@ -303,15 +345,19 @@ We need some way for the algorithm to account for the possibility of there being
 &lt;/figure&gt;
 &lt;/p&gt;
 
-&lt;p&gt;Almost all RL problems can be modeled as a Markov Decision Process (MDP). So what is an MDP? An MDP can be defined as a five tuple $$\langle \mathcal{S}, \mathcal{A}, \mathcal{P}, \mathcal{R}, \gamma \rangle$$
-Lets take a closer look at what all of this means.&lt;/p&gt;
+&lt;p&gt;Almost all RL problems can be modeled as a Markov Decision Process (MDP). So what is an MDP? An MDP is a mathematical model that we will be seeing a lot over this course. Most of our RL environments, will be MDPs. An MDP can be defined as a five tuple:
+$$\langle \mathcal{S}, \mathcal{A}, \mathcal{P}, \mathcal{R}, \gamma \rangle$$&lt;/p&gt;
+
+&lt;p&gt;Lets take a closer look at what all of this means.&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;S&lt;/em&gt; : This is the set of states of the MDP. In an RL setting, this would correspond to different settings of the environment. In the previous post, we spoke about how RL was all about choosing the right actions at the right times i.e. depending on the state of the environment. This is the state we were talking about. A state in chess or tic-tac-toe cpuld be the board positions or while riding a bike could be some combination of the pertinent variables like the angle of the bike with thr ground, the wind speed, etc. The S variable represents the set of all unique states in the MDP.&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;A&lt;/em&gt; : This is the set of all actions of the MDP. We already spoke about actions briefly. Actions describe the possible moves in a game of Chess or tic-tac-toe or different arrow keys or buttons in a video game, etc. It represents the different options the agent has and can play at a given point in time. A represents the set of all unique actions available to the agent.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Before we move on to the other symbols, lets get some things clear. Here is another more compilacted MDP for your reference.&lt;/p&gt;
+&lt;p&gt;It is worth mentioning now, that both &lt;em&gt;S&lt;/em&gt; and &lt;em&gt;A&lt;/em&gt; can be finite or infinite sets. Both can also be continuous spaces or discrete spaces, depending on the variables in the state space or the nature of actions. For example, if we have a variable taking real numbered values in the state space, the state space is automatically continuous (and infinite). If our actions are in the form of degree of turning a steering wheel, once again, continuous and infinite action space.&lt;/p&gt;
+
+&lt;p&gt;Before we move on to the other symbols, lets get some things clear. Here is another more detailed MDP for your reference.&lt;/p&gt;
 
 
 
@@ -345,17 +391,25 @@ Lets take a closer look at what all of this means.&lt;/p&gt;
 &lt;/figure&gt;
 
 
-&lt;p&gt;Some of the states of the MDP are designated as start states or initial states and end states or terminal states. An &lt;em&gt;episode&lt;/em&gt; in RL is a sequence of state-action pairs that take the agent from a start state to a terminal state. So the agent starts from one of the intial states, plays an action, goes to the next state and so on until it hits a terminal state and the episode ends.
+&lt;p&gt;Some of the states of the MDP are designated as start states or initial states and end states or terminal states. An &lt;em&gt;episode&lt;/em&gt; in RL is a sequence of state-action pairs that take the agent from a start state to a terminal state. So the agent starts from one of the intial states, plays an action, goes to the next state and so on until it hits a terminal state and the episode ends. Assume for now that there is such an end i.e. every episode does end after some unknown, finite time. This is a property of finite horizon MDPs which is what we will stick to in this course.
 Now lets take a look at this MDP in the diagram above. Assume &lt;em&gt;S&lt;/em&gt;&lt;sub&gt;0&lt;/sub&gt; is your initial state. Notice that &lt;em&gt;a&lt;/em&gt;&lt;sub&gt;0&lt;/sub&gt; from &lt;em&gt;S&lt;/em&gt;&lt;sub&gt;0&lt;/sub&gt; has two arrows, one going into &lt;em&gt;S&lt;/em&gt;&lt;sub&gt;0&lt;/sub&gt; again and another going into &lt;em&gt;S&lt;/em&gt;&lt;sub&gt;2&lt;/sub&gt;. The numbers on the arrows indicate 0.5 and 0.5 respectively. This means that if an agent plays the action &lt;em&gt;a&lt;/em&gt;&lt;sub&gt;0&lt;/sub&gt; from &lt;em&gt;S&lt;/em&gt;&lt;sub&gt;0&lt;/sub&gt;, it has a 0.5 probability that it ends up back in &lt;em&gt;S&lt;/em&gt;&lt;sub&gt;0&lt;/sub&gt; and a 0.5 probability that it ends up in &lt;em&gt;S&lt;/em&gt;&lt;sub&gt;2&lt;/sub&gt;. And similarly we have arrows going all over the diagram. Also notice the wiggly arrows &amp;ndash; they&amp;rsquo;re rewards.
 Notationally, we index the sequence of state-action pairs in an episode with a time variable &lt;em&gt;t&lt;/em&gt; so we say an agent plays action &lt;em&gt;a&lt;/em&gt;&lt;sub&gt;t&lt;/sub&gt; from state &lt;em&gt;s&lt;/em&gt;&lt;sub&gt;t&lt;/sub&gt; abnd gets reward &lt;em&gt;r&lt;/em&gt;&lt;sub&gt;t+1&lt;/sub&gt; for doing so (the reward can be 0). Here, &lt;em&gt;t&lt;/em&gt; starts from 0 and we represent the terminal time-step as &lt;em&gt;T&lt;/em&gt;.&lt;/p&gt;
 
+&lt;p&gt;Another crucial thing to note is that actions in an MDP have to be instantaneous in nature. That means you take action &lt;em&gt;a&lt;/em&gt;&lt;sub&gt;t&lt;/sub&gt; from state &lt;em&gt;s&lt;/em&gt;&lt;sub&gt;t&lt;/sub&gt; and end up in state &lt;em&gt;s&lt;/em&gt;&lt;sub&gt;t+1&lt;/sub&gt; immediately. There are several actions in real-world problems that may not be instantaneous but we&amp;rsquo;ll deal with them later. For now, assume your actions are instantaneous.&lt;/p&gt;
+
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;P&lt;/em&gt; : Now P is the probability function defined as &lt;em&gt;P&lt;/em&gt;(s&lt;sup&gt;&amp;lsquo;&lt;/sup&gt;| s, a) which is read as the probability of moving to &amp;ldquo;state s&amp;rsquo;&amp;rdquo; from &amp;ldquo;state s&amp;rdquo; if the agent plays &amp;ldquo;action a&amp;rdquo;. So for example, &lt;em&gt;P&lt;/em&gt;(&lt;em&gt;S&lt;/em&gt;&lt;sub&gt;2&lt;/sub&gt;|&lt;em&gt;S&lt;/em&gt;&lt;sub&gt;0&lt;/sub&gt;,&lt;em&gt;a&lt;/em&gt;&lt;sub&gt;0&lt;/sub&gt;) = 0.5&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;R&lt;/em&gt; : This is the reward function and is defined as &lt;em&gt;R&lt;/em&gt;(s&lt;sup&gt;&amp;lsquo;&lt;/sup&gt;| s, a) which is the reward the agent gets for moving to &amp;ldquo;state s&amp;rsquo;&amp;rdquo; from &amp;ldquo;state s&amp;rdquo; if the agent plays &amp;ldquo;action a&amp;rdquo;. So for example, &lt;em&gt;R&lt;/em&gt;(&lt;em&gt;S&lt;/em&gt;&lt;sub&gt;0&lt;/sub&gt;|&lt;em&gt;S&lt;/em&gt;&lt;sub&gt;1&lt;/sub&gt;,&lt;em&gt;a&lt;/em&gt;&lt;sub&gt;0&lt;/sub&gt;) = +5&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;R&lt;/em&gt; : This is the reward function and is defined as &lt;em&gt;R&lt;/em&gt;(s&lt;sup&gt;&amp;lsquo;&lt;/sup&gt;| s, a) which is the reward the agent gets for moving to &amp;ldquo;state s&amp;rsquo;&amp;rdquo; from &amp;ldquo;state s&amp;rdquo; if the agent plays &amp;ldquo;action a&amp;rdquo;. So for example, &lt;em&gt;R&lt;/em&gt;(&lt;em&gt;S&lt;/em&gt;&lt;sub&gt;0&lt;/sub&gt;|&lt;em&gt;S&lt;/em&gt;&lt;sub&gt;1&lt;/sub&gt;,&lt;em&gt;a&lt;/em&gt;&lt;sub&gt;0&lt;/sub&gt;) = +5. Rewards are always scalars.&lt;/li&gt;
 &lt;li&gt;$\gamma$ : We spoke about the concept of delayed rewards earlier in the post and we wanted a way to accound for delayed effects of actions. This is where $\gamma$ helps. We define the &lt;em&gt;returns&lt;/em&gt; of an action from a given state as the sum of the &lt;em&gt;discounted rewards&lt;/em&gt; we receive from that state for playing that action. If we started from the state &lt;em&gt;s&lt;/em&gt;&lt;sub&gt;0&lt;/sub&gt;, the returns would be defined as &lt;em&gt;r&lt;/em&gt;&lt;sub&gt;1&lt;/sub&gt; + $\gamma$ &lt;em&gt;r&lt;/em&gt;&lt;sub&gt;2&lt;/sub&gt; + $\gamma$&lt;sup&gt;2&lt;/sup&gt; &lt;em&gt;r&lt;/em&gt;&lt;/sub&gt;3&lt;/sub&gt; + &amp;hellip; $\gamma$ &lt;sup&gt;&lt;em&gt;T-1&lt;/em&gt;&lt;/sup&gt; &lt;em&gt;r&lt;/em&gt;&lt;sub&gt;&lt;em&gt;T&lt;/em&gt;&lt;/sub&gt;. We use the word &amp;ldquo;discounted&amp;rdquo; because $\gamma$ is usually a number between 0 and 1 and with the increasing powers, we give more weight to the immediate rewards than the delayed rewards. Hence, $\gamma$ is also called the discounting factor. The symbol we use for returns from timestep &lt;em&gt;t&lt;/em&gt; is usually &lt;em&gt;G&lt;/em&gt;&lt;sub&gt;&lt;em&gt;t&lt;/em&gt;&lt;/sub&gt; although some people like using &lt;em&gt;R&lt;/em&gt; as well (&lt;em&gt;r&lt;/em&gt; for reward and &lt;em&gt;R&lt;/em&gt; for returns). We will stick to the former notation. Now going back to the queen sacrifice example, if we were to consider the returns in our algorithm instead of just the immediate reward, we will be able to account for the delayed positive effect and not just the immediate negative effect.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;And with that, we&amp;rsquo;ve covered MDPs and how to model RL problems. But with that definition, we still haven&amp;rsquo;t accounted for the exploration-exploitation tradeoff. So in the &lt;a href=&#34;https://skandavaidyanath.github.io/courses/rl-course/post2/&#34; target=&#34;_blank&#34;&gt;next post&lt;/a&gt;, we&amp;rsquo;ll introduce a few more symbols and definitions and get cracking with our very first RL algorithm!&lt;/p&gt;
+&lt;p&gt;But with all of that information, we still haven&amp;rsquo;t covered that blockquote at the start of this section. No, that wasn&amp;rsquo;t a quote from Avengers: Endgame and it is the most important takeaway from this post. So what does it mean. Mathematically, it means this:&lt;/p&gt;
+
+&lt;p&gt;$$P(s_{t+1}|s_t,a) = P(s_{t+1}|s_t,s_{t-1},s_{t-2},s_{t-3},&amp;hellip;,a)$$&lt;/p&gt;
+
+&lt;p&gt;But what does that mean intuitively? It means are probability of going to state &lt;em&gt;s&lt;/em&gt;&lt;sub&gt;t+1&lt;/sub&gt; from state &lt;em&gt;s&lt;/em&gt;&lt;sub&gt;t&lt;/sub&gt; under the action &lt;em&gt;a&lt;/em&gt; is independent of how we got to state &lt;em&gt;s&lt;/em&gt;&lt;sub&gt;t&lt;/sub&gt; in the first place. If you&amp;rsquo;re thinking this isn&amp;rsquo;t very realistic, you&amp;rsquo;re right but this type of modeling works in most cases and is called &lt;em&gt;The Markov Property&lt;/em&gt;. So we will stick to this for now.&lt;/p&gt;
+
+&lt;p&gt;And with that, we&amp;rsquo;ve covered MDPs and how to model RL problems. With this background, I also recommend reading &lt;a href=&#34;https://skandavaidyanath.github.io/post/modeling-rl-problems/&#34; target=&#34;_blank&#34;&gt;this&lt;/a&gt;. But with that definition, we still haven&amp;rsquo;t accounted for the exploration-exploitation tradeoff. So in the &lt;a href=&#34;https://skandavaidyanath.github.io/courses/rl-course/post2/&#34; target=&#34;_blank&#34;&gt;next post&lt;/a&gt;, we&amp;rsquo;ll introduce a few more symbols and definitions and get cracking with our very first RL algorithm!&lt;/p&gt;
 
 &lt;p&gt;Once again, let me know if you have any feedback or suggestions.&lt;/p&gt;
 
@@ -391,13 +445,13 @@ Notationally, we index the sequence of state-action pairs in an episode with a t
       <guid>https://skandavaidyanath.github.io/post/modeling-rl-problems/</guid>
       <description>
 
-&lt;p&gt;I recommend that you gather some RL basics before you proceed to read this article. The first few posts from &lt;a href=&#34;https://skandavaidyanath.github.io/courses/rl-course/&#34; target=&#34;_blank&#34;&gt;the course&lt;/a&gt; on my page could be a good start.&lt;/p&gt;
+&lt;p&gt;I recommend that you gather some RL basics before you proceed to read this article. The first couple of posts from &lt;a href=&#34;https://skandavaidyanath.github.io/courses/rl-course/&#34; target=&#34;_blank&#34;&gt;the course&lt;/a&gt; on my page could be a good start.&lt;/p&gt;
 
 &lt;p&gt;In this article, I&amp;rsquo;m going to talk about something that I haven&amp;rsquo;t seen anywhere before and nobody really talks about it but I&amp;rsquo;m going to take a shot at it. I&amp;rsquo;ve learned RL on my own and hence I&amp;rsquo;ve read several articles on the internet about RL but most of them are about the different algorithms starting from the most basic dynamic programming and going on till the most complex Soft Actor Critic. But having spent some time conducting RL research, I find that nobody really talks about, according to me, the most challenging and interesting problem in RL &amp;ndash; the actual &lt;em&gt;modeling of the problem&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;So what do we mean by &amp;ldquo;modeling the problem&amp;rdquo;? If someone told you to solve the problem of self-driving cars using RL, how would you start? Lets say you decide to go ahead with some MDP framework, what would your states be? What would your actions be? What reward signal would you use? Would you solve the entire &amp;ldquo;self-driving&amp;rdquo; problem at once or would you want to break it down into smaller components? This is what I mean by &amp;ldquo;modeling a problem&amp;rdquo; and in my experience, has turned out to be the most important and challenging part of the bigger problem. Its something that sounds so simple but these early decisions are so important and I strongly believe that solid modeling could lead to better performance than using complex algorithms on weakly structured problems.&lt;/p&gt;
 
-&lt;p&gt;This is in fact one of the things that drew me to RL because I thought modeling problems was extremely interesting and difficult as well. I also couldn&amp;rsquo;t find anything quite similar to this in other domains. Feature selection in supervised learning comes close but there are specific techniques and tests you can conduct to come up with the best set of features given a large feature set. So this seemed like a unique problem specific to the RL world. But if it is such an exciting problem why hasn&amp;rsquo;t anyone written about it? My guess is that there is no simple answer to the question of &amp;ldquo;How to model an RL problem?&amp;rdquo;. The answer is that &amp;ldquo;It depends on the problem&amp;rdquo;. But I do believe there are some very simple guidelines you can follow or rather questions you can ask yourself when you&amp;rsquo;re modeling your problem. So here we go! Five questions that will help you model RL problems. There&amp;rsquo;s one additional question I guess that I&amp;rsquo;m implicitly answering; we will stick to the MDP framework and not talk about SMDPs or POMDPs for now.&lt;/p&gt;
+&lt;p&gt;This is in fact one of the things that drew me to RL because I thought modeling problems was extremely interesting and challenging as well. I also couldn&amp;rsquo;t find anything quite similar to this in other domains. Feature selection in supervised learning comes close but there are specific techniques and tests you can conduct to come up with the best set of features given a large feature set. So this seemed like a unique problem specific to the RL world. But if it is such an exciting problem why hasn&amp;rsquo;t anyone written about it? My guess is that there is no simple answer to the question of &amp;ldquo;How to model an RL problem?&amp;rdquo;. The answer is that &amp;ldquo;It depends on the problem&amp;rdquo;. But I do believe there are some very simple guidelines you can follow or rather questions you can ask yourself when you&amp;rsquo;re modeling your problem. So here we go! Five questions that will help you model RL problems. There&amp;rsquo;s one additional question I guess that I&amp;rsquo;m implicitly answering; we will stick to the MDP framework and not talk about SMDPs or POMDPs for now (if you&amp;rsquo;ve never heard of these, good).&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;What are the actions I need?&lt;/li&gt;
@@ -412,7 +466,7 @@ Notationally, we index the sequence of state-action pairs in an episode with a t
 &lt;h2 id=&#34;what-are-the-actions-i-need&#34;&gt;What are the actions I need?&lt;/h2&gt;
 
 &lt;p&gt;This is the first question you need to ask yourself when you&amp;rsquo;re handed a problem. What is the agent going to achieve and what actions will it need to achieve that task? This decision is often the easiest to make because this comes along with the problem description. So if the task is to navigate a car from one position of a square grid to another, the directions of movement would probably be the most natural choice for actions. Although this is much harder to see in a problem like Chess or self-driving cars, with a little bit of effort, we can think about all the different actions we have at our disposal. The important thing to keep track of however, is whether the action space is continuous or discrete and if discrete, how many actions you have. This information could be useful to decide if you maybe want to split the problem up into smaller easier problems.
-&lt;em&gt;Remember learning with multiple actions is tough!&lt;/em&gt;&lt;/p&gt;
+&lt;em&gt;Remember, the more actions you have, the harder the task is.&lt;/em&gt;&lt;/p&gt;
 
 
 
@@ -446,7 +500,7 @@ Notationally, we index the sequence of state-action pairs in an episode with a t
 
 &lt;h2 id=&#34;are-my-actions-instantaneous&#34;&gt;Are my actions instantaneous?&lt;/h2&gt;
 
-&lt;p&gt;Once you&amp;rsquo;ve figured out what your actions are, we can take a closer look at them now. One thing we want to look for is whether the actions are instantaenous or not. Sometimes there could be actions that realistically take time to execute. For example, in the above car-grid problem, if your actions were &amp;ldquo;move the car to the green square&amp;rdquo;, this action could take time to execute realitically. Modeling them as instantaneous actions wouldn&amp;rsquo;t be accurate. In the MDP framework, we need all actions to be instanteneous. So what do we do when we have actions that take time? First, try to get rid of them or replace them with simpler instantaneous actions. But this is a trade-off because this could increase the number of actions. Next, think about whether the &amp;ldquo;long&amp;rdquo; action could be a separate problem on its own and that could be modeled as a separate smaller RL problem. But this starts getting into hierarchical RL and I wouldn&amp;rsquo;t get into it unless you&amp;rsquo;re sure about what I&amp;rsquo;m doing.
+&lt;p&gt;Once you&amp;rsquo;ve figured out what your actions are, we can take a closer look at them now. One thing we want to look for is whether the actions are instantaenous or not. Sometimes there could be actions that realistically take time to execute. For example, in the above car-grid problem, if your actions were &amp;ldquo;move the car to the green square&amp;rdquo;, this action could take time to execute realistically. Modeling them as instantaneous actions wouldn&amp;rsquo;t be accurate. In the MDP framework, we need all actions to be instanteneous. So what do we do when we have actions that take time? First, try to get rid of them or replace them with simpler instantaneous actions. But this is a trade-off because this could increase the number of actions. Next, think about whether the &amp;ldquo;long&amp;rdquo; action could be a separate problem on its own and that could be modeled as a separate smaller RL problem. But this starts getting into hierarchical RL and I wouldn&amp;rsquo;t get into it unless you&amp;rsquo;re sure about what I&amp;rsquo;m doing.
 One thing that I&amp;rsquo;ve done in the past to model actions that take time (that could even vary, every time the action is played) is to model time using probabilities and put a variable in the state space (we&amp;rsquo;ll get to this) indicating that the crrent action is in progress. So where do the probabilities come into play? Lets say a &amp;ldquo;long&amp;rdquo; action is in progress. Now we keep playing an extra &amp;ldquo;WAIT&amp;rdquo; action or &amp;ldquo;NOP&amp;rdquo; action and flip a coin (not a fair one) and if its heads, the &amp;ldquo;long&amp;rdquo; action ends. This seems convoluted but I&amp;rsquo;ve found that sometimes it could make life a lot simpler by introducing not too much complexity into the state space or action space. Otherwise, simply foraying into SMDPs and hierarchical RL is fine as well if you&amp;rsquo;re confident.&lt;/p&gt;
 
 &lt;h2 id=&#34;what-is-my-state-space-and-can-i-make-it-smaller&#34;&gt;What is my state space and can I make it smaller?&lt;/h2&gt;
@@ -463,7 +517,7 @@ These questions may help you partition your state space and action space into mu
 &lt;h2 id=&#34;what-is-the-simplest-reward-function-i-can-use&#34;&gt;What is the simplest reward function I can use?&lt;/h2&gt;
 
 &lt;p&gt;And finally, my favourite question. Questions 3 and 5 are by far the hardest of the lot and this question is probably the hardest of the lot. Which makes writing the answer so much easier. Researchers have recognized the difficulty of crafting reward functions and created a new field called Inverse Reinforcement Learning just to address the issue. But once again, there are some guidelines you can follow.
-Usually, I try to stick to the simplest reward function possible. What do I mean by simplest? Small values and as sparse as possible. So if I&amp;rsquo;m designing a reward function for chess, my rewards would only be at the end of the game and would be a +1, 0, -1 for a win, draw and loss respectively. Another reward function could be for every move played but this would be harder to craft and there&amp;rsquo;s no reason for you to try this until you know the simple reward function doesn&amp;rsquo;t work. But in the problem of chess, it is qite straight-forward but there are other problems where finding an elegant reward fnction might not be as simple.&lt;/p&gt;
+Usually, I try to stick to the simplest reward function possible. What do I mean by simplest? Small values and as sparse as possible. So if I&amp;rsquo;m designing a reward function for chess, my rewards would only be at the end of the game and would be a +1, 0, -1 for a win, draw and loss respectively. Another reward function could be for every move played but this would be harder to craft and there&amp;rsquo;s no reason for you to try this until you know the simple reward function doesn&amp;rsquo;t work. But in the problem of chess, it is qite straight-forward but there are other problems where finding an elegant reward function might not be as simple.&lt;/p&gt;
 
 &lt;p&gt;So there you have it. I hope that helped and hopefully when you model your next problem, these tips will help. But thinking about all of this modeling has made me think about inverse reinforcement learning and meta learning a lot more. Is it possible for RL models to learn the optimal design of a problem? Not just the reward function but also the state space and the action space? And if it can, can it learn some common properties that we can learn across all RL problems? These are tough questions that I hope to answer some day.&lt;/p&gt;
 </description>
@@ -485,21 +539,22 @@ Usually, I try to stick to the simplest reward function possible. What do I mean
       <guid>https://skandavaidyanath.github.io/post/bridging-the-gaps-with-rl/</guid>
       <description>
 
-&lt;p&gt;In this post, I will be talking about a unique way to use reinforcement learning (RL) in deep learning applications. I definitely recommend burshing up some deep learning fundamentals and if possible, some policy gradient fundamentals as well before you get started with this post.&lt;/p&gt;
+&lt;p&gt;In this post, I will be talking about a unique way to use reinforcement learning (RL) in deep learning applications. I definitely recommend brushing up some deep learning fundamentals and if possible, some policy gradient fundamentals as well before you get started with this post.&lt;/p&gt;
 
-&lt;p&gt;Traditionally, RL is used to solve sequential decision making problems or decision making problems under uncertainty. There are several applications in the fields of video games and robotics where the task at hand can be very easily seen as an RL problem and can be modeled appropriately as well. But RL as a technique is quite versatile and can be used in several other domains to train neural networks that are traditionally trained in a supervised fashion. We&amp;rsquo;ll talk about one very important such application in this post. Along the way, I&amp;rsquo;ll also try to convince you that this isn&amp;rsquo;t really a different way to use RL but rather just a different way to look at the traditional RL problem.&lt;/p&gt;
+&lt;p&gt;Traditionally, RL is used to solve sequential decision making problems in the video game space or robotics space or any other space where there is a concrete RL task at hand. There are several applications in the fields of video games and robotics where the task at hand can be very easily seen as an RL problem and can be modeled appropriately as well. But RL as a technique is quite versatile and can be used in several other domains to train neural networks that are traditionally trained in a supervised fashion. We&amp;rsquo;ll talk about one very important such application in this post. Along the way, I&amp;rsquo;ll also try to convince you that this isn&amp;rsquo;t really a different way to use RL but rather just a different way to look at the traditional RL problem. So with that, lets begin!&lt;/p&gt;
 
 &lt;h2 id=&#34;non-differentiable-steps-in-deep-learning-the-gaps&#34;&gt;Non-differentiable steps in deep learning: The Gaps&lt;/h2&gt;
 
-&lt;p&gt;Sometimes when we&amp;rsquo;re coming up with neural network architectures, we stumble up on non-differentiable operations as a part of our network. Now this is a problem as we can&amp;rsquo;t backpropagate losses through such operation and hence lets call these &amp;ldquo;gaps&amp;rdquo;. So what are some common gaps we come across in neural networks?&lt;/p&gt;
+&lt;p&gt;Sometimes when we&amp;rsquo;re coming up with neural network architectures, we may need to incorporate some non-differentiable operations as a part of our network. Now this is a problem as we can&amp;rsquo;t backpropagate losses through such operation and hence lets call these &amp;ldquo;gaps&amp;rdquo;. So what are some common gaps we come across in neural networks?&lt;/p&gt;
 
-&lt;p&gt;Before we start talking about some &amp;ldquo;real gaps&amp;rdquo;, its worth mentioning that the famous ReLU function is a non-differentiable function but we overcome that gap by setting the derivative at 0 to either 1 or 0 and get away with it.&lt;/p&gt;
+&lt;p&gt;On a side-note, before we start talking about some &amp;ldquo;real gaps&amp;rdquo;, its worth mentioning that the famous ReLU function is a non-differentiable function but we overcome that gap by setting the derivative at 0 to either 1 or 0 and get away with it.&lt;/p&gt;
 
-&lt;p&gt;Now lets take a better example &amp;ndash; variational autoencoders (VAE). Without going into two many details, the VAE network outputs two vectors: a $\mu$ vector and a $\sigma$ vector and it involves a crucial sampling step where we sample from the distribution &lt;em&gt;N($\mu$, $\sigma$)&lt;/em&gt; as a part of the network. Now sampling is a gap as it is a non-differentiable step. So how do they get over this in the VAE case? They use a clever trick.
-Instead of sampling from &lt;em&gt;N&lt;/em&gt;($\mu$, $\sigma$), they just rewrite this as $\mu$ + $\sigma$&lt;em&gt;N(0,1)&lt;/em&gt; where they sample from the standard normal function. This neat trick now makes the expression differentiable because we just need the $\mu$ and $\sigma$ quantities to be differentiable and we don&amp;rsquo;t care about the &lt;em&gt;N(0,1)&lt;/em&gt;. Remember that we only need to differentiate with respect to the parameters of our network (brush up some backpropagation basics if you&amp;rsquo;re confused here) and hence we need to differentiate wrt $\mu$ and $\sigma$. For more details about VAEs read &lt;a href=&#34;https://towardsdatascience.com/intuitively-understanding-variational-autoencoders-1bfe67eb5daf&#34; target=&#34;_blank&#34;&gt;this post&lt;/a&gt; or &lt;a href=&#34;https://towardsdatascience.com/understanding-variational-autoencoders-vaes-f70510919f73&#34; target=&#34;_blank&#34;&gt;this one&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Now lets take a better example &amp;ndash; variational autoencoders (VAE). Without going into two many details, the VAE network outputs two vectors: a $\mu$ vector and a $\sigma$ vector and it involves a crucial sampling step where we sample from the distribution &lt;em&gt;N($\mu$, $\sigma$)&lt;/em&gt; as a part of the network. Now sampling is a gap as it is a non-differentiable step. You should stop here and convince yourself that this is, in fact true. When we sample, we don&amp;rsquo;t know what the outcome will be and hence the function in not differentiable. So how do they get over this in the VAE case? They use a clever trick.
+Instead of sampling from &lt;em&gt;N&lt;/em&gt;($\mu$, $\sigma$), they just rewrite this as $\mu$ + $\sigma$&lt;em&gt;N(0,1)&lt;/em&gt; where they sample from the standard normal function. This neat trick now makes the expression differentiable because we just need the $\mu$ and $\sigma$ quantities to be differentiable and we don&amp;rsquo;t care about the &lt;em&gt;N(0,1)&lt;/em&gt;. Remember that we only need to differentiate with respect to the parameters of our network (brush up some backpropagation basics if you&amp;rsquo;re confused here) and hence we need to differentiate only with respect to $\mu$ and $\sigma$ and not the standard normal distribution. For more details about VAEs read &lt;a href=&#34;https://towardsdatascience.com/intuitively-understanding-variational-autoencoders-1bfe67eb5daf&#34; target=&#34;_blank&#34;&gt;this post&lt;/a&gt; or &lt;a href=&#34;https://towardsdatascience.com/understanding-variational-autoencoders-vaes-f70510919f73&#34; target=&#34;_blank&#34;&gt;this one&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;So as it turned out, that wasn&amp;rsquo;t a very good example either but we&amp;rsquo;re starting to understand what we mean by gaps now and how common they are. Some common examples of gaps in networks are sampling operations and the argmax operation. Read &lt;a href=&#34;https://www.reddit.com/r/MachineLearning/comments/4e2get/argmax_differentiable/&#34; target=&#34;_blank&#34;&gt;this thread&lt;/a&gt; to understand why max is a differentiable function (recall max pooling in CNNs) while argmax is not.
-These are commonly used in natural language processing (NLP) applications, information retrieval (IR) applications and Computer Vision (CV) applications as well. For example, a sampling function could be used to select words from a sentence based on a probability distribution in an NLP application or an argmax function could be used to find the highest ranked document in an IR application. &lt;a href=&#34;https://jhui.github.io/2017/03/15/Soft-and-hard-attention/&#34; target=&#34;_blank&#34;&gt;Hard attention&lt;/a&gt; uses sampling techniques which involves non-differentiable computation.&lt;/p&gt;
+&lt;p&gt;So as it turned out, that wasn&amp;rsquo;t a very good example either but we&amp;rsquo;re starting to understand what we mean by gaps now and how common they are. Some common examples of gaps in networks are sampling operations and the argmax operation. Once again, convince yourself that argmax is not a differentiable function. Assume you have a function that takes argmax of two quantities &lt;em&gt;(x1,x2)&lt;/em&gt;. When &lt;em&gt;x1&lt;/em&gt; &amp;gt; &lt;em&gt;x2&lt;/em&gt;, this has value 0 (zero-indexed) and when &lt;em&gt;x1&lt;/em&gt; &amp;lt; &lt;em&gt;x2&lt;/em&gt;, it has value 1. Say the function is not defined on the &lt;em&gt;x1==x2&lt;/em&gt; line or define it as you wish (0 or 1). Now if you can visualise the 2D plane, you&amp;rsquo;ll see that the function is not differentiable as we move across the &lt;em&gt;x1==x2&lt;/em&gt; line. So argmax isn&amp;rsquo;t differentiable &lt;em&gt;but max is a differentiable function&lt;/em&gt; (recall max pooling in CNNs). Read &lt;a href=&#34;https://www.reddit.com/r/MachineLearning/comments/4e2get/argmax_differentiable/&#34; target=&#34;_blank&#34;&gt;this thread&lt;/a&gt; for more details.&lt;/p&gt;
+
+&lt;p&gt;These functions are commonly used in natural language processing (NLP) applications, information retrieval (IR) applications and Computer Vision (CV) applications as well. For example, a sampling function could be used to select words from a sentence based on a probability distribution in an NLP application or an argmax function could be used to find the highest ranked document in an IR application. &lt;a href=&#34;https://jhui.github.io/2017/03/15/Soft-and-hard-attention/&#34; target=&#34;_blank&#34;&gt;Hard attention&lt;/a&gt; uses sampling techniques which involves non-differentiable computation.&lt;/p&gt;
 
 &lt;p&gt;So its quite clear that these gaps are common in several deep learning architectures and sometimes, it could even be useful to introduce such a gap in the network intentionally to reap added benefits. The only question is, &lt;em&gt;how do we bridge these gaps?&lt;/em&gt;&lt;/p&gt;
 
@@ -601,10 +656,10 @@ The most common policy gradient (PG) algorithm is the REINFORCE which is a Monte
 &lt;/figure&gt;
 &lt;/p&gt;
 
-&lt;p&gt;So now we can train the blue arrows i.e. the differentiable path as usual. But to train the red arrows, we need to introduce a policy gradient and as we sample, we ensure with the help of the policy gradient that we encourage samples that led to a lower loss. The updates to the red arrows happen independently than those of the blue arrows.
-Note that in the diagrams above, there isn&amp;rsquo;t really a gap per-say because the blue arrows go all the way from start to finish. So there is a differentiable path and a non-differentiable path. A true gap would mean there would be no completely differentiable path at all. In this case, we need to make sure that the loss functions on either side of the gap are &amp;ldquo;in sync&amp;rdquo; and are being optimized in such a way that it facilitates joint training and achieves a common goal.&lt;/p&gt;
+&lt;p&gt;So now we can train the blue arrows i.e. the differentiable path as usual. But to train the red arrows, we need to introduce a policy gradient and as we sample, we ensure with the help of the policy gradient that we encourage samples that led to a lower loss. In this way, we are &amp;ldquo;training&amp;rdquo; the sampling operation or one could say, propagating the loss through the sampling operation! Note that the updates to the red arrows happen independently than those of the blue arrows.
+Note that in the diagrams above, there isn&amp;rsquo;t really a gap per-say because the blue arrows go all the way from start to finish. So there is a differentiable path and a non-differentiable path. A true gap would mean there would be no completely differentiable path at all. In this case, we need to make sure that the loss functions on either side of the gap are &amp;ldquo;in sync&amp;rdquo; and are being optimized in such a way that it facilitates joint training and achieves a common goal. This is often not as easy as it sounds.&lt;/p&gt;
 
-&lt;p&gt;We can still look at this entire setup as a traditional RL problem if we think of the inputs to the neural network as the state and the sampling process as sampling different actions from that given state. Now what is the reward function? This depends on what comes after the gap and could be an output from the rest of the network or it could be a completely independent reward function that you came up with as well. So at the end of the day, it is still the same MDP with the traditional setup but just used in a very different way.&lt;/p&gt;
+&lt;p&gt;I said at the start that as obscure as it seems, this is still the traditional RL problem we&amp;rsquo;re used to with the MDP and states and actions. We can still look at this entire setup as a traditional RL problem if we think of the inputs to the neural network as the state and the sampling process as sampling different actions from that given state. Now what is the reward function? This depends on what comes after the gap and could be an output from the rest of the network or it could be a completely independent reward function that you came up with as well. So at the end of the day, it is still the same MDP with the traditional setup but just used in a very different way.&lt;/p&gt;
 </description>
     </item>
     
