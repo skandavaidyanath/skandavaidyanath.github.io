@@ -135,6 +135,36 @@ Usually, I try to stick to the simplest reward function possible. What do I mean
 &lt;p&gt;Now lets take a better example &amp;ndash; variational autoencoders (VAE). Without going into two many details, the VAE network outputs two vectors: a $\mu$ vector and a $\sigma$ vector and it involves a crucial sampling step where we sample from the distribution &lt;em&gt;N($\mu$, $\sigma$)&lt;/em&gt; as a part of the network. Now sampling is a gap as it is a non-differentiable step. You should stop here and convince yourself that this is, in fact true. When we sample, we don&amp;rsquo;t know what the outcome will be and hence the function in not differentiable. So how do they get over this in the VAE case? They use a clever trick.
 Instead of sampling from &lt;em&gt;N&lt;/em&gt;($\mu$, $\sigma$), they just rewrite this as $\mu$ + $\sigma$&lt;em&gt;N(0,1)&lt;/em&gt; where they sample from the standard normal function. This neat trick now makes the expression differentiable because we just need the $\mu$ and $\sigma$ quantities to be differentiable and we don&amp;rsquo;t care about the &lt;em&gt;N(0,1)&lt;/em&gt;. Remember that we only need to differentiate with respect to the parameters of our network (brush up some backpropagation basics if you&amp;rsquo;re confused here) and hence we need to differentiate only with respect to $\mu$ and $\sigma$ and not the standard normal distribution. For more details about VAEs read &lt;a href=&#34;https://towardsdatascience.com/intuitively-understanding-variational-autoencoders-1bfe67eb5daf&#34; target=&#34;_blank&#34;&gt;this post&lt;/a&gt; or &lt;a href=&#34;https://towardsdatascience.com/understanding-variational-autoencoders-vaes-f70510919f73&#34; target=&#34;_blank&#34;&gt;this one&lt;/a&gt;.&lt;/p&gt;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;vae.PNG&#34; data-caption=&#34;Variational Autoencoders. Source: here&#34;&gt;
+&lt;img src=&#34;vae.PNG&#34; alt=&#34;&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Variational Autoencoders. Source: &lt;a href=&#34;https://towardsdatascience.com/intuitively-understanding-variational-autoencoders-1bfe67eb5daf&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
 &lt;p&gt;So as it turned out, that wasn&amp;rsquo;t a very good example either but we&amp;rsquo;re starting to understand what we mean by gaps now and how common they are. Some common examples of gaps in networks are sampling operations and the argmax operation. Once again, convince yourself that argmax is not a differentiable function. Assume you have a function that takes argmax of two quantities &lt;em&gt;(x1,x2)&lt;/em&gt;. When &lt;em&gt;x1&lt;/em&gt; &amp;gt; &lt;em&gt;x2&lt;/em&gt;, this has value 0 (zero-indexed) and when &lt;em&gt;x1&lt;/em&gt; &amp;lt; &lt;em&gt;x2&lt;/em&gt;, it has value 1. Say the function is not defined on the &lt;em&gt;x1==x2&lt;/em&gt; line or define it as you wish (0 or 1). Now if you can visualise the 2D plane, you&amp;rsquo;ll see that the function is not differentiable as we move across the &lt;em&gt;x1==x2&lt;/em&gt; line. So argmax isn&amp;rsquo;t differentiable &lt;em&gt;but max is a differentiable function&lt;/em&gt; (recall max pooling in CNNs). Read &lt;a href=&#34;https://www.reddit.com/r/MachineLearning/comments/4e2get/argmax_differentiable/&#34; target=&#34;_blank&#34;&gt;this thread&lt;/a&gt; for more details.&lt;/p&gt;
 
 &lt;p&gt;These functions are commonly used in natural language processing (NLP) applications, information retrieval (IR) applications and Computer Vision (CV) applications as well. For example, a sampling function could be used to select words from a sentence based on a probability distribution in an NLP application or an argmax function could be used to find the highest ranked document in an IR application. &lt;a href=&#34;https://jhui.github.io/2017/03/15/Soft-and-hard-attention/&#34; target=&#34;_blank&#34;&gt;Hard attention&lt;/a&gt; uses sampling techniques which involves non-differentiable computation.&lt;/p&gt;
