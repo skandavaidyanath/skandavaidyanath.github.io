@@ -595,7 +595,7 @@ The definition speaks about &ldquo;agents&rdquo; taking &ldquo;actions&rdquo; in
 </figure>
 
 
-<p>Our data is in the form of several games that have been played from start to finish. If we consider this as training data for our SL model, the only labels we could possibly decipher from these games would be the final outcome &ndash; the winner of the game or if it was a draw. If we are able to somehow encode the game and train a classifier on the data, this SL model would be able to predict the outcome of a game (which is not very useful) but not <em>how to play the game</em>.</p>
+<p>Our data is in the form of several games that have been played from start to finish. If we consider this as training data for our SL model, the only labels we could possibly decipher from these games would be the final outcome &ndash; the winner of the game or if it was a draw. If we are able to somehow encode the game and train a classifier on the data, this SL model would be able to predict the outcome of a game (which is not very useful) but not <em>how to play the game</em>. Stop for a second, think about all the different potential SL solutions to this problem and convince yourself that this would be an extremely difficult (if even possible) problem to solve if we do not have supervised labels telling us what the best move is for every board position.</p>
 
 <p>If we wanted to train a SL model to learn <em>how to play the game</em>, we would need training data in the form of <em>the best move to play at every board position</em>. But alas, we do not have such information and this is the case in most problems (think about riding a cycle or playing chess or a video game).</p>
 
