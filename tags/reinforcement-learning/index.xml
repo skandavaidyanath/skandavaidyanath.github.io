@@ -258,7 +258,7 @@ such that if $\lambda &amp;gt; \lambda_{o}$, &lt;em&gt;R&lt;/em&gt;=0 and if $\l
 &lt;/figure&gt;
 
 
-&lt;p&gt;Note that the summation term running from 1 to &lt;em&gt;N&lt;/em&gt; is so that we maximize across all the states in the MDP. This can be solved as a LP problem now.&lt;/p&gt;
+&lt;p&gt;Note that the summation term running from 1 to &lt;em&gt;N&lt;/em&gt; is so that we maximize across all the states in the MDP. Also note that we use our information of the optimal policy implicitly here since we know the best action &lt;em&gt;a&lt;/em&gt;&lt;sub&gt;1&lt;/sub&gt; at every step. This can be solved as a LP problem now.&lt;/p&gt;
 
 &lt;h2 id=&#34;irl-in-large-state-spaces-using-linear-function-approximation&#34;&gt;IRL in large state spaces using linear function approximation&lt;/h2&gt;
 
@@ -364,11 +364,11 @@ such that if $\lambda &amp;gt; \lambda_{o}$, &lt;em&gt;R&lt;/em&gt;=0 and if $\l
 &lt;/figure&gt;
 
 
-&lt;p&gt;&lt;em&gt;S&lt;/em&gt;&lt;sub&gt;o&lt;/sub&gt; is the subsample of states and $p(x) = x$ when $x \geq 0$ and $2x$ when $x &amp;lt; 0$. This can be solved with LP now.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;S&lt;/em&gt;&lt;sub&gt;o&lt;/sub&gt; is the subsample of states and $p(x) = x$ when $x \geq 0$ and $2x$ when $x &amp;lt; 0$. $\pi$ is the optimal policy. This can be solved with LP now.&lt;/p&gt;
 
 &lt;h2 id=&#34;irl-from-sampled-trajectories&#34;&gt;IRL from sampled trajectories&lt;/h2&gt;
 
-&lt;p&gt;Now, we come to the most interesting and most realistic case. We now try to learn from sampled trajectories from the environment. &lt;strong&gt;We do not require an explicit model of the MDP but we do assume the ability to find an optimal policy under any reward function. We also assume the ability to simulate trajectories in the environment with the optimal policy or any other policy we want.&lt;/strong&gt; Also assume there is only a single start state &lt;em&gt;s&lt;/em&gt;&lt;sub&gt;o&lt;/sub&gt;. This is not a string assumption as if there are several start states with an initial state distribution, add an additional state and connect it to each of them.&lt;/p&gt;
+&lt;p&gt;Now, we come to the most interesting and most realistic case. We now try to learn from sampled trajectories from the environment. &lt;strong&gt;We do not require an explicit model of the MDP but we do assume the ability to find an optimal policy under any reward function. We also assume the ability to simulate trajectories in the environment with the optimal policy or any other policy we want.&lt;/strong&gt; Also assume there is only a single start state &lt;em&gt;s&lt;/em&gt;&lt;sub&gt;o&lt;/sub&gt;. This is not a string assumption as if there are several start states with an initial state distribution, add an additional state and connect it to each of them. This is the most realistic case and is different from the previous cases because we don&amp;rsquo;t have the model of the environment i.e. the &lt;em&gt;P&lt;/em&gt; matrices.&lt;/p&gt;
 
 &lt;p&gt;Once again, &lt;em&gt;R&lt;/em&gt; will be expressed as a linear function approximation in the same form as the previous section. Please refer to the paper and convince yourself that it is possible to use Monte Carlo trajectories to estimate a value function that is also linear in the $\alpha$ values. The math is quite simple and straight-forward. This is important because it allows us to use LP again.&lt;/p&gt;
 
@@ -427,6 +427,8 @@ such that if $\lambda &amp;gt; \lambda_{o}$, &lt;em&gt;R&lt;/em&gt;=0 and if $\l
       <pubDate>Thu, 16 Jan 2020 22:12:05 +0530</pubDate>
       <guid>https://skandavaidyanath.github.io/post/modeling-rl-problems/</guid>
       <description>
+
+&lt;p&gt;&lt;strong&gt;Disclaimer: The content for this article does not come from any textbook or other reliable sources. They are observations made purely from my very limited experience with RL.&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;I recommend that you gather some RL basics before you proceed to read this article. The first couple of posts from &lt;a href=&#34;https://skandavaidyanath.github.io/courses/rl-course/&#34; target=&#34;_blank&#34;&gt;the course&lt;/a&gt; on my page could be a good start.&lt;/p&gt;
 

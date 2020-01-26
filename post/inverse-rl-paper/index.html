@@ -886,7 +886,7 @@ such that if $\lambda &gt; \lambda_{o}$, <em>R</em>=0 and if $\lambda &lt; \lamb
 </figure>
 
 
-<p>Note that the summation term running from 1 to <em>N</em> is so that we maximize across all the states in the MDP. This can be solved as a LP problem now.</p>
+<p>Note that the summation term running from 1 to <em>N</em> is so that we maximize across all the states in the MDP. Also note that we use our information of the optimal policy implicitly here since we know the best action <em>a</em><sub>1</sub> at every step. This can be solved as a LP problem now.</p>
 
 <h2 id="irl-in-large-state-spaces-using-linear-function-approximation">IRL in large state spaces using linear function approximation</h2>
 
@@ -992,11 +992,11 @@ such that if $\lambda &gt; \lambda_{o}$, <em>R</em>=0 and if $\lambda &lt; \lamb
 </figure>
 
 
-<p><em>S</em><sub>o</sub> is the subsample of states and $p(x) = x$ when $x \geq 0$ and $2x$ when $x &lt; 0$. This can be solved with LP now.</p>
+<p><em>S</em><sub>o</sub> is the subsample of states and $p(x) = x$ when $x \geq 0$ and $2x$ when $x &lt; 0$. $\pi$ is the optimal policy. This can be solved with LP now.</p>
 
 <h2 id="irl-from-sampled-trajectories">IRL from sampled trajectories</h2>
 
-<p>Now, we come to the most interesting and most realistic case. We now try to learn from sampled trajectories from the environment. <strong>We do not require an explicit model of the MDP but we do assume the ability to find an optimal policy under any reward function. We also assume the ability to simulate trajectories in the environment with the optimal policy or any other policy we want.</strong> Also assume there is only a single start state <em>s</em><sub>o</sub>. This is not a string assumption as if there are several start states with an initial state distribution, add an additional state and connect it to each of them.</p>
+<p>Now, we come to the most interesting and most realistic case. We now try to learn from sampled trajectories from the environment. <strong>We do not require an explicit model of the MDP but we do assume the ability to find an optimal policy under any reward function. We also assume the ability to simulate trajectories in the environment with the optimal policy or any other policy we want.</strong> Also assume there is only a single start state <em>s</em><sub>o</sub>. This is not a string assumption as if there are several start states with an initial state distribution, add an additional state and connect it to each of them. This is the most realistic case and is different from the previous cases because we don&rsquo;t have the model of the environment i.e. the <em>P</em> matrices.</p>
 
 <p>Once again, <em>R</em> will be expressed as a linear function approximation in the same form as the previous section. Please refer to the paper and convince yourself that it is possible to use Monte Carlo trajectories to estimate a value function that is also linear in the $\alpha$ values. The math is quite simple and straight-forward. This is important because it allows us to use LP again.</p>
 
