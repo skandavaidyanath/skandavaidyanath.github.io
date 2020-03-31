@@ -23,6 +23,21 @@
   </url>
   
   <url>
+    <loc>https://skandavaidyanath.github.io/post/</loc>
+    <lastmod>2020-03-06T03:19:30+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skandavaidyanath.github.io/post/curiosity-is-all-you-need/</loc>
+    <lastmod>2020-03-06T03:19:30+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skandavaidyanath.github.io/</loc>
+    <lastmod>2020-03-06T03:19:30+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://skandavaidyanath.github.io/authors/admin/</loc>
     <lastmod>2020-01-21T06:02:24+05:30</lastmod>
   </url>
@@ -34,11 +49,6 @@
   
   <url>
     <loc>https://skandavaidyanath.github.io/authors/</loc>
-    <lastmod>2020-01-21T06:02:24+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skandavaidyanath.github.io/post/</loc>
     <lastmod>2020-01-21T06:02:24+05:30</lastmod>
   </url>
   
@@ -58,11 +68,6 @@
   </url>
   
   <url>
-    <loc>https://skandavaidyanath.github.io/</loc>
-    <lastmod>2020-01-21T06:02:24+05:30</lastmod>
-  </url>
-  
-  <url>
     <loc>https://skandavaidyanath.github.io/tags/</loc>
     <lastmod>2020-01-21T06:02:24+05:30</lastmod>
   </url>
@@ -78,12 +83,12 @@
   </url>
   
   <url>
-    <loc>https://skandavaidyanath.github.io/tags/deep-learning/</loc>
+    <loc>https://skandavaidyanath.github.io/categories/deep-learning/</loc>
     <lastmod>2019-11-04T03:10:24+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://skandavaidyanath.github.io/categories/deep-learning/</loc>
+    <loc>https://skandavaidyanath.github.io/tags/deep-learning/</loc>
     <lastmod>2019-11-04T03:10:24+05:30</lastmod>
   </url>
   
@@ -123,12 +128,12 @@
   </url>
   
   <url>
-    <loc>https://skandavaidyanath.github.io/tags/natural-language-processing/</loc>
+    <loc>https://skandavaidyanath.github.io/categories/natural-language-processing/</loc>
     <lastmod>2019-10-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://skandavaidyanath.github.io/categories/natural-language-processing/</loc>
+    <loc>https://skandavaidyanath.github.io/tags/natural-language-processing/</loc>
     <lastmod>2019-10-01T00:00:00+00:00</lastmod>
   </url>
   
