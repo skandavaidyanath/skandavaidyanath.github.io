@@ -436,13 +436,7 @@ Notationally, we index the sequence of state-action pairs in an episode with a t
       <link>https://skandavaidyanath.github.io/courses/rl-course/post3/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       <guid>https://skandavaidyanath.github.io/courses/rl-course/post3/</guid>
-      <description>&lt;p&gt;COMING SOON&amp;hellip;
-quick recap mdp and markov property. another mdp diagram here
-driving traffic jam example for long term gains vs short term gains and/or heaven-hell mdp?
-exploration-exploitation mouse example
-more symbols q v pi and g recap
-bellman eqn and other eqns connecting q v pi. a full equation flowchart
-dp&lt;/p&gt;
+      <description>&lt;p&gt;COMING SOON&amp;hellip;&lt;/p&gt;
 </description>
     </item>
     
