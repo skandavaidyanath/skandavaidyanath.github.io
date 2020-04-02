@@ -83,6 +83,38 @@ The definition speaks about &amp;ldquo;agents&amp;rdquo; taking &amp;ldquo;actio
 
 &lt;p&gt;Think about how you started learning to ride a bike. You probably tried many different things (turning the handle-bar in different directions, trying to pedal backwards) and continued doing more of what worked (&amp;ldquo;worked&amp;rdquo; in this context probably means &amp;ldquo;did not fall and moved in the intended direction&amp;rdquo;) and less of what didn&amp;rsquo;t. Nobody gave you clear instructions on what to do at each step, you just tried things and they worked (or didn&amp;rsquo;t). In fact, humans gain several skills in the same fashion. Imagine you&amp;rsquo;re playing a brand new video game without reading the instructions or picking up a new sport. Humans learn several tasks by trial and error and that&amp;rsquo;s exactly what we&amp;rsquo;re trying to emulate with RL. Trying to get as close as possible to the way humans learn.&lt;/p&gt;
 
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://skandavaidyanath.github.io/img/post1_bicycle.jpg&#34; data-caption=&#34;Learning to ride a bike. Source: Google Images&#34;&gt;
+&lt;img src=&#34;https://skandavaidyanath.github.io/img/post1_bicycle.jpg&#34; alt=&#34;&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Learning to ride a bike. Source: Google Images
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
 &lt;p&gt;With that intuition, lets take a jab at the Wikipedia definition again. The &amp;ldquo;agent&amp;rdquo; in our biker example is the person trying to learn to ride a bike. The &amp;ldquo;environment&amp;rdquo; is everything that may affect the person riding the bike &amp;ndash; so this could be the road, the traffic, the weather, etc. Remember the environment is dynamic &amp;ndash; the traffic could get heavier, the weather could get rainier, etc. So the agent has to account for the different settings of the environment. As for &amp;ldquo;actions&amp;rdquo;, these are the different decisions the agent can make &amp;ndash; for example, they could be &amp;ldquo;turn left&amp;rdquo;, &amp;ldquo;turn right&amp;rdquo;, etc. The agent must decide based on the state of the environment, what the right action to play is at a given point. And finally &amp;ldquo;rewards&amp;rdquo; is some sort of feedback we get for the series (could be singular) of actions we just took. So we would get a positive reward if we reached our destination and negative if we fell down for example. All these terms will be dealt with more formally in the next post. For now, just make sure you get the intuition.&lt;/p&gt;
 
 &lt;p&gt;So we have an agent that is going to try and take different possible actions in its environment (which is dynamic!) and learn the best actions under each setting of the environment in order to maximise some notion of a cumulative reward (a feedback signal). All this will get clearer as we go along but for now just remember this.&lt;/p&gt;
@@ -267,10 +299,45 @@ The definition speaks about &amp;ldquo;agents&amp;rdquo; taking &amp;ldquo;actio
 
 &lt;h2 id=&#34;two-issues&#34;&gt;Two Issues&lt;/h2&gt;
 
-&lt;p&gt;Before we begin with the mathematical foundations of RL, I&amp;rsquo;d like to point out some issues with RL and what kinds of problems we need to account for if we were to come up with RL algorithms of our own. Once again, I&amp;rsquo;m going to move on to a new example so lets take chess this time.
-So we want to teach our agent (recall what this means from the previous post) how to play the game of chess. Lets assume we have some sort of reward function in place where we get some small positive rewards for capturing a piece and small negative rewards for losing a piece depending on the importance of the piece (so losing a queen would lead to a negative reward of larger magnitude than losing a pawn). We also have some large positive final reward for winning the game and a large positive negative reward for losing. If you&amp;rsquo;re wondering whether just this large final reward is a sufficient reward function on its own, you&amp;rsquo;re probably right and it probably is, but lets stick to this for the sake of illustration.
-Now assume we have an RL algorithm that can look at several games of chess and the rewards and learn to play chess on its own. What would this algorithm need to account for? We spoke about trial and error being the basis of any RL algorithm in the previous post that is exactly what our algorithm would do as well. It starts playing random moves and when it plays a good move (positive reward), it remembers to play that move the next time it is in a similar situation. This seems fine on the face of it, but there is an issue. Maybe the algorithm found a good move to play at a given position, &lt;em&gt;but what if there was a better move?&lt;/em&gt;
-We need some way for the algorithm to account for the possibility of there being a better move than the one it has found already. So when we train our agent we need to make sure the agent doesn&amp;rsquo;t greedily play the best move it knows all the time but also plays some different moves, hoping that they may be better than the one it already found. This is called the &lt;em&gt;exploration-exploitation tradeoff&lt;/em&gt; in RL. Usually, RL algorithms tend to explore i.e. play many random moves initially and when the agent is more sure about the best moves under different circumstances, it starts exploiting that knowledge. We will revisit this problem in the next post with another example.&lt;/p&gt;
+&lt;p&gt;Before we begin with the mathematical foundations of RL, I&amp;rsquo;d like to point out some issues with RL and what kinds of problems we need to account for if we were to come up with RL algorithms of our own. Once again, I&amp;rsquo;m going to move on to a new example so lets take chess this time.&lt;/p&gt;
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://skandavaidyanath.github.io/img/post1_alphazero.jpg&#34; data-caption=&#34;AlphaZero: Chess. Source: Google Images&#34;&gt;
+&lt;img src=&#34;https://skandavaidyanath.github.io/img/post1_alphazero.jpg&#34; alt=&#34;&#34; &gt;&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    AlphaZero: Chess. Source: Google Images
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+&lt;p&gt;So we want to teach our agent (recall what this means from the previous post) how to play the game of chess. Lets assume we have some sort of reward function in place where we get some small positive rewards for capturing a piece and small negative rewards for losing a piece depending on the importance of the piece (so losing a queen would lead to a negative reward of larger magnitude than losing a pawn). We also have some large positive final reward for winning the game and a large positive negative reward for losing. If you&amp;rsquo;re wondering whether just this large final reward is a sufficient reward function on its own, you&amp;rsquo;re probably right and it probably is, but lets stick to this for the sake of illustration.&lt;/p&gt;
+
+&lt;p&gt;Now assume we have an RL algorithm that can look at several games of chess and the rewards and learn to play chess on its own. What would this algorithm need to account for? We spoke about trial and error being the basis of any RL algorithm in the previous post that is exactly what our algorithm would do as well. It starts playing random moves and when it plays a good move (positive reward), it remembers to play that move the next time it is in a similar situation. This seems fine on the face of it, but there is an issue. Maybe the algorithm found a good move to play at a given position, &lt;em&gt;but what if there was a better move?&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;We need some way for the algorithm to account for the possibility of there being a better move than the one it has found already. So when we train our agent we need to make sure the agent doesn&amp;rsquo;t greedily play the best move it knows all the time but also plays some different moves, hoping that they may be better than the one it already found. This is called the &lt;em&gt;exploration-exploitation tradeoff&lt;/em&gt; in RL. Usually, RL algorithms tend to explore i.e. play many random moves initially and when the agent is more sure about the best moves under different circumstances, it starts exploiting that knowledge. We will revisit this problem in the next post with another example.&lt;/p&gt;
 
 &lt;p&gt;Lets move on to the next issue that our RL algorithm will have to account for. Lets say our RL algorithm is learning from a game of chess again where the player sacrifices the queen but goes on to win the game. The RL agent immediately registers a negative reward for the loss of the queen but the large positive reward for winning the game only comes much later. But it is entirely possible that the very queen sacrifice that the RL agent probably classified as a bad move, was the reason for the player winning the game. So it is possible that a move seems like a &amp;ldquo;bad&amp;rdquo; one in the short term but in the long term, could be a very &amp;ldquo;good&amp;rdquo; move. How do we account for this in our algorithm? This is the concept of &lt;em&gt;delayed rewards&lt;/em&gt; and we will deal with a simple yet elegant solution for this as well as we go through this post. We will look at another example for this as well in the next post.&lt;/p&gt;
 
@@ -399,9 +466,11 @@ $$\langle \mathcal{S}, \mathcal{A}, \mathcal{P}, \mathcal{R}, \gamma \rangle$$&l
 &lt;/figure&gt;
 
 
-&lt;p&gt;Some of the states of the MDP are designated as start states or initial states and end states or terminal states. An &lt;em&gt;episode&lt;/em&gt; in RL is a sequence of state-action pairs that take the agent from a start state to a terminal state. So the agent starts from one of the intial states, plays an action, goes to the next state and so on until it hits a terminal state and the episode ends. Assume for now that there is such an end i.e. every episode does end after some unknown, finite time. This is a property of &lt;em&gt;finite horizon MDPs&lt;/em&gt; which is what we will stick to in this course.
-Now lets take a look at this MDP in the diagram above. Assume &lt;em&gt;S&lt;/em&gt;&lt;sub&gt;0&lt;/sub&gt; is your initial state. Notice that &lt;em&gt;a&lt;/em&gt;&lt;sub&gt;0&lt;/sub&gt; from &lt;em&gt;S&lt;/em&gt;&lt;sub&gt;0&lt;/sub&gt; has two arrows, one going into &lt;em&gt;S&lt;/em&gt;&lt;sub&gt;0&lt;/sub&gt; again and another going into &lt;em&gt;S&lt;/em&gt;&lt;sub&gt;2&lt;/sub&gt;. The numbers on the arrows indicate 0.5 and 0.5 respectively. This means that if an agent plays the action &lt;em&gt;a&lt;/em&gt;&lt;sub&gt;0&lt;/sub&gt; from &lt;em&gt;S&lt;/em&gt;&lt;sub&gt;0&lt;/sub&gt;, it has a 0.5 probability that it ends up back in &lt;em&gt;S&lt;/em&gt;&lt;sub&gt;0&lt;/sub&gt; and a 0.5 probability that it ends up in &lt;em&gt;S&lt;/em&gt;&lt;sub&gt;2&lt;/sub&gt;. And similarly we have arrows going all over the diagram. Also notice the wiggly arrows &amp;ndash; they&amp;rsquo;re rewards.
-Notationally, we index the sequence of state-action pairs in an episode with a time variable &lt;em&gt;t&lt;/em&gt; so we say an agent plays action &lt;em&gt;a&lt;/em&gt;&lt;sub&gt;t&lt;/sub&gt; from state &lt;em&gt;s&lt;/em&gt;&lt;sub&gt;t&lt;/sub&gt; and gets reward &lt;em&gt;r&lt;/em&gt;&lt;sub&gt;t+1&lt;/sub&gt; for doing so (the reward can be 0). Here, &lt;em&gt;t&lt;/em&gt; starts from 0 and we represent the terminal time-step as &lt;em&gt;T&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Some of the states of the MDP are designated as start states or initial states and end states or terminal states. An &lt;em&gt;episode&lt;/em&gt; in RL is a sequence of state-action pairs that take the agent from a start state to a terminal state. So the agent starts from one of the intial states, plays an action, goes to the next state and so on until it hits a terminal state and the episode ends. Assume for now that there is such an end i.e. every episode does end after some unknown, finite time. This is a property of &lt;em&gt;finite horizon MDPs&lt;/em&gt; which is what we will stick to in this course.&lt;/p&gt;
+
+&lt;p&gt;Now lets take a look at this MDP in the diagram above. Assume &lt;em&gt;S&lt;/em&gt;&lt;sub&gt;0&lt;/sub&gt; is your initial state. Notice that &lt;em&gt;a&lt;/em&gt;&lt;sub&gt;0&lt;/sub&gt; from &lt;em&gt;S&lt;/em&gt;&lt;sub&gt;0&lt;/sub&gt; has two arrows, one going into &lt;em&gt;S&lt;/em&gt;&lt;sub&gt;0&lt;/sub&gt; again and another going into &lt;em&gt;S&lt;/em&gt;&lt;sub&gt;2&lt;/sub&gt;. The numbers on the arrows indicate 0.5 and 0.5 respectively. This means that if an agent plays the action &lt;em&gt;a&lt;/em&gt;&lt;sub&gt;0&lt;/sub&gt; from &lt;em&gt;S&lt;/em&gt;&lt;sub&gt;0&lt;/sub&gt;, it has a 0.5 probability that it ends up back in &lt;em&gt;S&lt;/em&gt;&lt;sub&gt;0&lt;/sub&gt; and a 0.5 probability that it ends up in &lt;em&gt;S&lt;/em&gt;&lt;sub&gt;2&lt;/sub&gt;. And similarly we have arrows going all over the diagram. Also notice the wiggly arrows &amp;ndash; they&amp;rsquo;re rewards.&lt;/p&gt;
+
+&lt;p&gt;Notationally, we index the sequence of state-action pairs in an episode with a time variable &lt;em&gt;t&lt;/em&gt; so we say an agent plays action &lt;em&gt;a&lt;/em&gt;&lt;sub&gt;t&lt;/sub&gt; from state &lt;em&gt;s&lt;/em&gt;&lt;sub&gt;t&lt;/sub&gt; and gets reward &lt;em&gt;r&lt;/em&gt;&lt;sub&gt;t+1&lt;/sub&gt; for doing so (the reward can be 0). Here, &lt;em&gt;t&lt;/em&gt; starts from 0 and we represent the terminal time-step as &lt;em&gt;T&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;Another crucial thing to note is that actions in an MDP have to be instantaneous in nature. That means you take action &lt;em&gt;a&lt;/em&gt;&lt;sub&gt;t&lt;/sub&gt; from state &lt;em&gt;s&lt;/em&gt;&lt;sub&gt;t&lt;/sub&gt; and end up in state &lt;em&gt;s&lt;/em&gt;&lt;sub&gt;t+1&lt;/sub&gt; immediately. There are several actions in real-world problems that may not be instantaneous but we&amp;rsquo;ll deal with them later. For now, assume your actions are instantaneous.&lt;/p&gt;
 

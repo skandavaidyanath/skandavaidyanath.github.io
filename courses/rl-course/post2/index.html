@@ -460,10 +460,45 @@ Two Issues Before we begin with the mathematical foundations of RL, I&rsquo;d li
 
 <h2 id="two-issues">Two Issues</h2>
 
-<p>Before we begin with the mathematical foundations of RL, I&rsquo;d like to point out some issues with RL and what kinds of problems we need to account for if we were to come up with RL algorithms of our own. Once again, I&rsquo;m going to move on to a new example so lets take chess this time.
-So we want to teach our agent (recall what this means from the previous post) how to play the game of chess. Lets assume we have some sort of reward function in place where we get some small positive rewards for capturing a piece and small negative rewards for losing a piece depending on the importance of the piece (so losing a queen would lead to a negative reward of larger magnitude than losing a pawn). We also have some large positive final reward for winning the game and a large positive negative reward for losing. If you&rsquo;re wondering whether just this large final reward is a sufficient reward function on its own, you&rsquo;re probably right and it probably is, but lets stick to this for the sake of illustration.
-Now assume we have an RL algorithm that can look at several games of chess and the rewards and learn to play chess on its own. What would this algorithm need to account for? We spoke about trial and error being the basis of any RL algorithm in the previous post that is exactly what our algorithm would do as well. It starts playing random moves and when it plays a good move (positive reward), it remembers to play that move the next time it is in a similar situation. This seems fine on the face of it, but there is an issue. Maybe the algorithm found a good move to play at a given position, <em>but what if there was a better move?</em>
-We need some way for the algorithm to account for the possibility of there being a better move than the one it has found already. So when we train our agent we need to make sure the agent doesn&rsquo;t greedily play the best move it knows all the time but also plays some different moves, hoping that they may be better than the one it already found. This is called the <em>exploration-exploitation tradeoff</em> in RL. Usually, RL algorithms tend to explore i.e. play many random moves initially and when the agent is more sure about the best moves under different circumstances, it starts exploiting that knowledge. We will revisit this problem in the next post with another example.</p>
+<p>Before we begin with the mathematical foundations of RL, I&rsquo;d like to point out some issues with RL and what kinds of problems we need to account for if we were to come up with RL algorithms of our own. Once again, I&rsquo;m going to move on to a new example so lets take chess this time.</p>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure>
+
+
+  <a data-fancybox="" href="/img/post1_alphazero.jpg" data-caption="AlphaZero: Chess. Source: Google Images">
+<img src="/img/post1_alphazero.jpg" alt="" ></a>
+
+
+  
+  
+  <figcaption>
+    AlphaZero: Chess. Source: Google Images
+  </figcaption>
+
+
+</figure>
+
+
+<p>So we want to teach our agent (recall what this means from the previous post) how to play the game of chess. Lets assume we have some sort of reward function in place where we get some small positive rewards for capturing a piece and small negative rewards for losing a piece depending on the importance of the piece (so losing a queen would lead to a negative reward of larger magnitude than losing a pawn). We also have some large positive final reward for winning the game and a large positive negative reward for losing. If you&rsquo;re wondering whether just this large final reward is a sufficient reward function on its own, you&rsquo;re probably right and it probably is, but lets stick to this for the sake of illustration.</p>
+
+<p>Now assume we have an RL algorithm that can look at several games of chess and the rewards and learn to play chess on its own. What would this algorithm need to account for? We spoke about trial and error being the basis of any RL algorithm in the previous post that is exactly what our algorithm would do as well. It starts playing random moves and when it plays a good move (positive reward), it remembers to play that move the next time it is in a similar situation. This seems fine on the face of it, but there is an issue. Maybe the algorithm found a good move to play at a given position, <em>but what if there was a better move?</em></p>
+
+<p>We need some way for the algorithm to account for the possibility of there being a better move than the one it has found already. So when we train our agent we need to make sure the agent doesn&rsquo;t greedily play the best move it knows all the time but also plays some different moves, hoping that they may be better than the one it already found. This is called the <em>exploration-exploitation tradeoff</em> in RL. Usually, RL algorithms tend to explore i.e. play many random moves initially and when the agent is more sure about the best moves under different circumstances, it starts exploiting that knowledge. We will revisit this problem in the next post with another example.</p>
 
 <p>Lets move on to the next issue that our RL algorithm will have to account for. Lets say our RL algorithm is learning from a game of chess again where the player sacrifices the queen but goes on to win the game. The RL agent immediately registers a negative reward for the loss of the queen but the large positive reward for winning the game only comes much later. But it is entirely possible that the very queen sacrifice that the RL agent probably classified as a bad move, was the reason for the player winning the game. So it is possible that a move seems like a &ldquo;bad&rdquo; one in the short term but in the long term, could be a very &ldquo;good&rdquo; move. How do we account for this in our algorithm? This is the concept of <em>delayed rewards</em> and we will deal with a simple yet elegant solution for this as well as we go through this post. We will look at another example for this as well in the next post.</p>
 
@@ -592,9 +627,11 @@ $$\langle \mathcal{S}, \mathcal{A}, \mathcal{P}, \mathcal{R}, \gamma \rangle$$</
 </figure>
 
 
-<p>Some of the states of the MDP are designated as start states or initial states and end states or terminal states. An <em>episode</em> in RL is a sequence of state-action pairs that take the agent from a start state to a terminal state. So the agent starts from one of the intial states, plays an action, goes to the next state and so on until it hits a terminal state and the episode ends. Assume for now that there is such an end i.e. every episode does end after some unknown, finite time. This is a property of <em>finite horizon MDPs</em> which is what we will stick to in this course.
-Now lets take a look at this MDP in the diagram above. Assume <em>S</em><sub>0</sub> is your initial state. Notice that <em>a</em><sub>0</sub> from <em>S</em><sub>0</sub> has two arrows, one going into <em>S</em><sub>0</sub> again and another going into <em>S</em><sub>2</sub>. The numbers on the arrows indicate 0.5 and 0.5 respectively. This means that if an agent plays the action <em>a</em><sub>0</sub> from <em>S</em><sub>0</sub>, it has a 0.5 probability that it ends up back in <em>S</em><sub>0</sub> and a 0.5 probability that it ends up in <em>S</em><sub>2</sub>. And similarly we have arrows going all over the diagram. Also notice the wiggly arrows &ndash; they&rsquo;re rewards.
-Notationally, we index the sequence of state-action pairs in an episode with a time variable <em>t</em> so we say an agent plays action <em>a</em><sub>t</sub> from state <em>s</em><sub>t</sub> and gets reward <em>r</em><sub>t+1</sub> for doing so (the reward can be 0). Here, <em>t</em> starts from 0 and we represent the terminal time-step as <em>T</em>.</p>
+<p>Some of the states of the MDP are designated as start states or initial states and end states or terminal states. An <em>episode</em> in RL is a sequence of state-action pairs that take the agent from a start state to a terminal state. So the agent starts from one of the intial states, plays an action, goes to the next state and so on until it hits a terminal state and the episode ends. Assume for now that there is such an end i.e. every episode does end after some unknown, finite time. This is a property of <em>finite horizon MDPs</em> which is what we will stick to in this course.</p>
+
+<p>Now lets take a look at this MDP in the diagram above. Assume <em>S</em><sub>0</sub> is your initial state. Notice that <em>a</em><sub>0</sub> from <em>S</em><sub>0</sub> has two arrows, one going into <em>S</em><sub>0</sub> again and another going into <em>S</em><sub>2</sub>. The numbers on the arrows indicate 0.5 and 0.5 respectively. This means that if an agent plays the action <em>a</em><sub>0</sub> from <em>S</em><sub>0</sub>, it has a 0.5 probability that it ends up back in <em>S</em><sub>0</sub> and a 0.5 probability that it ends up in <em>S</em><sub>2</sub>. And similarly we have arrows going all over the diagram. Also notice the wiggly arrows &ndash; they&rsquo;re rewards.</p>
+
+<p>Notationally, we index the sequence of state-action pairs in an episode with a time variable <em>t</em> so we say an agent plays action <em>a</em><sub>t</sub> from state <em>s</em><sub>t</sub> and gets reward <em>r</em><sub>t+1</sub> for doing so (the reward can be 0). Here, <em>t</em> starts from 0 and we represent the terminal time-step as <em>T</em>.</p>
 
 <p>Another crucial thing to note is that actions in an MDP have to be instantaneous in nature. That means you take action <em>a</em><sub>t</sub> from state <em>s</em><sub>t</sub> and end up in state <em>s</em><sub>t+1</sub> immediately. There are several actions in real-world problems that may not be instantaneous but we&rsquo;ll deal with them later. For now, assume your actions are instantaneous.</p>
 
