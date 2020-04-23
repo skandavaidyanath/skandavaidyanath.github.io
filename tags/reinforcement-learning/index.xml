@@ -5,12 +5,21 @@
     <link>https://skandavaidyanath.github.io/tags/reinforcement-learning/</link>
       <atom:link href="https://skandavaidyanath.github.io/tags/reinforcement-learning/index.xml" rel="self" type="application/rss+xml" />
     <description>Reinforcement Learning</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 21 Jan 2020 06:02:24 +0530</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 06 Mar 2020 03:19:30 +0530</lastBuildDate>
     <image>
       <url>https://skandavaidyanath.github.io/img/icon-192.png</url>
       <title>Reinforcement Learning</title>
       <link>https://skandavaidyanath.github.io/tags/reinforcement-learning/</link>
     </image>
+    
+    <item>
+      <title>Curiosity Is All You Need</title>
+      <link>https://skandavaidyanath.github.io/post/curiosity-is-all-you-need/</link>
+      <pubDate>Fri, 06 Mar 2020 03:19:30 +0530</pubDate>
+      <guid>https://skandavaidyanath.github.io/post/curiosity-is-all-you-need/</guid>
+      <description>&lt;p&gt;COMING SOON&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>An Overview of Bandits</title>
@@ -251,7 +260,7 @@ $$l = \frac{2}{\epsilon^2} \ln(\frac{2K}{\delta})$$&lt;/p&gt;
     </item>
     
     <item>
-      <title>The Inverse Problem</title>
+      <title>Inverse Reinforcement Learning</title>
       <link>https://skandavaidyanath.github.io/post/inverse-rl-paper/</link>
       <pubDate>Sun, 19 Jan 2020 00:17:50 +0530</pubDate>
       <guid>https://skandavaidyanath.github.io/post/inverse-rl-paper/</guid>
@@ -735,15 +744,6 @@ These questions may help you partition your state space and action space into mu
 Usually, I try to stick to the simplest reward function possible. What do I mean by simplest? Small values and as sparse as possible. So if I&amp;rsquo;m designing a reward function for chess, my rewards would only be at the end of the game and would be a +1, 0, -1 for a win, draw and loss respectively. Another reward function could be for every move played but this would be harder to craft and there&amp;rsquo;s no reason for you to try this until you know the simple reward function doesn&amp;rsquo;t work. But in the problem of chess, it is qite straight-forward but there are other problems where finding an elegant reward function might not be as simple.&lt;/p&gt;
 
 &lt;p&gt;So there you have it. I hope that helped and hopefully when you model your next problem, these tips will help. But thinking about all of this modeling has made me think about inverse reinforcement learning and meta learning a lot more. Is it possible for RL models to learn the optimal design of a problem? Not just the reward function but also the state space and the action space? And if it can, can it learn some common properties that we can learn across all RL problems? These are tough questions that I hope to answer some day.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Works Like a Charm</title>
-      <link>https://skandavaidyanath.github.io/post/works-like-a-charm/</link>
-      <pubDate>Mon, 04 Nov 2019 03:10:24 +0530</pubDate>
-      <guid>https://skandavaidyanath.github.io/post/works-like-a-charm/</guid>
-      <description>&lt;p&gt;Coming soon&amp;hellip;&lt;/p&gt;
 </description>
     </item>
     

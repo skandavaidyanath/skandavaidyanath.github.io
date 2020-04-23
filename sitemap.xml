@@ -23,8 +23,53 @@
   </url>
   
   <url>
+    <loc>https://skandavaidyanath.github.io/courses/rl-course/post4/</loc>
+    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skandavaidyanath.github.io/authors/admin/</loc>
+    <lastmod>2020-04-11T03:53:21+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skandavaidyanath.github.io/authors/</loc>
+    <lastmod>2020-04-11T03:53:21+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://skandavaidyanath.github.io/post/</loc>
-    <lastmod>2020-03-06T03:19:30+05:30</lastmod>
+    <lastmod>2020-04-11T03:53:21+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skandavaidyanath.github.io/categories/</loc>
+    <lastmod>2020-04-11T03:53:21+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skandavaidyanath.github.io/post/maml/</loc>
+    <lastmod>2020-04-11T03:53:21+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skandavaidyanath.github.io/tags/meta-learning/</loc>
+    <lastmod>2020-04-11T03:53:21+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skandavaidyanath.github.io/categories/meta-learning/</loc>
+    <lastmod>2020-04-11T03:53:21+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skandavaidyanath.github.io/</loc>
+    <lastmod>2020-04-11T03:53:21+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skandavaidyanath.github.io/tags/</loc>
+    <lastmod>2020-04-11T03:53:21+05:30</lastmod>
   </url>
   
   <url>
@@ -33,42 +78,17 @@
   </url>
   
   <url>
-    <loc>https://skandavaidyanath.github.io/</loc>
+    <loc>https://skandavaidyanath.github.io/categories/reinforcement-learning/</loc>
     <lastmod>2020-03-06T03:19:30+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://skandavaidyanath.github.io/authors/admin/</loc>
-    <lastmod>2020-01-21T06:02:24+05:30</lastmod>
+    <loc>https://skandavaidyanath.github.io/tags/reinforcement-learning/</loc>
+    <lastmod>2020-03-06T03:19:30+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://skandavaidyanath.github.io/post/bandits/</loc>
-    <lastmod>2020-01-21T06:02:24+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skandavaidyanath.github.io/authors/</loc>
-    <lastmod>2020-01-21T06:02:24+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skandavaidyanath.github.io/categories/</loc>
-    <lastmod>2020-01-21T06:02:24+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skandavaidyanath.github.io/tags/reinforcement-learning/</loc>
-    <lastmod>2020-01-21T06:02:24+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skandavaidyanath.github.io/categories/reinforcement-learning/</loc>
-    <lastmod>2020-01-21T06:02:24+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skandavaidyanath.github.io/tags/</loc>
     <lastmod>2020-01-21T06:02:24+05:30</lastmod>
   </url>
   
@@ -83,32 +103,17 @@
   </url>
   
   <url>
-    <loc>https://skandavaidyanath.github.io/categories/deep-learning/</loc>
-    <lastmod>2019-11-04T03:10:24+05:30</lastmod>
+    <loc>https://skandavaidyanath.github.io/post/bridging-the-gaps-with-rl/</loc>
+    <lastmod>2019-11-04T03:10:09+05:30</lastmod>
   </url>
   
   <url>
     <loc>https://skandavaidyanath.github.io/tags/deep-learning/</loc>
-    <lastmod>2019-11-04T03:10:24+05:30</lastmod>
+    <lastmod>2019-11-04T03:10:09+05:30</lastmod>
   </url>
   
   <url>
-    <loc>https://skandavaidyanath.github.io/categories/information-retrieval/</loc>
-    <lastmod>2019-11-04T03:10:24+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skandavaidyanath.github.io/tags/information-retrieval/</loc>
-    <lastmod>2019-11-04T03:10:24+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skandavaidyanath.github.io/post/works-like-a-charm/</loc>
-    <lastmod>2019-11-04T03:10:24+05:30</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://skandavaidyanath.github.io/post/bridging-the-gaps-with-rl/</loc>
+    <loc>https://skandavaidyanath.github.io/categories/deep-learning/</loc>
     <lastmod>2019-11-04T03:10:09+05:30</lastmod>
   </url>
   
@@ -174,6 +179,16 @@
   
   <url>
     <loc>https://skandavaidyanath.github.io/project/cqa/</loc>
+    <lastmod>2018-11-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skandavaidyanath.github.io/tags/information-retrieval/</loc>
+    <lastmod>2018-11-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://skandavaidyanath.github.io/categories/information-retrieval/</loc>
     <lastmod>2018-11-01T00:00:00+00:00</lastmod>
   </url>
   

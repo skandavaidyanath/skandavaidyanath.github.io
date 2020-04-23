@@ -5,7 +5,7 @@
     <link>https://skandavaidyanath.github.io/tags/</link>
       <atom:link href="https://skandavaidyanath.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 21 Jan 2020 06:02:24 +0530</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 11 Apr 2020 03:53:21 +0530</lastBuildDate>
     <image>
       <url>https://skandavaidyanath.github.io/img/icon-192.png</url>
       <title>Tags</title>
@@ -13,9 +13,17 @@
     </image>
     
     <item>
+      <title>Meta Learning</title>
+      <link>https://skandavaidyanath.github.io/tags/meta-learning/</link>
+      <pubDate>Sat, 11 Apr 2020 03:53:21 +0530</pubDate>
+      <guid>https://skandavaidyanath.github.io/tags/meta-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Reinforcement Learning</title>
       <link>https://skandavaidyanath.github.io/tags/reinforcement-learning/</link>
-      <pubDate>Tue, 21 Jan 2020 06:02:24 +0530</pubDate>
+      <pubDate>Fri, 06 Mar 2020 03:19:30 +0530</pubDate>
       <guid>https://skandavaidyanath.github.io/tags/reinforcement-learning/</guid>
       <description></description>
     </item>
@@ -23,16 +31,8 @@
     <item>
       <title>Deep Learning</title>
       <link>https://skandavaidyanath.github.io/tags/deep-learning/</link>
-      <pubDate>Mon, 04 Nov 2019 03:10:24 +0530</pubDate>
+      <pubDate>Mon, 04 Nov 2019 03:10:09 +0530</pubDate>
       <guid>https://skandavaidyanath.github.io/tags/deep-learning/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Information Retrieval</title>
-      <link>https://skandavaidyanath.github.io/tags/information-retrieval/</link>
-      <pubDate>Mon, 04 Nov 2019 03:10:24 +0530</pubDate>
-      <guid>https://skandavaidyanath.github.io/tags/information-retrieval/</guid>
       <description></description>
     </item>
     
@@ -49,6 +49,14 @@
       <link>https://skandavaidyanath.github.io/tags/other/</link>
       <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
       <guid>https://skandavaidyanath.github.io/tags/other/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Information Retrieval</title>
+      <link>https://skandavaidyanath.github.io/tags/information-retrieval/</link>
+      <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
+      <guid>https://skandavaidyanath.github.io/tags/information-retrieval/</guid>
       <description></description>
     </item>
     

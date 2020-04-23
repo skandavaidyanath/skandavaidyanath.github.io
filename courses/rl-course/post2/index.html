@@ -29,7 +29,7 @@
     
   
   <meta name="description" content="In this post, we&rsquo;ll try to get into the real nitty-gritties of RL and build on the intuition that we gained from the last article. So we&rsquo;ll bring in some mathematical foundation and then introduce some RL parlance that we will use for the rest of this course. I&rsquo;ll stick to the standard notation and jargon from the RL book.
-Two Issues Before we begin with the mathematical foundations of RL, I&rsquo;d like to point out some issues with RL and what kinds of problems we need to account for if we were to come up with RL algorithms of our own.">
+Three Challenges Before we begin with the mathematical foundations of RL, I&rsquo;d like to point out three challenges in RL we need to account for if we were to come up with RL algorithms of our own.">
 
   
   <link rel="alternate" hreflang="en-us" href="https://skandavaidyanath.github.io/courses/rl-course/post2/">
@@ -118,7 +118,7 @@ Two Issues Before we begin with the mathematical foundations of RL, I&rsquo;d li
   <meta property="og:url" content="https://skandavaidyanath.github.io/courses/rl-course/post2/">
   <meta property="og:title" content="RL Fundamentals and MDPs | Skanda Vaidyanath">
   <meta property="og:description" content="In this post, we&rsquo;ll try to get into the real nitty-gritties of RL and build on the intuition that we gained from the last article. So we&rsquo;ll bring in some mathematical foundation and then introduce some RL parlance that we will use for the rest of this course. I&rsquo;ll stick to the standard notation and jargon from the RL book.
-Two Issues Before we begin with the mathematical foundations of RL, I&rsquo;d like to point out some issues with RL and what kinds of problems we need to account for if we were to come up with RL algorithms of our own."><meta property="og:image" content="https://skandavaidyanath.github.io/img/icon-192.png">
+Three Challenges Before we begin with the mathematical foundations of RL, I&rsquo;d like to point out three challenges in RL we need to account for if we were to come up with RL algorithms of our own."><meta property="og:image" content="https://skandavaidyanath.github.io/img/icon-192.png">
   <meta property="twitter:image" content="https://skandavaidyanath.github.io/img/icon-192.png"><meta property="og:locale" content="en-us">
   
     
@@ -410,7 +410,11 @@ Two Issues Before we begin with the mathematical foundations of RL, I&rsquo;d li
       </li>
       
       <li >
-        <a href="/courses/rl-course/post3/">The Bellman Equation and Dynamic Programming</a>
+        <a href="/courses/rl-course/post3/">Policies, Value Functions and the Bellman Equation</a>
+      </li>
+      
+      <li >
+        <a href="/courses/rl-course/post4/">Value Iteration, Policy Iteration and Dynamic Programming</a>
       </li>
       
     </ul>
@@ -433,7 +437,7 @@ Two Issues Before we begin with the mathematical foundations of RL, I&rsquo;d li
 <ul>
 <li>
 <ul>
-<li><a href="#two-issues">Two Issues</a></li>
+<li><a href="#three-challenges">Three Challenges</a></li>
 <li><a href="#markov-decision-processes">Markov Decision Processes</a>
 <ul>
 <li><a href="#references">References</a></li>
@@ -458,9 +462,9 @@ Two Issues Before we begin with the mathematical foundations of RL, I&rsquo;d li
 
 <p>In this post, we&rsquo;ll try to get into the real nitty-gritties of RL and build on the intuition that we gained from the <a href="https://skandavaidyanath.github.io/courses/rl-course/post1/" target="_blank">last article</a>. So we&rsquo;ll bring in some mathematical foundation and then introduce some RL parlance that we will use for the rest of this course. I&rsquo;ll stick to the standard notation and jargon from the RL book.</p>
 
-<h2 id="two-issues">Two Issues</h2>
+<h2 id="three-challenges">Three Challenges</h2>
 
-<p>Before we begin with the mathematical foundations of RL, I&rsquo;d like to point out some issues with RL and what kinds of problems we need to account for if we were to come up with RL algorithms of our own. Once again, I&rsquo;m going to move on to a new example so lets take chess this time.</p>
+<p>Before we begin with the mathematical foundations of RL, I&rsquo;d like to point out three challenges in RL we need to account for if we were to come up with RL algorithms of our own. Once again, I&rsquo;m going to move on to a new example so lets take chess this time.</p>
 
 
 
@@ -500,7 +504,9 @@ Two Issues Before we begin with the mathematical foundations of RL, I&rsquo;d li
 
 <p>We need some way for the algorithm to account for the possibility of there being a better move than the one it has found already. So when we train our agent we need to make sure the agent doesn&rsquo;t greedily play the best move it knows all the time but also plays some different moves, hoping that they may be better than the one it already found. This is called the <em>exploration-exploitation tradeoff</em> in RL. Usually, RL algorithms tend to explore i.e. play many random moves initially and when the agent is more sure about the best moves under different circumstances, it starts exploiting that knowledge. We will revisit this problem in the next post with another example.</p>
 
-<p>Lets move on to the next issue that our RL algorithm will have to account for. Lets say our RL algorithm is learning from a game of chess again where the player sacrifices the queen but goes on to win the game. The RL agent immediately registers a negative reward for the loss of the queen but the large positive reward for winning the game only comes much later. But it is entirely possible that the very queen sacrifice that the RL agent probably classified as a bad move, was the reason for the player winning the game. So it is possible that a move seems like a &ldquo;bad&rdquo; one in the short term but in the long term, could be a very &ldquo;good&rdquo; move. How do we account for this in our algorithm? This is the concept of <em>delayed rewards</em> and we will deal with a simple yet elegant solution for this as well as we go through this post. We will look at another example for this as well in the next post.</p>
+<p>Lets move on to the next challenge that our RL algorithm will have to account for. Lets say our RL algorithm is learning from a game of chess again where the player sacrifices the queen but goes on to win the game. The RL agent immediately registers a negative reward for the loss of the queen but the large positive reward for winning the game only comes much later. But it is entirely possible that the very queen sacrifice that the RL agent probably classified as a bad move, was the reason for the player winning the game. So it is possible that a move seems like a &ldquo;bad&rdquo; one in the short term but in the long term, could be a very &ldquo;good&rdquo; move. How do we account for this in our algorithm? This is the concept of <em>delayed rewards</em> and we will deal with a simple yet elegant solution for this as well as we go through this post. We will look at another example for this as well in the next post.</p>
+
+<p>And finally our RL algorithm should learn to generalize i.e. it should be able to efficiently learn from the data it collects. One of the major drawbacks in RL is that it requires a lot of data to learn so <em>generalization</em> is important for RL algorithms.</p>
 
 <p>Note that RL is based on the <em>reward hypothesis</em> that states that:</p>
 
@@ -637,7 +643,7 @@ $$\langle \mathcal{S}, \mathcal{A}, \mathcal{P}, \mathcal{R}, \gamma \rangle$$</
 
 <ul>
 <li><em>P</em> : Now P is the probability function defined as <em>P</em>(s<sup>&lsquo;</sup>| s, a) which is read as the probability of moving to &ldquo;state s&rsquo;&rdquo; from &ldquo;state s&rdquo; if the agent plays &ldquo;action a&rdquo;. So for example, <em>P</em>(<em>S</em><sub>2</sub>|<em>S</em><sub>0</sub>,<em>a</em><sub>0</sub>) = 0.5. This is also called the <em>transition function</em>.</li>
-<li><em>R</em> : This is the <em>reward function</em> or <em>reinforcement function</em> and is defined as <em>R</em>(s<sup>&lsquo;</sup>| s, a) which is the reward the agent gets for moving to &ldquo;state s&rsquo;&rdquo; from &ldquo;state s&rdquo; if the agent plays &ldquo;action a&rdquo;. So for example, <em>R</em>(<em>S</em><sub>0</sub>|<em>S</em><sub>1</sub>,<em>a</em><sub>0</sub>) = +5. Rewards are always scalars.</li>
+<li><em>R</em> : This is the <em>reward function</em> or <em>reinforcement function</em> and is defined as <em>R</em>(s<sup>&lsquo;</sup>| s, a) which is the reward the agent gets for moving to &ldquo;state s&rsquo;&rdquo; from &ldquo;state s&rdquo; if the agent plays &ldquo;action a&rdquo;. So for example, <em>R</em>(<em>S</em><sub>0</sub>|<em>S</em><sub>1</sub>,<em>a</em><sub>0</sub>) = +5. However, the answer may not be as simple as a single number and the reward could be sampled from a probability distribution i.e. <em>R</em>(s<sup>&lsquo;</sup>| s, a) is a probability distribution that we will try to estimate by interaction with the environment. There are some other forms of reward functions like <em>R</em>(s,a) or even just <em>R</em>(s) as well. Note that rewards are always scalars because they are easier to optimize. They are also usually finite.</li>
 <li>$\gamma$ : We spoke about the concept of delayed rewards earlier in the post and we wanted a way to accound for delayed effects of actions. This is where $\gamma$ helps. We define the <em>returns</em> of an action from a given state as the sum of the <em>discounted rewards</em> we receive from that state for playing that action. If we started from the state <em>s</em><sub>0</sub>, the returns would be defined as <em>r</em><sub>1</sub> + $\gamma$ <em>r</em><sub>2</sub> + $\gamma$<sup>2</sup> <em>r</em></sub>3</sub> + &hellip; $\gamma$ <sup><em>T-1</em></sup> <em>r</em><sub><em>T</em></sub>. We use the word &ldquo;discounted&rdquo; because $\gamma$ is usually a number between 0 and 1 and with the increasing powers, we give more weight to the immediate rewards than the delayed rewards. Hence, $\gamma$ is also called the discounting factor. The symbol we use for returns from timestep <em>t</em> is usually <em>G</em><sub><em>t</em></sub> although some people like using <em>R</em> as well (<em>r</em> for reward and <em>R</em> for returns). We will stick to the former notation. Now going back to the queen sacrifice example, if we were to consider the returns in our algorithm instead of just the immediate reward, we will be able to account for the delayed positive effect and not just the immediate negative effect.</li>
 </ul>
 
@@ -645,9 +651,15 @@ $$\langle \mathcal{S}, \mathcal{A}, \mathcal{P}, \mathcal{R}, \gamma \rangle$$</
 
 <p>$$P(s_{t+1}|s_t,a) = P(s_{t+1}|s_t,s_{t-1},s_{t-2},s_{t-3},&hellip;,a)$$</p>
 
-<p>But what does that mean intuitively? It means the probability of going to state <em>s</em><sub>t+1</sub> from state <em>s</em><sub>t</sub> under the action <em>a</em> is independent of how we got to state <em>s</em><sub>t</sub> in the first place. If you&rsquo;re thinking this isn&rsquo;t very realistic, you&rsquo;re right but this type of modeling works in most cases and is called <em>The Markov Property</em>. The future is independent of the past, given the present i.e. the action from the current state only depends on the current state and not how we got to this state in the first place. So we will stick to this for now.</p>
+<p>But what does that mean intuitively? It means the probability of going to state <em>s</em><sub>t+1</sub> from state <em>s</em><sub>t</sub> under the action <em>a</em> is independent of how we got to state <em>s</em><sub>t</sub> in the first place. If you&rsquo;re thinking this isn&rsquo;t very realistic, you&rsquo;re right but this type of modeling works in most cases and is called <em>The Markov Property</em>. The future is independent of the past, given the present i.e. the action from the current state only depends on the current state and not how we got to this state in the first place.</p>
 
-<p>And with that, we&rsquo;ve covered MDPs and how to model RL problems. With this background, I also recommend reading <a href="https://skandavaidyanath.github.io/post/modeling-rl-problems/" target="_blank">this</a>. But with that definition, we still haven&rsquo;t accounted for the exploration-exploitation tradeoff. So in the <a href="https://skandavaidyanath.github.io/courses/rl-course/post3/" target="_blank">next post</a>, we&rsquo;ll introduce a few more symbols and definitions and get cracking with our very first RL algorithm!</p>
+<p>We make another assumption of stationarity which means:</p>
+
+<p>$$P(s_{t+1}=s&rsquo;,r_{t+1}=r|s_{t}=s,a_{t}=a) = P(s&rsquo;,r|s,a)$$</p>
+
+<p>This means that the timestep variable doesn&rsquo;t matter &ndash; no matter at what point we are in the trajectory, given the state <em>s</em> and and action <em>a</em>, we always end up sampling the next state <em>s&rsquo;</em> and the reward <em>r</em> from the same distribution. This is a property of <em>stationary</em> MDPs.</p>
+
+<p>And with that, we&rsquo;ve covered MDPs and how to model RL problems. With this background, I also recommend reading <a href="https://skandavaidyanath.github.io/post/modeling-rl-problems/" target="_blank">this</a>. But with that definition, we still haven&rsquo;t accounted for the exploration-exploitation tradeoff. So in the <a href="https://skandavaidyanath.github.io/courses/rl-course/post3/" target="_blank">next post</a>, we&rsquo;ll introduce a few more symbols and definitions before we get cracking with our very first RL algorithm!</p>
 
 <p>Once again, let me know if you have any feedback or suggestions.</p>
 
@@ -656,7 +668,7 @@ $$\langle \mathcal{S}, \mathcal{A}, \mathcal{P}, \mathcal{R}, \gamma \rangle$$</
 <ol>
 <li><a href="https://lilianweng.github.io/lil-log/2018/02/19/a-long-peek-into-reinforcement-learning.html" target="_blank">A (Long) Peek into Reinforcement Learning by Lilian Weng</a></li>
 <li><a href="http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html" target="_blank">David Silver&rsquo;s RL Course at UCL</a></li>
-<li>For MDP notation, <a href="https://ai.stanford.edu/~ang/papers/icml00-irl.pdf" target="_blank">Algorithms for Inverese Reinforcement Learning</a></li>
+<li>For MDP notation, <a href="https://ai.stanford.edu/~ang/papers/icml00-irl.pdf" target="_blank">Algorithms for Inverse Reinforcement Learning</a></li>
 </ol>
 
           </div>
@@ -681,7 +693,7 @@ $$\langle \mathcal{S}, \mathcal{A}, \mathcal{P}, \mathcal{R}, \gamma \rangle$$</
   
   <div class="post-nav-item">
     <div class="meta-nav">Next</div>
-    <a href="/courses/rl-course/post3/" rel="prev">The Bellman Equation and Dynamic Programming</a>
+    <a href="/courses/rl-course/post3/" rel="prev">Policies, Value Functions and the Bellman Equation</a>
   </div>
   
 </div>
