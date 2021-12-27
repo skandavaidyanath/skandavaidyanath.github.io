@@ -85,7 +85,7 @@ The Problem    The Inverse RL problem.">
   
   
   
-  <link rel="stylesheet" href="/css/academic.min.1884ccbe79662c38d99b291260b58a24.css">
+  <link rel="stylesheet" href="/css/academic.min.8565976d7831ba0a0daf18ae5d4ff0e8.css">
 
   
 
@@ -382,6 +382,35 @@ The Problem    The Inverse RL problem."><meta property="og:image" content="https
         
         
         
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#publications"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
 
         <li class="nav-item">
           <a class="nav-link " href="/courses/"><span>Courses</span></a>
@@ -615,7 +644,7 @@ The Problem    The Inverse RL problem."><meta property="og:image" content="https
 
 <div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 803px;">
   <div style="position: relative">
-    <img src="/post/inverse-rl-paper/featured_hu615da993f187b8851e76f2d277012e97_238280_720x0_resize_lanczos_2.png" alt="" class="featured-image">
+    <img src="/post/inverse-rl-paper/featured_hu615da993f187b8851e76f2d277012e97_238280_720x0_resize_lanczos_3.png" alt="" class="featured-image">
     
   </div>
 </div>
@@ -625,14 +654,9 @@ The Problem    The Inverse RL problem."><meta property="og:image" content="https
   <div class="article-container">
 
     <div class="article-style">
-      
-
-<p>This is a review of the paper <a href="https://ai.stanford.edu/~ang/papers/icml00-irl.pdf" target="_blank">Algorithms for Inverse Reinforcement Learning</a>. I recommend some reinforcement learning (RL) basics before you read this. The first couple of posts from the RL course on my page might be a good starting point.</p>
-
+      <p>This is a review of the paper <a href="https://ai.stanford.edu/~ang/papers/icml00-irl.pdf">Algorithms for Inverse Reinforcement Learning</a>. I recommend some reinforcement learning (RL) basics before you read this. The first couple of posts from the RL course on my page might be a good starting point.</p>
 <p>Inverse RL (IRL) is a topic I&rsquo;ve been interested in in recent times so I&rsquo;m excited to write this post. So lets get cracking!</p>
-
 <h2 id="the-problem">The Problem</h2>
-
 
 
 
@@ -662,9 +686,7 @@ The Problem    The Inverse RL problem."><meta property="og:image" content="https
 
 </figure>
 
-
 <p>Reinforcement Learning has allowed researchers to solve several challenging problems without direct supervision but with some sort of distant/ weak supervision or feedback signal. In RL, this feedback signal is in the form of a reward signal. Reward functions are crucial to developing powerful RL models but coming up with good reward functions can be a challenging task. If we were to taake a game like Tic Tac Toe, the reward signal just presents itself based on the result of the game. If it were a video game we were trying to learn, then once again the score in the game provides a solid reward signal. But what about in the case of self-driving cars? With so many factors to consider, it is difficult to come up with a good reward function and even if we do, there may be a better reward function possible. Researchers recognized this issue with RL and decided to come up with a way to <em>learn a reward function</em>. They wanted to learn a reward function from optimal behaviour. So they would look at a human driving a car, learn a reward function from the demonstration, and then use this reward function to train an RL agent. The problem of extracting the reward fnction from observed optimal behaviour is the problem of Inverse Reinforcement Learning (IRL).</p>
-
 
 
 
@@ -694,28 +716,21 @@ The Problem    The Inverse RL problem."><meta property="og:image" content="https
 
 </figure>
 
-
 <blockquote>
 <p>Inverse Reinforcement Learning: Find a reward function to explain observed optimal behaviour</p>
 </blockquote>
-
 <p>The paper gives two major motivations to learn such a reward function. One is obvious: to use the reward function to train RL agents. Two, is to use with apprenticeship learning or imitation learning to teach agents.</p>
-
 <blockquote>
 <p>The reward function and not the policy is the most succinct, robust and transferable definition of a task</p>
 </blockquote>
-
 <h2 id="some-quick-pointers">Some Quick Pointers</h2>
-
 <p>Before we get into the meat of the paper, here are some quick pointers to keep in mind.</p>
-
 <ul>
 <li>All reward functions are only functions of the state and not the state and the action. So we have <em>R(s)</em> and not <em>R(s,a)</em> everywhere. This is done to simplify the math and the extension is simple. It may help to think of <em>R</em> as a vector of size <em>N</em> where <em>N</em> is the number of states.</li>
-<li>All values of the reward vector are bounded by a magnitude of <em>R</em><sub>max</sub></li>
-<li><em>P</em><sub>a</sub> is a <em>NxN</em> matrix where <em>P</em><sub><em>ij</em></sub> is the probability of going from state <em>i</em> to state <em>j</em> by playing action <em>a</em>.</li>
+<li>All values of the reward vector are bounded by a magnitude of <em>R</em><!-- raw HTML omitted -->max<!-- raw HTML omitted --></li>
+<li><em>P</em><!-- raw HTML omitted -->a<!-- raw HTML omitted --> is a <em>NxN</em> matrix where <em>P</em><!-- raw HTML omitted --><em>ij</em><!-- raw HTML omitted --> is the probability of going from state <em>i</em> to state <em>j</em> by playing action <em>a</em>.</li>
 <li>The paper uses the MDP setup for its proofs and arguments. Here are some properties and theorems that they take advantage of.</li>
 </ul>
-
 
 
 
@@ -745,11 +760,8 @@ The Problem    The Inverse RL problem."><meta property="og:image" content="https
 
 </figure>
 
-
 <h2 id="irl-in-finite-state-spaces">IRL in finite state spaces</h2>
-
 <p>So we need to find a reward function that explains our optimal behaviour. In this case, let us assume we have a finite state space of size <em>N</em>. The paper proves the following theorem using the properties above. The proof is quite simple to follow so I won&rsquo;t talk about it here.</p>
-
 
 
 
@@ -779,18 +791,13 @@ The Problem    The Inverse RL problem."><meta property="og:image" content="https
 
 </figure>
 
-
 <p>Now what does this theorem tell us? This theorem has now characterized our solution set. We&rsquo;re no longer looking for a needle in a haystack. Initially, our reward vector <em>R</em> could have been any real vector of size <em>N</em>. But now, we have some constraints. <em>R</em> has to satisfy the above condition.</p>
-
 <p>But the authors point out two issues.</p>
-
 <ol>
 <li><em>R</em>=0 is always a solution. If the reward function is the zero vector, then any policy is an optimal policy and so is our observed policy. The authors point out that this can be alleviated by demanding that our observed policy be the only optimal policy but this doesn&rsquo;t work entirely because although we can get rid of the zero vector now, some vectors arbitrarily close to the zero vector would still be solutions.</li>
 <li>We have characterised our solution set, but there are still several vectors that satisfy this condition. Which of those is our reward function?</li>
 </ol>
-
 <p>To address these issues the authors came up with a linear programming (LP) formulation to find the &ldquo;best&rdquo; <em>R</em> vector. The authors sought to maximize the sum of the difference between the quality of the optimal action and the next best action.</p>
-
 
 
 
@@ -820,13 +827,10 @@ The Problem    The Inverse RL problem."><meta property="og:image" content="https
 
 </figure>
 
-
 <p>So maximizing the above should give you the reward function but the authors also claim that smaller rewards lead to simpler reward functions and hence want to control the magnitude of the <em>R</em> vector. To do this, they add a penalty term of $\lambda\Vert R\Vert_{1}$. $\lambda$ is a hyperparameter they control and larger the $\lambda$, the smaller the <em>R</em> vector norm and simpler the reward function. But this is a trade-off since you also want to maximize the first term.
 The authors claim that there is a phase transition point $\lambda_{o}$,
 such that if $\lambda &gt; \lambda_{o}$, <em>R</em>=0 and if $\lambda &lt; \lambda_{o}$, <em>R</em> is bounded away from 0. So the best $\lambda$ would be a value just below $\lambda_{o}$.</p>
-
 <p>So the final optimization objective is as follows.</p>
-
 
 
 
@@ -856,15 +860,10 @@ such that if $\lambda &gt; \lambda_{o}$, <em>R</em>=0 and if $\lambda &lt; \lamb
 
 </figure>
 
-
-<p>Note that the summation term running from 1 to <em>N</em> is so that we maximize across all the states in the MDP. Also note that we use our information of the optimal policy implicitly here since we know the best action <em>a</em><sub>1</sub> at every step. This can be solved as a LP problem now.</p>
-
+<p>Note that the summation term running from 1 to <em>N</em> is so that we maximize across all the states in the MDP. Also note that we use our information of the optimal policy implicitly here since we know the best action <em>a</em><!-- raw HTML omitted -->1<!-- raw HTML omitted --> at every step. This can be solved as a LP problem now.</p>
 <h2 id="irl-in-large-state-spaces-using-linear-function-approximation">IRL in large state spaces using linear function approximation</h2>
-
 <p>We now consider a large (possibly infinite) state space. Assume we have <em>n</em> variables in our state space and so think of <em>R</em> now as a function $\Re^n \rightarrow \Re$.</p>
-
 <p>But we don&rsquo;t want to consider all such functions so let us restrict ourselves by only considering functions in the following format. We have used linear function approximation here.</p>
-
 
 
 
@@ -894,11 +893,8 @@ such that if $\lambda &gt; \lambda_{o}$, <em>R</em>=0 and if $\lambda &lt; \lamb
 
 </figure>
 
-
 <p>The \phi functions are basis functions over the state variables and our job now is to find the $\alpha$ values. Once again, since we&rsquo;re using linear function approximation, we can use LP to solve the problem.</p>
-
 <p>The paper also shows that the value function under a given policy is also a linear function of the $\alpha$ values (refer to the paper to see why this is true). So now, we can rewrite the equation that characterizes our solution set as the following for the large state space case.</p>
-
 
 
 
@@ -928,11 +924,8 @@ such that if $\lambda &gt; \lambda_{o}$, <em>R</em>=0 and if $\lambda &lt; \lamb
 
 </figure>
 
-
 <p>But we have a problem now. This leads to infinitely many constraints to check because the state space could be infinite and we need to check the condition for each one of those states. Remember we had a summation in the final equation in the last section? That would be an infinite summation in this case. However, the authors circumvent this issue algorithmically by just sampling a large number of states and just checking for those states.</p>
-
 <p>The other issue is that since we have restricted ourselves by using linear function approximation, we may not be able to express all reward functions and hence we&rsquo;ll relax some constraints and pay a penalty when we don&rsquo;t meet the constraints. The final optimization objective is below.</p>
-
 
 
 
@@ -962,17 +955,11 @@ such that if $\lambda &gt; \lambda_{o}$, <em>R</em>=0 and if $\lambda &lt; \lamb
 
 </figure>
 
-
-<p><em>S</em><sub>o</sub> is the subsample of states and $p(x) = x$ when $x \geq 0$ and $2x$ when $x &lt; 0$. $\pi$ is the optimal policy. This can be solved with LP now.</p>
-
+<p><em>S</em><!-- raw HTML omitted -->o<!-- raw HTML omitted --> is the subsample of states and $p(x) = x$ when $x \geq 0$ and $2x$ when $x &lt; 0$. $\pi$ is the optimal policy. This can be solved with LP now.</p>
 <h2 id="irl-from-sampled-trajectories">IRL from sampled trajectories</h2>
-
-<p>Now, we come to the most interesting and most realistic case. We now try to learn from sampled trajectories from the environment. <strong>We do not require an explicit model of the MDP but we do assume the ability to find an optimal policy under any reward function. We also assume the ability to simulate trajectories in the environment with the optimal policy or any other policy we want.</strong> Also assume there is only a single start state <em>s</em><sub>o</sub>. This is not a string assumption as if there are several start states with an initial state distribution, add an additional state and connect it to each of them. This is the most realistic case and is different from the previous cases because we don&rsquo;t have the model of the environment i.e. the <em>P</em> matrices.</p>
-
+<p>Now, we come to the most interesting and most realistic case. We now try to learn from sampled trajectories from the environment. <strong>We do not require an explicit model of the MDP but we do assume the ability to find an optimal policy under any reward function. We also assume the ability to simulate trajectories in the environment with the optimal policy or any other policy we want.</strong> Also assume there is only a single start state <em>s</em><!-- raw HTML omitted -->o<!-- raw HTML omitted -->. This is not a string assumption as if there are several start states with an initial state distribution, add an additional state and connect it to each of them. This is the most realistic case and is different from the previous cases because we don&rsquo;t have the model of the environment i.e. the <em>P</em> matrices.</p>
 <p>Once again, <em>R</em> will be expressed as a linear function approximation in the same form as the previous section. Please refer to the paper and convince yourself that it is possible to use Monte Carlo trajectories to estimate a value function that is also linear in the $\alpha$ values. The math is quite simple and straight-forward. This is important because it allows us to use LP again.</p>
-
 <p>So now we have the optimization objective as follows.</p>
-
 
 
 
@@ -1002,20 +989,15 @@ such that if $\lambda &gt; \lambda_{o}$, <em>R</em>=0 and if $\lambda &lt; \lamb
 
 </figure>
 
-
 <p><em>p</em> is as defined in the previous section. But what is <em>k</em> in the summation? It is the number of policies apart from the optimal policy we are considering at that step of the algorithm. This will be clear in a second. The algorithm is as follows:</p>
-
 <ol>
 <li>Start with the optimal policy $\pi^*$ and another random policy $\pi_{1}$. Find the $\alpha$ values that satisfy the above with <em>k</em>=1. Hence find <em>R</em>.</li>
 <li>Now using the <em>R</em> we just found, find $\pi_{2}$ that maximizes $V^{\pi_{2}}(s_{o})$. This can be done using some RL algorithm.</li>
 <li>Now add $\pi_{2}$ to our current set of policies and optimize the above for $\pi^*$, $\pi_{1}$ and $\pi_{2}$ with <em>k</em>=2.</li>
 <li>Keep going until you are &ldquo;satisfied&rdquo;.</li>
 </ol>
-
 <p>I will not get into the experiments conducted but I would highly recommend that you read the paper since there are some interesting details and observations.</p>
-
 <h2 id="future-work">Future Work</h2>
-
 <p>The authors plan on finding not just simple reward functions as they have done in this paper i.e. ones with small values but want to do one better to find &ldquo;easy to learn&rdquo; reward functions. I guess this means that &ldquo;simple&rdquo; doesn&rsquo;t always mean &ldquo;easy to learn&rdquo;. They also want a way to be able to account for variation and noise in the state space and action selection process in real world applications. They also hope to find &ldquo;locally consistent&rdquo; reward functions in specific regions of the state space if they find that observed behaviour is far from optimal.</p>
 
     </div>
@@ -1068,8 +1050,8 @@ such that if $\lambda &gt; \lambda_{o}$, <em>R</em>=0 and if $\lambda &lt; \lamb
 
     <div class="media-body">
       <h5 class="card-title"><a href="https://skandavaidyanath.github.io/">Skanda Vaidyanath</a></h5>
-      <h6 class="card-subtitle">Final Year Undergraduate Student of Computer Science</h6>
-      <p class="card-text">My research interests lie primarily in the area of reinforcement learning (RL) and related areas like inverse RL, meta RL and apprenticeship learning.</p>
+      <h6 class="card-subtitle">First Year Master&rsquo;s Student of Computer Science (AI Track)</h6>
+      <p class="card-text">My research interests lie primarily in the area of reinforcement learning (RL) and control to build agents that can acquire complex behaviours in the real world via interaction.</p>
       <ul class="network-icon" aria-hidden="true">
   
     
@@ -1099,7 +1081,7 @@ such that if $\lambda &gt; \lambda_{o}$, <em>R</em>=0 and if $\lambda &lt; \lamb
       
     
     <li>
-      <a href="https://in.linkedin.com/in/skanda-vaidyanath-3750b416a" target="_blank" rel="noopener">
+      <a href="https://in.linkedin.com/in/skanda-vaidyanath" target="_blank" rel="noopener">
         <i class="fab fa-linkedin"></i>
       </a>
     </li>
@@ -1156,7 +1138,7 @@ such that if $\lambda &gt; \lambda_{o}$, <em>R</em>=0 and if $\lambda &lt; \lamb
           
           <li><a href="/post/bridging-the-gaps-with-rl/">Bridging the Gaps With Reinforcement Learning</a></li>
           
-          <li><a href="/project/mpii/">Deep RL for Conversational Recommender Systems</a></li>
+          <li><a href="/project/mpii/">Deep RL for IR applications</a></li>
           
           <li><a href="/project/usc-ict/">The Human Swarm Project</a></li>
           
@@ -1277,7 +1259,7 @@ such that if $\lambda &gt; \lambda_{o}$, <em>R</em>=0 and if $\lambda &lt; \lamb
     
     
     
-    <script src="/js/academic.min.6cbefe3f0755301b86cd38317ded9f54.js"></script>
+    <script src="/js/academic.min.c5b98a8914247ae95edfbe976665d60f.js"></script>
 
     
 

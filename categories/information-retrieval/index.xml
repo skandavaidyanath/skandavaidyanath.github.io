@@ -5,7 +5,7 @@
     <link>https://skandavaidyanath.github.io/categories/information-retrieval/</link>
       <atom:link href="https://skandavaidyanath.github.io/categories/information-retrieval/index.xml" rel="self" type="application/rss+xml" />
     <description>Information Retrieval</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 01 Nov 2018 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 01 Nov 2019 04:46:38 +0530</lastBuildDate>
     <image>
       <url>https://skandavaidyanath.github.io/img/icon-192.png</url>
       <title>Information Retrieval</title>
@@ -13,11 +13,20 @@
     </image>
     
     <item>
+      <title>Deep RL for IR applications</title>
+      <link>https://skandavaidyanath.github.io/project/mpii/</link>
+      <pubDate>Fri, 01 Nov 2019 04:46:38 +0530</pubDate>
+      <guid>https://skandavaidyanath.github.io/project/mpii/</guid>
+      <description>&lt;p&gt;Used deep reinforcement learning to recommend travel destinations to users based on forum posts and user reviews. Used deep reinforcement learning to improve document retrieval from a corpus via document expansion. This project was a part of my undergraduate thesis at the Max Planck Institute for Informatics under &lt;a href=&#34;https://andrewyates.net/&#34;&gt;Dr. Andrew Yates&lt;/a&gt; and &lt;a href=&#34;https://paramitamirza.com/&#34;&gt;Dr. Paramita Mirza&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Community Question Answering for a distance-learning platform</title>
       <link>https://skandavaidyanath.github.io/project/cqa/</link>
       <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
       <guid>https://skandavaidyanath.github.io/project/cqa/</guid>
-      <description>&lt;p&gt;This project is currently in progress and a research paper is in preparation. I will attach the code, the dataset and the paper once it has been published. This project was done under the guidance of &lt;a href=&#34;https://www.bits-pilani.ac.in/hyderabad/bhanumurthy/Profile&#34; target=&#34;_blank&#34;&gt;Prof. N. L. Bhanu Murthy&lt;/a&gt; and &lt;a href=&#34;https://universe.bits-pilani.ac.in/hyderabad/arunamalapati/Profile&#34; target=&#34;_blank&#34;&gt;Prof. Aruna Malapati&lt;/a&gt;.&lt;/p&gt;
+      <description>&lt;p&gt;Developed deep learning solutions for retrieving similar questions from a large Q&amp;amp;A archive for a distance-learning platform.  This project was done under the guidance of &lt;a href=&#34;https://www.bits-pilani.ac.in/hyderabad/bhanumurthy/Profile&#34;&gt;Prof. N. L. Bhanu Murthy&lt;/a&gt; and &lt;a href=&#34;https://universe.bits-pilani.ac.in/hyderabad/arunamalapati/Profile&#34;&gt;Prof. Aruna Malapati&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     

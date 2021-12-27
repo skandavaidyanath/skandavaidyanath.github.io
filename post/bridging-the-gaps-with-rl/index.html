@@ -84,7 +84,7 @@ Traditionally, RL is used to solve sequential decision making problems in the vi
   
   
   
-  <link rel="stylesheet" href="/css/academic.min.1884ccbe79662c38d99b291260b58a24.css">
+  <link rel="stylesheet" href="/css/academic.min.8565976d7831ba0a0daf18ae5d4ff0e8.css">
 
   
 
@@ -380,6 +380,35 @@ Traditionally, RL is used to solve sequential decision making problems in the vi
         
         
         
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#publications"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
 
         <li class="nav-item">
           <a class="nav-link " href="/courses/"><span>Courses</span></a>
@@ -623,21 +652,13 @@ Traditionally, RL is used to solve sequential decision making problems in the vi
   <div class="article-container">
 
     <div class="article-style">
-      
-
-<p>In this post, I will be talking about a unique way to use reinforcement learning (RL) in deep learning applications. I definitely recommend brushing up some deep learning fundamentals and if possible, some policy gradient fundamentals as well before you get started with this post.</p>
-
+      <p>In this post, I will be talking about a unique way to use reinforcement learning (RL) in deep learning applications. I definitely recommend brushing up some deep learning fundamentals and if possible, some policy gradient fundamentals as well before you get started with this post.</p>
 <p>Traditionally, RL is used to solve sequential decision making problems in the video game space or robotics space or any other space where there is a concrete RL task at hand. There are several applications in the fields of video games and robotics where the task at hand can be very easily seen as an RL problem and can be modeled appropriately as well. But RL as a technique is quite versatile and can be used in several other domains to train neural networks that are traditionally trained in a supervised fashion. We&rsquo;ll talk about one very important such application in this post. Along the way, I&rsquo;ll also try to convince you that this isn&rsquo;t really a different way to use RL but rather just a different way to look at the traditional RL problem. So with that, lets begin!</p>
-
 <h2 id="non-differentiable-steps-in-deep-learning-the-gaps">Non-differentiable steps in deep learning: The Gaps</h2>
-
 <p>Sometimes when we&rsquo;re coming up with neural network architectures, we may need to incorporate some non-differentiable operations as a part of our network. Now this is a problem as we can&rsquo;t backpropagate losses through such operation and hence lets call these &ldquo;gaps&rdquo;. So what are some common gaps we come across in neural networks?</p>
-
 <p>On a side-note, before we start talking about some &ldquo;real gaps&rdquo;, its worth mentioning that the famous ReLU function is a non-differentiable function but we overcome that gap by setting the derivative at 0 to either 1 or 0 and get away with it.</p>
-
 <p>Now lets take a better example &ndash; variational autoencoders (VAE). Without going into two many details, the VAE network outputs two vectors: a $\mu$ vector and a $\sigma$ vector and it involves a crucial sampling step where we sample from the distribution <em>N($\mu$, $\sigma$)</em> as a part of the network. Now sampling is a gap as it is a non-differentiable step. You should stop here and convince yourself that this is, in fact true. When we sample, we don&rsquo;t know what the outcome will be and hence the function in not differentiable. So how do they get over this in the VAE case? They use a clever trick.
-Instead of sampling from <em>N</em>($\mu$, $\sigma$), they just rewrite this as $\mu$ + $\sigma$<em>N(0,1)</em> where they sample from the standard normal function. This neat trick now makes the expression differentiable because we just need the $\mu$ and $\sigma$ quantities to be differentiable and we don&rsquo;t care about the <em>N(0,1)</em>. Remember that we only need to differentiate with respect to the parameters of our network (brush up some backpropagation basics if you&rsquo;re confused here) and hence we need to differentiate only with respect to $\mu$ and $\sigma$ and not the standard normal distribution. For more details about VAEs read <a href="https://towardsdatascience.com/intuitively-understanding-variational-autoencoders-1bfe67eb5daf" target="_blank">this post</a> or <a href="https://towardsdatascience.com/understanding-variational-autoencoders-vaes-f70510919f73" target="_blank">this one</a>.</p>
-
+Instead of sampling from <em>N</em>($\mu$, $\sigma$), they just rewrite this as $\mu$ + $\sigma$<em>N(0,1)</em> where they sample from the standard normal function. This neat trick now makes the expression differentiable because we just need the $\mu$ and $\sigma$ quantities to be differentiable and we don&rsquo;t care about the <em>N(0,1)</em>. Remember that we only need to differentiate with respect to the parameters of our network (brush up some backpropagation basics if you&rsquo;re confused here) and hence we need to differentiate only with respect to $\mu$ and $\sigma$ and not the standard normal distribution. For more details about VAEs read <a href="https://towardsdatascience.com/intuitively-understanding-variational-autoencoders-1bfe67eb5daf">this post</a> or <a href="https://towardsdatascience.com/understanding-variational-autoencoders-vaes-f70510919f73">this one</a>.</p>
 
 
 
@@ -661,24 +682,18 @@ Instead of sampling from <em>N</em>($\mu$, $\sigma$), they just rewrite this as 
   
   
   <figcaption>
-    Variational Autoencoders. Source: <a href="https://towardsdatascience.com/intuitively-understanding-variational-autoencoders-1bfe67eb5daf" target="_blank">here</a>
+    Variational Autoencoders. Source: <a href="https://towardsdatascience.com/intuitively-understanding-variational-autoencoders-1bfe67eb5daf">here</a>
   </figcaption>
 
 
 </figure>
 
-
-<p>So as it turned out, that wasn&rsquo;t a very good example either but we&rsquo;re starting to understand what we mean by gaps now and how common they are. Some common examples of gaps in networks are sampling operations and the argmax operation. Once again, convince yourself that argmax is not a differentiable function. Assume you have a function that takes argmax of two quantities <em>(x1,x2)</em>. When <em>x1</em> &gt; <em>x2</em>, this has value 0 (zero-indexed) and when <em>x1</em> &lt; <em>x2</em>, it has value 1. Say the function is not defined on the <em>x1==x2</em> line or define it as you wish (0 or 1). Now if you can visualise the 2D plane, you&rsquo;ll see that the function is not differentiable as we move across the <em>x1==x2</em> line. So argmax isn&rsquo;t differentiable <em>but max is a differentiable function</em> (recall max pooling in CNNs). Read <a href="https://www.reddit.com/r/MachineLearning/comments/4e2get/argmax_differentiable/" target="_blank">this thread</a> for more details.</p>
-
-<p>These functions are commonly used in natural language processing (NLP) applications, information retrieval (IR) applications and Computer Vision (CV) applications as well. For example, a sampling function could be used to select words from a sentence based on a probability distribution in an NLP application or an argmax function could be used to find the highest ranked document in an IR application. <a href="https://jhui.github.io/2017/03/15/Soft-and-hard-attention/" target="_blank">Hard attention</a> uses sampling techniques which involves non-differentiable computation.</p>
-
+<p>So as it turned out, that wasn&rsquo;t a very good example either but we&rsquo;re starting to understand what we mean by gaps now and how common they are. Some common examples of gaps in networks are sampling operations and the argmax operation. Once again, convince yourself that argmax is not a differentiable function. Assume you have a function that takes argmax of two quantities <em>(x1,x2)</em>. When <em>x1</em> &gt; <em>x2</em>, this has value 0 (zero-indexed) and when <em>x1</em> &lt; <em>x2</em>, it has value 1. Say the function is not defined on the <em>x1==x2</em> line or define it as you wish (0 or 1). Now if you can visualise the 2D plane, you&rsquo;ll see that the function is not differentiable as we move across the <em>x1==x2</em> line. So argmax isn&rsquo;t differentiable <em>but max is a differentiable function</em> (recall max pooling in CNNs). Read <a href="https://www.reddit.com/r/MachineLearning/comments/4e2get/argmax_differentiable/">this thread</a> for more details.</p>
+<p>These functions are commonly used in natural language processing (NLP) applications, information retrieval (IR) applications and Computer Vision (CV) applications as well. For example, a sampling function could be used to select words from a sentence based on a probability distribution in an NLP application or an argmax function could be used to find the highest ranked document in an IR application. <a href="https://jhui.github.io/2017/03/15/Soft-and-hard-attention/">Hard attention</a> uses sampling techniques which involves non-differentiable computation.</p>
 <p>So its quite clear that these gaps are common in several deep learning architectures and sometimes, it could even be useful to introduce such a gap in the network intentionally to reap added benefits. The only question is, <em>how do we bridge these gaps?</em></p>
-
 <h2 id="reinforcement-learning-and-policy-gradients-the-bridge">Reinforcement Learning and Policy Gradients: The Bridge</h2>
-
-<p>Policy gradients are a class of algorithms in RL. There are several policy gradient algorithms and <a href="https://lilianweng.github.io/lil-log/2018/04/08/policy-gradient-algorithms.html" target="_blank">this</a> is a great blog that lists out almost all of them. But without going into too many details, these algorithms work in the policy space by updating the parameters of the policy we&rsquo;re trying to learn. That means we don&rsquo;t necessarily need to find the value function of different states but we can directly alter our policy until we&rsquo;re happy.
+<p>Policy gradients are a class of algorithms in RL. There are several policy gradient algorithms and <a href="https://lilianweng.github.io/lil-log/2018/04/08/policy-gradient-algorithms.html">this</a> is a great blog that lists out almost all of them. But without going into too many details, these algorithms work in the policy space by updating the parameters of the policy we&rsquo;re trying to learn. That means we don&rsquo;t necessarily need to find the value function of different states but we can directly alter our policy until we&rsquo;re happy.
 The most common policy gradient (PG) algorithm is the REINFORCE which is a Monte Carlo algorithm. This means we run an entire episode and make changes to our policy only at the end of each episode and not at every step. We make these changes based on the returns that we received by taking a given action from a given state in the episode. I skip the derivation of the policy gradient here but it can be found in the link above. The final result is in the image below.</p>
-
 
 
 
@@ -702,17 +717,14 @@ The most common policy gradient (PG) algorithm is the REINFORCE which is a Monte
   
   
   <figcaption>
-    The Policy Gradient. Source: <a href="https://medium.com/@thechrisyoon/deriving-policy-gradients-and-implementing-reinforce-f887949bd63" target="_blank">here</a>
+    The Policy Gradient. Source: <a href="https://medium.com/@thechrisyoon/deriving-policy-gradients-and-implementing-reinforce-f887949bd63">here</a>
   </figcaption>
 
 
 </figure>
 
-
 <p>The key idea here is that in policy gradient methods, we are allowed to <em>sample different actions from a given state and wait till the end of an episode before we make updates to our network</em>. So if we have a sampling operation as a part of our network, we can introduce a policy gradient and think of it as sampling actions in a given state in an RL framework. A similar procedure can also be followed if we had argmax in place of the sampling operation.</p>
-
-<p>Consider a neural network now with a gap. The images below are taken from <a href="http://karpathy.github.io/2016/05/31/rl/" target="_blank">this blog</a> on Policy Gradients written by Andrej Karpathy.</p>
-
+<p>Consider a neural network now with a gap. The images below are taken from <a href="http://karpathy.github.io/2016/05/31/rl/">this blog</a> on Policy Gradients written by Andrej Karpathy.</p>
 <p>
 
 
@@ -736,7 +748,7 @@ The most common policy gradient (PG) algorithm is the REINFORCE which is a Monte
   
   
   <figcaption>
-    Gaps in a neural network. Source: Karpathy&rsquo;s <a href="http://karpathy.github.io/2016/05/31/rl/" target="_blank">blog</a>
+    Gaps in a neural network. Source: Karpathy&rsquo;s <a href="http://karpathy.github.io/2016/05/31/rl/">blog</a>
   </figcaption>
 
 
@@ -765,16 +777,14 @@ The most common policy gradient (PG) algorithm is the REINFORCE which is a Monte
   
   
   <figcaption>
-    The sampling operation. Source: Karpathy&rsquo;s <a href="http://karpathy.github.io/2016/05/31/rl/" target="_blank">blog</a>
+    The sampling operation. Source: Karpathy&rsquo;s <a href="http://karpathy.github.io/2016/05/31/rl/">blog</a>
   </figcaption>
 
 
 </figure>
 </p>
-
 <p>So now we can train the blue arrows i.e. the differentiable path as usual. But to train the red arrows, we need to introduce a policy gradient and as we sample, we ensure with the help of the policy gradient that we encourage samples that led to a lower loss. In this way, we are &ldquo;training&rdquo; the sampling operation or one could say, propagating the loss through the sampling operation! Note that the updates to the red arrows happen independently than those of the blue arrows.
 Note that in the diagrams above, there isn&rsquo;t really a gap per-say because the blue arrows go all the way from start to finish. So there is a differentiable path and a non-differentiable path. A true gap would mean there would be no completely differentiable path at all. In this case, we need to make sure that the loss functions on either side of the gap are &ldquo;in sync&rdquo; and are being optimized in such a way that it facilitates joint training and achieves a common goal. This is often not as easy as it sounds.</p>
-
 <p>I said at the start that as obscure as it seems, this is still the traditional RL problem we&rsquo;re used to with the MDP and states and actions. We can still look at this entire setup as a traditional RL problem if we think of the inputs to the neural network as the state and the sampling process as sampling different actions from that given state. Now what is the reward function? This depends on what comes after the gap and could be an output from the rest of the network or it could be a completely independent reward function that you came up with as well. So at the end of the day, it is still the same MDP with the traditional setup but just used in a very different way.</p>
 
     </div>
@@ -829,8 +839,8 @@ Note that in the diagrams above, there isn&rsquo;t really a gap per-say because 
 
     <div class="media-body">
       <h5 class="card-title"><a href="https://skandavaidyanath.github.io/">Skanda Vaidyanath</a></h5>
-      <h6 class="card-subtitle">Final Year Undergraduate Student of Computer Science</h6>
-      <p class="card-text">My research interests lie primarily in the area of reinforcement learning (RL) and related areas like inverse RL, meta RL and apprenticeship learning.</p>
+      <h6 class="card-subtitle">First Year Master&rsquo;s Student of Computer Science (AI Track)</h6>
+      <p class="card-text">My research interests lie primarily in the area of reinforcement learning (RL) and control to build agents that can acquire complex behaviours in the real world via interaction.</p>
       <ul class="network-icon" aria-hidden="true">
   
     
@@ -860,7 +870,7 @@ Note that in the diagrams above, there isn&rsquo;t really a gap per-say because 
       
     
     <li>
-      <a href="https://in.linkedin.com/in/skanda-vaidyanath-3750b416a" target="_blank" rel="noopener">
+      <a href="https://in.linkedin.com/in/skanda-vaidyanath" target="_blank" rel="noopener">
         <i class="fab fa-linkedin"></i>
       </a>
     </li>
@@ -911,7 +921,7 @@ Note that in the diagrams above, there isn&rsquo;t really a gap per-say because 
         <h3>Related</h3>
         <ul>
           
-          <li><a href="/project/mpii/">Deep RL for Conversational Recommender Systems</a></li>
+          <li><a href="/project/mpii/">Deep RL for IR applications</a></li>
           
           <li><a href="/project/usc-ict/">The Human Swarm Project</a></li>
           
@@ -1038,7 +1048,7 @@ Note that in the diagrams above, there isn&rsquo;t really a gap per-say because 
     
     
     
-    <script src="/js/academic.min.6cbefe3f0755301b86cd38317ded9f54.js"></script>
+    <script src="/js/academic.min.c5b98a8914247ae95edfbe976665d60f.js"></script>
 
     
 
