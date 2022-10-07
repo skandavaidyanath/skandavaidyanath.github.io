@@ -719,15 +719,5 @@ So we need to think about how we can solve this problem.&lt;/p&gt;
 </description>
     </item>
     
-    <item>
-      <title>Value Iteration, Policy Iteration and Dynamic Programming</title>
-      <link>https://skandavaidyanath.github.io/courses/rl-course/post4/</link>
-      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      <guid>https://skandavaidyanath.github.io/courses/rl-course/post4/</guid>
-      <description>&lt;p&gt;COMING SOON&amp;hellip;
-#NEED TO DO MODEL-BASED AND MODEL-FREE AT SOME POINT&lt;/p&gt;
-</description>
-    </item>
-    
   </channel>
 </rss>

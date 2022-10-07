@@ -5,31 +5,12 @@
     <link>https://skandavaidyanath.github.io/tags/reinforcement-learning/</link>
       <atom:link href="https://skandavaidyanath.github.io/tags/reinforcement-learning/index.xml" rel="self" type="application/rss+xml" />
     <description>Reinforcement Learning</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 27 Dec 2021 13:21:24 -0800</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 21 Jan 2020 06:02:24 +0530</lastBuildDate>
     <image>
       <url>https://skandavaidyanath.github.io/img/icon-192.png</url>
       <title>Reinforcement Learning</title>
       <link>https://skandavaidyanath.github.io/tags/reinforcement-learning/</link>
     </image>
-    
-    <item>
-      <title>Using Reinforcement Learning to Manage Communications Between Humans and Artificial Agents in an Evacuation Scenario</title>
-      <link>https://skandavaidyanath.github.io/publication/flairs-2021/</link>
-      <pubDate>Mon, 27 Dec 2021 13:21:24 -0800</pubDate>
-      <guid>https://skandavaidyanath.github.io/publication/flairs-2021/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Curiosity Is All You Need</title>
-      <link>https://skandavaidyanath.github.io/post/curiosity-is-all-you-need/</link>
-      <pubDate>Fri, 06 Mar 2020 03:19:30 +0530</pubDate>
-      <guid>https://skandavaidyanath.github.io/post/curiosity-is-all-you-need/</guid>
-      <description>&lt;p&gt;COMING SOON&amp;hellip;&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-</description>
-    </item>
     
     <item>
       <title>An Overview of Bandits</title>
