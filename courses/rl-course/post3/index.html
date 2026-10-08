@@ -29,7 +29,39 @@
     
   
   <meta name="description" content="In the last post, we discussed the three major challenges RL algorithms need to tackle and then went on to Markov Decision Processes (MDPs). We&rsquo;ll start this post with a quick recap of some important concepts from the last post and then move on to new ideas.
-   An MDP. Source: Google Images   An MDP formally describes the environment for RL when the environment is fully observable i.">
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+  
+    An MDP. Source: Google Images
+  
+
+
+
+
+An MDP formally describes the environment for RL when the environment is fully observable i.e. we know all the values of the relevant state variables. In other words, the current state completely characterises the process. Almost all RL problems are formulated as MDPs. This is the same MDP we saw in the previous post. We already discussed the different components of an MDP i.e. the states, the actions, the transition function, reward function and the discount factor $\gamma$. If you need to refresh your memory about any of these, refer back to the previous post before you go ahead.
+Here is the Markov property once again for your reference. The future is independent of the past given the present and the state captures all relevant information from the history. This means once we know what state we are in, we don&rsquo;t care how we got to the state in the first place i.e. the state is a sufficient statistic of the future.">
 
   
   <link rel="alternate" hreflang="en-us" href="https://skandavaidyanath.github.io/courses/rl-course/post3/">
@@ -84,7 +116,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/academic.min.8565976d7831ba0a0daf18ae5d4ff0e8.css">
+  <link rel="stylesheet" href="/css/academic.min.6fc7d7a0d656cf3f62910d40bd0a3856.css">
 
   
 
@@ -118,7 +150,39 @@
   <meta property="og:url" content="https://skandavaidyanath.github.io/courses/rl-course/post3/">
   <meta property="og:title" content="Policies, Value Functions and the Bellman Equation | Skanda Vaidyanath">
   <meta property="og:description" content="In the last post, we discussed the three major challenges RL algorithms need to tackle and then went on to Markov Decision Processes (MDPs). We&rsquo;ll start this post with a quick recap of some important concepts from the last post and then move on to new ideas.
-   An MDP. Source: Google Images   An MDP formally describes the environment for RL when the environment is fully observable i."><meta property="og:image" content="https://skandavaidyanath.github.io/img/icon-192.png">
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+  
+    An MDP. Source: Google Images
+  
+
+
+
+
+An MDP formally describes the environment for RL when the environment is fully observable i.e. we know all the values of the relevant state variables. In other words, the current state completely characterises the process. Almost all RL problems are formulated as MDPs. This is the same MDP we saw in the previous post. We already discussed the different components of an MDP i.e. the states, the actions, the transition function, reward function and the discount factor $\gamma$. If you need to refresh your memory about any of these, refer back to the previous post before you go ahead.
+Here is the Markov property once again for your reference. The future is independent of the past given the present and the state captures all relevant information from the history. This means once we know what state we are in, we don&rsquo;t care how we got to the state in the first place i.e. the state is a sufficient statistic of the future."><meta property="og:image" content="https://skandavaidyanath.github.io/img/icon-192.png">
   <meta property="twitter:image" content="https://skandavaidyanath.github.io/img/icon-192.png"><meta property="og:locale" content="en-us">
   
     
@@ -500,7 +564,7 @@ We will revisit the returns definition later in this post.</p>
   
   
   <figcaption>
-    Exploration vs Exploitation. Source: Lecture 11 of <a href="http://ai.berkeley.edu/lecture_slides.html">this</a>
+    Exploration vs Exploitation. Source: Lecture 11 of <a href="http://ai.berkeley.edu/lecture_slides.html" target="_blank">this</a>
   </figcaption>
 
 
@@ -598,8 +662,9 @@ The value function and the Q-function are crucial for several RL algorithms that
 
 </figure>
 
-<p>Note that the Bellman Expectation Equations form a system of equations &ndash; one equation for every state. There are as many equations as there are number of states. The variables are $V^{\pi}(s)$ for all <em>s</em>. 
-So we have <em>n</em> equations for <em>n</em> states and this system of equations will always have a unique solution because the transition matrix is a <a href="https://en.wikipedia.org/wiki/Stochastic_matrix">stochastic matrix</a>.
+<p>Note that the Bellman Expectation Equations form a system of equations &ndash; one equation for every state. There are as many equations as there are number of states. The variables are $V^{\pi}(s)$ for all <em>s</em>.
+So we have <em>n</em> equations for <em>n</em> states and this system of equations will always have a unique solution because the transition matrix is a <a href="https://en.wikipedia.org/wiki/Stochastic_matrix" target="_blank">stochastic matrix</a>
+.
 The equations are linear and they are solvable.</p>
 <h2 id="optimality-equations">Optimality Equations</h2>
 <p>The aim of RL is to learn an optimal policy i.e. an optimal mapping from states to actions that can allow the agent to accumulate maximum rewards as it goes on a trajectory (governed by this policy) through the MDP. We want a $\pi$ such that for no other $\pi$ can we get better expected returns.</p>
@@ -609,7 +674,8 @@ The equations are linear and they are solvable.</p>
 <p>Here, $\pi^{*}$ is the optimal policy. The $\forall s$ tells us that this is true at any starting state or even any state in the trajectory. Note that there may be more than one optimal policy and in that case, we will take any one of them.
 However, <em>even though there are several possible optimal policies, there is only one possible setting for the optimal value functions</em>, i.e. there may be several optimal $\pi^{*}$ but there can be only one optimal $V^{\pi^{*}}$. Think about this for a second and convince yourself that this is in fact true.</p>
 <p>$V^{\pi^{*}} = \underset{\pi}{\operatorname{argmax}} V^{\pi}(s) \forall s = V^{*}$</p>
-<p>$V^{*}$ is the optimal value function. The existence of such an optimal value function and hence an optimal policy that is able to reach the maximum value function <em>for all states</em> has been proven in finite MDPs (it gets trickier in infinite MDPs but still holds for some settings). The proof is quite intricate but I have attached some notes from this <a href="https://nptel.ac.in/courses/106106143/">NPTEL course</a> in the reference section for the interested reader.</p>
+<p>$V^{*}$ is the optimal value function. The existence of such an optimal value function and hence an optimal policy that is able to reach the maximum value function <em>for all states</em> has been proven in finite MDPs (it gets trickier in infinite MDPs but still holds for some settings). The proof is quite intricate but I have attached some notes from this <a href="https://nptel.ac.in/courses/106106143/" target="_blank">NPTEL course</a>
+ in the reference section for the interested reader.</p>
 <p>The math in the following images talk about the Bellman Optimality Equations. Once again, this is very important for the rest of the course.</p>
 
 
@@ -679,7 +745,7 @@ So we need to think about how we can solve this problem.</p>
 <p>Let me know if you have any feedback or suggestions.</p>
 <h3 id="references">References</h3>
 <ol>
-<li><!-- raw HTML omitted -->Proof of the existence of an optimal value function in finite MDPs<!-- raw HTML omitted --></li>
+<li><a href="/files/existence_of_optimal_v_proof.pdf" target="_blank">Proof of the existence of an optimal value function in finite MDPs</a></li>
 </ol>
 
           </div>
@@ -854,7 +920,7 @@ So we need to think about how we can solve this problem.</p>
     
     
     
-    <script src="/js/academic.min.c5b98a8914247ae95edfbe976665d60f.js"></script>
+    <script src="/js/academic.min.b89d1011e4e05f2d9ac6fafcb0f556d1.js"></script>
 
     
 

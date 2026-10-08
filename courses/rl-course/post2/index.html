@@ -28,8 +28,10 @@
   
     
   
-  <meta name="description" content="In this post, we&rsquo;ll try to get into the real nitty-gritties of RL and build on the intuition that we gained from the last article. So we&rsquo;ll bring in some mathematical foundation and then introduce some RL parlance that we will use for the rest of this course. I&rsquo;ll stick to the standard notation and jargon from the RL book.
-Three Challenges Before we begin with the mathematical foundations of RL, I&rsquo;d like to point out three challenges in RL we need to account for if we were to come up with RL algorithms of our own.">
+  <meta name="description" content="In this post, we&rsquo;ll try to get into the real nitty-gritties of RL and build on the intuition that we gained from the last article
+. So we&rsquo;ll bring in some mathematical foundation and then introduce some RL parlance that we will use for the rest of this course. I&rsquo;ll stick to the standard notation and jargon from the RL book.
+Three Challenges
+Before we begin with the mathematical foundations of RL, I&rsquo;d like to point out three challenges in RL we need to account for if we were to come up with RL algorithms of our own. Once again, I&rsquo;m going to move on to a new example so lets take chess this time.">
 
   
   <link rel="alternate" hreflang="en-us" href="https://skandavaidyanath.github.io/courses/rl-course/post2/">
@@ -84,7 +86,7 @@ Three Challenges Before we begin with the mathematical foundations of RL, I&rsqu
   
   
   
-  <link rel="stylesheet" href="/css/academic.min.8565976d7831ba0a0daf18ae5d4ff0e8.css">
+  <link rel="stylesheet" href="/css/academic.min.6fc7d7a0d656cf3f62910d40bd0a3856.css">
 
   
 
@@ -117,8 +119,10 @@ Three Challenges Before we begin with the mathematical foundations of RL, I&rsqu
   <meta property="og:site_name" content="Skanda Vaidyanath">
   <meta property="og:url" content="https://skandavaidyanath.github.io/courses/rl-course/post2/">
   <meta property="og:title" content="RL Fundamentals and MDPs | Skanda Vaidyanath">
-  <meta property="og:description" content="In this post, we&rsquo;ll try to get into the real nitty-gritties of RL and build on the intuition that we gained from the last article. So we&rsquo;ll bring in some mathematical foundation and then introduce some RL parlance that we will use for the rest of this course. I&rsquo;ll stick to the standard notation and jargon from the RL book.
-Three Challenges Before we begin with the mathematical foundations of RL, I&rsquo;d like to point out three challenges in RL we need to account for if we were to come up with RL algorithms of our own."><meta property="og:image" content="https://skandavaidyanath.github.io/img/icon-192.png">
+  <meta property="og:description" content="In this post, we&rsquo;ll try to get into the real nitty-gritties of RL and build on the intuition that we gained from the last article
+. So we&rsquo;ll bring in some mathematical foundation and then introduce some RL parlance that we will use for the rest of this course. I&rsquo;ll stick to the standard notation and jargon from the RL book.
+Three Challenges
+Before we begin with the mathematical foundations of RL, I&rsquo;d like to point out three challenges in RL we need to account for if we were to come up with RL algorithms of our own. Once again, I&rsquo;m going to move on to a new example so lets take chess this time."><meta property="og:image" content="https://skandavaidyanath.github.io/img/icon-192.png">
   <meta property="twitter:image" content="https://skandavaidyanath.github.io/img/icon-192.png"><meta property="og:locale" content="en-us">
   
     
@@ -394,7 +398,8 @@ Three Challenges Before we begin with the mathematical foundations of RL, I&rsqu
           <h1>RL Fundamentals and MDPs</h1>
 
           <div class="article-style">
-            <p>In this post, we&rsquo;ll try to get into the real nitty-gritties of RL and build on the intuition that we gained from the <a href="https://skandavaidyanath.github.io/courses/rl-course/post1/">last article</a>. So we&rsquo;ll bring in some mathematical foundation and then introduce some RL parlance that we will use for the rest of this course. I&rsquo;ll stick to the standard notation and jargon from the RL book.</p>
+            <p>In this post, we&rsquo;ll try to get into the real nitty-gritties of RL and build on the intuition that we gained from the <a href="https://skandavaidyanath.github.io/courses/rl-course/post1/">last article</a>
+. So we&rsquo;ll bring in some mathematical foundation and then introduce some RL parlance that we will use for the rest of this course. I&rsquo;ll stick to the standard notation and jargon from the RL book.</p>
 <h2 id="three-challenges">Three Challenges</h2>
 <p>Before we begin with the mathematical foundations of RL, I&rsquo;d like to point out three challenges in RL we need to account for if we were to come up with RL algorithms of our own. Once again, I&rsquo;m going to move on to a new example so lets take chess this time.</p>
 
@@ -468,7 +473,7 @@ Three Challenges Before we begin with the mathematical foundations of RL, I&rsqu
   
   
   <figcaption>
-    A Markov Decision Process. Source: <a href="https://randomant.net/reinforcement-learning-concepts/">here</a>
+    A Markov Decision Process. Source: <a href="https://randomant.net/reinforcement-learning-concepts/" target="_blank">here</a>
   </figcaption>
 
 
@@ -507,7 +512,8 @@ Three Challenges Before we begin with the mathematical foundations of RL, I&rsqu
 </p>
 <p>Almost all RL problems can be modeled as a Markov Decision Process (MDP). So what is an MDP? An MDP is a mathematical model that we will be seeing a lot over this course. Most of our RL environments, will be MDPs. An MDP can be defined as a five tuple:
 $$\langle \mathcal{S}, \mathcal{A}, \mathcal{P}, \mathcal{R}, \gamma \rangle$$</p>
-<p>Lets take a closer look at what all of this means. Note that in this section, I do not follow the notation in the RL book and follow the notation <a href="https://ai.stanford.edu/~ang/papers/icml00-irl.pdf">here</a> which is quite commonly followed.</p>
+<p>Lets take a closer look at what all of this means. Note that in this section, I do not follow the notation in the RL book and follow the notation <a href="https://ai.stanford.edu/~ang/papers/icml00-irl.pdf" target="_blank">here</a>
+ which is quite commonly followed.</p>
 <ul>
 <li><em>S</em> : This is the set of states of the MDP. In an RL setting, this would correspond to different settings of the environment i.e. each setting of the environment is a state in the MDP. In the previous post, we spoke about how RL was all about choosing the right actions at the right times i.e. depending on the state of the environment. This is the state we were talking about. A state in chess or tic-tac-toe could be the board positions or while riding a bike could be some combination of the pertinent variables like the angle of the bike with thr ground, the wind speed, etc. The <em>S</em> variable represents the set of all unique states in the MDP.</li>
 <li><em>A</em> : This is the set of all actions of the MDP. We already spoke about actions briefly. Actions describe the possible moves in a game of chess or tic-tac-toe or different arrow keys or buttons in a video game, etc. It represents the different options the agent has and can play at a given point in time. <em>A</em> represents the set of all unique actions available to the agent.</li>
@@ -546,27 +552,32 @@ $$\langle \mathcal{S}, \mathcal{A}, \mathcal{P}, \mathcal{R}, \gamma \rangle$$</
 </figure>
 
 <p>Some of the states of the MDP are designated as start states or initial states and end states or terminal states. An <em>episode</em> in RL is a sequence of state-action pairs that take the agent from a start state to a terminal state. So the agent starts from one of the intial states, plays an action, goes to the next state and so on until it hits a terminal state and the episode ends. Assume for now that there is such an end i.e. every episode does end after some unknown, finite time. This is a property of <em>finite horizon MDPs</em> which is what we will stick to in this course.</p>
-<p>Now lets take a look at this MDP in the diagram above. Assume <em>S</em><!-- raw HTML omitted -->0<!-- raw HTML omitted --> is your initial state. Notice that <em>a</em><!-- raw HTML omitted -->0<!-- raw HTML omitted --> from <em>S</em><!-- raw HTML omitted -->0<!-- raw HTML omitted --> has two arrows, one going into <em>S</em><!-- raw HTML omitted -->0<!-- raw HTML omitted --> again and another going into <em>S</em><!-- raw HTML omitted -->2<!-- raw HTML omitted -->. The numbers on the arrows indicate 0.5 and 0.5 respectively. This means that if an agent plays the action <em>a</em><!-- raw HTML omitted -->0<!-- raw HTML omitted --> from <em>S</em><!-- raw HTML omitted -->0<!-- raw HTML omitted -->, it has a 0.5 probability that it ends up back in <em>S</em><!-- raw HTML omitted -->0<!-- raw HTML omitted --> and a 0.5 probability that it ends up in <em>S</em><!-- raw HTML omitted -->2<!-- raw HTML omitted -->. And similarly we have arrows going all over the diagram. Also notice the wiggly arrows &ndash; they&rsquo;re rewards.</p>
-<p>Notationally, we index the sequence of state-action pairs in an episode with a time variable <em>t</em> so we say an agent plays action <em>a</em><!-- raw HTML omitted -->t<!-- raw HTML omitted --> from state <em>s</em><!-- raw HTML omitted -->t<!-- raw HTML omitted --> and gets reward <em>r</em><!-- raw HTML omitted -->t+1<!-- raw HTML omitted --> for doing so (the reward can be 0). Here, <em>t</em> starts from 0 and we represent the terminal time-step as <em>T</em>.</p>
-<p>Another crucial thing to note is that actions in an MDP have to be instantaneous in nature. That means you take action <em>a</em><!-- raw HTML omitted -->t<!-- raw HTML omitted --> from state <em>s</em><!-- raw HTML omitted -->t<!-- raw HTML omitted --> and end up in state <em>s</em><!-- raw HTML omitted -->t+1<!-- raw HTML omitted --> immediately. There are several actions in real-world problems that may not be instantaneous but we&rsquo;ll deal with them later. For now, assume your actions are instantaneous.</p>
+<p>Now lets take a look at this MDP in the diagram above. Assume <em>S</em><sub>0</sub> is your initial state. Notice that <em>a</em><sub>0</sub> from <em>S</em><sub>0</sub> has two arrows, one going into <em>S</em><sub>0</sub> again and another going into <em>S</em><sub>2</sub>. The numbers on the arrows indicate 0.5 and 0.5 respectively. This means that if an agent plays the action <em>a</em><sub>0</sub> from <em>S</em><sub>0</sub>, it has a 0.5 probability that it ends up back in <em>S</em><sub>0</sub> and a 0.5 probability that it ends up in <em>S</em><sub>2</sub>. And similarly we have arrows going all over the diagram. Also notice the wiggly arrows &ndash; they&rsquo;re rewards.</p>
+<p>Notationally, we index the sequence of state-action pairs in an episode with a time variable <em>t</em> so we say an agent plays action <em>a</em><sub>t</sub> from state <em>s</em><sub>t</sub> and gets reward <em>r</em><sub>t+1</sub> for doing so (the reward can be 0). Here, <em>t</em> starts from 0 and we represent the terminal time-step as <em>T</em>.</p>
+<p>Another crucial thing to note is that actions in an MDP have to be instantaneous in nature. That means you take action <em>a</em><sub>t</sub> from state <em>s</em><sub>t</sub> and end up in state <em>s</em><sub>t+1</sub> immediately. There are several actions in real-world problems that may not be instantaneous but we&rsquo;ll deal with them later. For now, assume your actions are instantaneous.</p>
 <ul>
-<li><em>P</em> : Now P is the probability function defined as <em>P</em>(s<!-- raw HTML omitted -->'<!-- raw HTML omitted -->| s, a) which is read as the probability of moving to &ldquo;state s'&rdquo; from &ldquo;state s&rdquo; if the agent plays &ldquo;action a&rdquo;. So for example, <em>P</em>(<em>S</em><!-- raw HTML omitted -->2<!-- raw HTML omitted -->|<em>S</em><!-- raw HTML omitted -->0<!-- raw HTML omitted -->,<em>a</em><!-- raw HTML omitted -->0<!-- raw HTML omitted -->) = 0.5. This is also called the <em>transition function</em>.</li>
-<li><em>R</em> : This is the <em>reward function</em> or <em>reinforcement function</em> and is defined as <em>R</em>(s<!-- raw HTML omitted -->'<!-- raw HTML omitted -->| s, a) which is the reward the agent gets for moving to &ldquo;state s'&rdquo; from &ldquo;state s&rdquo; if the agent plays &ldquo;action a&rdquo;. So for example, <em>R</em>(<em>S</em><!-- raw HTML omitted -->0<!-- raw HTML omitted -->|<em>S</em><!-- raw HTML omitted -->1<!-- raw HTML omitted -->,<em>a</em><!-- raw HTML omitted -->0<!-- raw HTML omitted -->) = +5. However, the answer may not be as simple as a single number and the reward could be sampled from a probability distribution i.e. <em>R</em>(s<!-- raw HTML omitted -->'<!-- raw HTML omitted -->| s, a) is a probability distribution that we will try to estimate by interaction with the environment. There are some other forms of reward functions like <em>R</em>(s,a) or even just <em>R</em>(s) as well. Note that rewards are always scalars because they are easier to optimize. They are also usually finite.</li>
-<li>$\gamma$ : We spoke about the concept of delayed rewards earlier in the post and we wanted a way to accound for delayed effects of actions. This is where $\gamma$ helps. We define the <em>returns</em> of an action from a given state as the sum of the <em>discounted rewards</em> we receive from that state for playing that action. If we started from the state <em>s</em><!-- raw HTML omitted -->0<!-- raw HTML omitted -->, the returns would be defined as <em>r</em><!-- raw HTML omitted -->1<!-- raw HTML omitted --> + $\gamma$ <em>r</em><!-- raw HTML omitted -->2<!-- raw HTML omitted --> + $\gamma$<!-- raw HTML omitted -->2<!-- raw HTML omitted --> <em>r</em><!-- raw HTML omitted -->3<!-- raw HTML omitted --> + &hellip; $\gamma$ <!-- raw HTML omitted --><em>T-1</em><!-- raw HTML omitted --> <em>r</em><!-- raw HTML omitted --><em>T</em><!-- raw HTML omitted -->. We use the word &ldquo;discounted&rdquo; because $\gamma$ is usually a number between 0 and 1 and with the increasing powers, we give more weight to the immediate rewards than the delayed rewards. Hence, $\gamma$ is also called the discounting factor. The symbol we use for returns from timestep <em>t</em> is usually <em>G</em><!-- raw HTML omitted --><em>t</em><!-- raw HTML omitted --> although some people like using <em>R</em> as well (<em>r</em> for reward and <em>R</em> for returns). We will stick to the former notation. Now going back to the queen sacrifice example, if we were to consider the returns in our algorithm instead of just the immediate reward, we will be able to account for the delayed positive effect and not just the immediate negative effect.</li>
+<li><em>P</em> : Now P is the probability function defined as <em>P</em>(s<sup>&rsquo;</sup>| s, a) which is read as the probability of moving to &ldquo;state s&rsquo;&rdquo; from &ldquo;state s&rdquo; if the agent plays &ldquo;action a&rdquo;. So for example, <em>P</em>(<em>S</em><sub>2</sub>|<em>S</em><sub>0</sub>,<em>a</em><sub>0</sub>) = 0.5. This is also called the <em>transition function</em>.</li>
+<li><em>R</em> : This is the <em>reward function</em> or <em>reinforcement function</em> and is defined as <em>R</em>(s<sup>&rsquo;</sup>| s, a) which is the reward the agent gets for moving to &ldquo;state s&rsquo;&rdquo; from &ldquo;state s&rdquo; if the agent plays &ldquo;action a&rdquo;. So for example, <em>R</em>(<em>S</em><sub>0</sub>|<em>S</em><sub>1</sub>,<em>a</em><sub>0</sub>) = +5. However, the answer may not be as simple as a single number and the reward could be sampled from a probability distribution i.e. <em>R</em>(s<sup>&rsquo;</sup>| s, a) is a probability distribution that we will try to estimate by interaction with the environment. There are some other forms of reward functions like <em>R</em>(s,a) or even just <em>R</em>(s) as well. Note that rewards are always scalars because they are easier to optimize. They are also usually finite.</li>
+<li>$\gamma$ : We spoke about the concept of delayed rewards earlier in the post and we wanted a way to accound for delayed effects of actions. This is where $\gamma$ helps. We define the <em>returns</em> of an action from a given state as the sum of the <em>discounted rewards</em> we receive from that state for playing that action. If we started from the state <em>s</em><sub>0</sub>, the returns would be defined as <em>r</em><sub>1</sub> + $\gamma$ <em>r</em><sub>2</sub> + $\gamma$<sup>2</sup> <em>r</em></sub>3</sub> + &hellip; $\gamma$ <sup><em>T-1</em></sup> <em>r</em><sub><em>T</em></sub>. We use the word &ldquo;discounted&rdquo; because $\gamma$ is usually a number between 0 and 1 and with the increasing powers, we give more weight to the immediate rewards than the delayed rewards. Hence, $\gamma$ is also called the discounting factor. The symbol we use for returns from timestep <em>t</em> is usually <em>G</em><sub><em>t</em></sub> although some people like using <em>R</em> as well (<em>r</em> for reward and <em>R</em> for returns). We will stick to the former notation. Now going back to the queen sacrifice example, if we were to consider the returns in our algorithm instead of just the immediate reward, we will be able to account for the delayed positive effect and not just the immediate negative effect.</li>
 </ul>
 <p>But with all of that information, we still haven&rsquo;t covered that blockquote at the start of this section. No, that wasn&rsquo;t a quote from Avengers: Endgame and it is the most important takeaway from this post. So what does it mean? Mathematically, it means this:</p>
 <p>$$P(s_{t+1}|s_t,a) = P(s_{t+1}|s_t,s_{t-1},s_{t-2},s_{t-3},&hellip;,a)$$</p>
-<p>But what does that mean intuitively? It means the probability of going to state <em>s</em><!-- raw HTML omitted -->t+1<!-- raw HTML omitted --> from state <em>s</em><!-- raw HTML omitted -->t<!-- raw HTML omitted --> under the action <em>a</em> is independent of how we got to state <em>s</em><!-- raw HTML omitted -->t<!-- raw HTML omitted --> in the first place. If you&rsquo;re thinking this isn&rsquo;t very realistic, you&rsquo;re right but this type of modeling works in most cases and is called <em>The Markov Property</em>. The future is independent of the past, given the present i.e. the action from the current state only depends on the current state and not how we got to this state in the first place.</p>
+<p>But what does that mean intuitively? It means the probability of going to state <em>s</em><sub>t+1</sub> from state <em>s</em><sub>t</sub> under the action <em>a</em> is independent of how we got to state <em>s</em><sub>t</sub> in the first place. If you&rsquo;re thinking this isn&rsquo;t very realistic, you&rsquo;re right but this type of modeling works in most cases and is called <em>The Markov Property</em>. The future is independent of the past, given the present i.e. the action from the current state only depends on the current state and not how we got to this state in the first place.</p>
 <p>We make another assumption of stationarity which means:</p>
-<p>$$P(s_{t+1}=s',r_{t+1}=r|s_{t}=s,a_{t}=a) = P(s',r|s,a)$$</p>
-<p>This means that the timestep variable doesn&rsquo;t matter &ndash; no matter at what point we are in the trajectory, given the state <em>s</em> and and action <em>a</em>, we always end up sampling the next state <em>s'</em> and the reward <em>r</em> from the same distribution. This is a property of <em>stationary</em> MDPs.</p>
-<p>And with that, we&rsquo;ve covered MDPs and how to model RL problems. With this background, I also recommend reading <a href="https://skandavaidyanath.github.io/post/modeling-rl-problems/">this</a>. But with that definition, we still haven&rsquo;t accounted for the exploration-exploitation tradeoff. So in the <a href="https://skandavaidyanath.github.io/courses/rl-course/post3/">next post</a>, we&rsquo;ll introduce a few more symbols and definitions before we get cracking with our very first RL algorithm!</p>
+<p>$$P(s_{t+1}=s&rsquo;,r_{t+1}=r|s_{t}=s,a_{t}=a) = P(s&rsquo;,r|s,a)$$</p>
+<p>This means that the timestep variable doesn&rsquo;t matter &ndash; no matter at what point we are in the trajectory, given the state <em>s</em> and and action <em>a</em>, we always end up sampling the next state <em>s&rsquo;</em> and the reward <em>r</em> from the same distribution. This is a property of <em>stationary</em> MDPs.</p>
+<p>And with that, we&rsquo;ve covered MDPs and how to model RL problems. With this background, I also recommend reading <a href="https://skandavaidyanath.github.io/post/modeling-rl-problems/">this</a>
+. But with that definition, we still haven&rsquo;t accounted for the exploration-exploitation tradeoff. So in the <a href="https://skandavaidyanath.github.io/courses/rl-course/post3/">next post</a>
+, we&rsquo;ll introduce a few more symbols and definitions before we get cracking with our very first RL algorithm!</p>
 <p>Once again, let me know if you have any feedback or suggestions.</p>
 <h3 id="references">References</h3>
 <ol>
-<li><a href="https://lilianweng.github.io/lil-log/2018/02/19/a-long-peek-into-reinforcement-learning.html">A (Long) Peek into Reinforcement Learning by Lilian Weng</a></li>
-<li><a href="http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html">David Silver&rsquo;s RL Course at UCL</a></li>
-<li>For MDP notation, <a href="https://ai.stanford.edu/~ang/papers/icml00-irl.pdf">Algorithms for Inverse Reinforcement Learning</a></li>
+<li><a href="https://lilianweng.github.io/lil-log/2018/02/19/a-long-peek-into-reinforcement-learning.html" target="_blank">A (Long) Peek into Reinforcement Learning by Lilian Weng</a>
+</li>
+<li><a href="http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html" target="_blank">David Silver&rsquo;s RL Course at UCL</a>
+</li>
+<li>For MDP notation, <a href="https://ai.stanford.edu/~ang/papers/icml00-irl.pdf" target="_blank">Algorithms for Inverse Reinforcement Learning</a>
+</li>
 </ol>
 
           </div>
@@ -747,7 +758,7 @@ $$\langle \mathcal{S}, \mathcal{A}, \mathcal{P}, \mathcal{R}, \gamma \rangle$$</
     
     
     
-    <script src="/js/academic.min.c5b98a8914247ae95edfbe976665d60f.js"></script>
+    <script src="/js/academic.min.b89d1011e4e05f2d9ac6fafcb0f556d1.js"></script>
 
     
 

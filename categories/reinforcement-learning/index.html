@@ -28,7 +28,7 @@
   
     
   
-  <meta name="description" content="Member of Technical Staff">
+  <meta name="description" content="Founding AI Researcher">
 
   
   <link rel="alternate" hreflang="en-us" href="https://skandavaidyanath.github.io/categories/reinforcement-learning/">
@@ -83,7 +83,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/academic.min.8565976d7831ba0a0daf18ae5d4ff0e8.css">
+  <link rel="stylesheet" href="/css/academic.min.6fc7d7a0d656cf3f62910d40bd0a3856.css">
 
   
 
@@ -118,7 +118,7 @@
   <meta property="og:site_name" content="Skanda Vaidyanath">
   <meta property="og:url" content="https://skandavaidyanath.github.io/categories/reinforcement-learning/">
   <meta property="og:title" content="Reinforcement Learning | Skanda Vaidyanath">
-  <meta property="og:description" content="Member of Technical Staff"><meta property="og:image" content="https://skandavaidyanath.github.io/img/icon-192.png">
+  <meta property="og:description" content="Founding AI Researcher"><meta property="og:image" content="https://skandavaidyanath.github.io/img/icon-192.png">
   <meta property="twitter:image" content="https://skandavaidyanath.github.io/img/icon-192.png"><meta property="og:locale" content="en-us">
   
     <meta property="og:updated_time" content="2020-01-21T06:02:24&#43;05:30">
@@ -344,7 +344,8 @@
     <h2><a href="/post/bandits/">An Overview of Bandits</a></h2>
     <div class="article-style">
       
-      In this post, we will take a look at the bandit problem and discuss some solution strategies. This is a fairly introductory overview so a basic understanding of probability should be enough to get through this one. Most of the posts on my page talk about RL and various topics related to RL and this post is no different. If you are already familiar with some RL, then the best way to understand bandits is as a simplified RL problem.
+      In this post, we will take a look at the bandit problem and discuss some solution strategies. This is a fairly introductory overview so a basic understanding of probability should be enough to get through this one. Most of the posts on my page talk about RL and various topics related to RL and this post is no different. If you are already familiar with some RL, then the best way to understand bandits is as a simplified RL problem. If you aren&rsquo;t familiar with RL, we&rsquo;ll start from scratch anyway and try to make the link with RL at the end of this post. And with that, lets begin.
+
       
     </div>
   </div>
@@ -353,9 +354,10 @@
     <h2><a href="/post/inverse-rl-paper/">Inverse Reinforcement Learning</a></h2>
     <div class="article-style">
       
-      This is a review of the paper Algorithms for Inverse Reinforcement Learning. I recommend some reinforcement learning (RL) basics before you read this. The first couple of posts from the RL course on my page might be a good starting point.
+      This is a review of the paper Algorithms for Inverse Reinforcement Learning . I recommend some reinforcement learning (RL) basics before you read this. The first couple of posts from the RL course on my page might be a good starting point.
 Inverse RL (IRL) is a topic I&rsquo;ve been interested in in recent times so I&rsquo;m excited to write this post. So lets get cracking!
-The Problem    The Inverse RL problem.
+The Problem The Inverse RL problem. Source: Google Images Reinforcement Learning has allowed researchers to solve several challenging problems without direct supervision but with some sort of distant/ weak supervision or feedback signal. In RL, this feedback signal is in the form of a reward signal. Reward functions are crucial to developing powerful RL models but coming up with good reward functions can be a challenging task. If we were to taake a game like Tic Tac Toe, the reward signal just presents itself based on the result of the game. If it were a video game we were trying to learn, then once again the score in the game provides a solid reward signal. But what about in the case of self-driving cars? With so many factors to consider, it is difficult to come up with a good reward function and even if we do, there may be a better reward function possible. Researchers recognized this issue with RL and decided to come up with a way to learn a reward function. They wanted to learn a reward function from optimal behaviour. So they would look at a human driving a car, learn a reward function from the demonstration, and then use this reward function to train an RL agent. The problem of extracting the reward fnction from observed optimal behaviour is the problem of Inverse Reinforcement Learning (IRL).
+
       
     </div>
   </div>
@@ -366,7 +368,8 @@ The Problem    The Inverse RL problem.
       
       Disclaimer: The content for this article does not come from any textbook or other reliable sources. They are observations made purely from my very limited experience with RL.
 I recommend that you gather some RL basics before you proceed to read this article. The first couple of posts from the course on my page could be a good start.
-In this article, I&rsquo;m going to talk about something that I haven&rsquo;t seen anywhere before and nobody really talks about it but I&rsquo;m going to take a shot at it.
+In this article, I&rsquo;m going to talk about something that I haven&rsquo;t seen anywhere before and nobody really talks about it but I&rsquo;m going to take a shot at it. I&rsquo;ve learned RL on my own and hence I&rsquo;ve read several articles on the internet about RL but most of them are about the different algorithms starting from the most basic dynamic programming and going on till the most complex Soft Actor Critic. But having spent some time conducting RL research, I find that nobody really talks about, according to me, the most challenging and interesting problem in RL &ndash; the actual modeling of the problem.
+
       
     </div>
   </div>
@@ -376,7 +379,8 @@ In this article, I&rsquo;m going to talk about something that I haven&rsquo;t se
     <div class="article-style">
       
       In this post, I will be talking about a unique way to use reinforcement learning (RL) in deep learning applications. I definitely recommend brushing up some deep learning fundamentals and if possible, some policy gradient fundamentals as well before you get started with this post.
-Traditionally, RL is used to solve sequential decision making problems in the video game space or robotics space or any other space where there is a concrete RL task at hand.
+Traditionally, RL is used to solve sequential decision making problems in the video game space or robotics space or any other space where there is a concrete RL task at hand. There are several applications in the fields of video games and robotics where the task at hand can be very easily seen as an RL problem and can be modeled appropriately as well. But RL as a technique is quite versatile and can be used in several other domains to train neural networks that are traditionally trained in a supervised fashion. We&rsquo;ll talk about one very important such application in this post. Along the way, I&rsquo;ll also try to convince you that this isn&rsquo;t really a different way to use RL but rather just a different way to look at the traditional RL problem. So with that, lets begin!
+
       
     </div>
   </div>
@@ -508,7 +512,7 @@ Traditionally, RL is used to solve sequential decision making problems in the vi
     
     
     
-    <script src="/js/academic.min.c5b98a8914247ae95edfbe976665d60f.js"></script>
+    <script src="/js/academic.min.b89d1011e4e05f2d9ac6fafcb0f556d1.js"></script>
 
     
 

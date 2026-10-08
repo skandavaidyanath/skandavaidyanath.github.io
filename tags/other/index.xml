@@ -17,7 +17,8 @@
       <link>https://skandavaidyanath.github.io/project/jigsaw/</link>
       <pubDate>Mon, 27 Dec 2021 12:44:33 -0800</pubDate>
       <guid>https://skandavaidyanath.github.io/project/jigsaw/</guid>
-      <description>&lt;p&gt;Used program synthesis techniques to generate code from multi-modal user input using large language models like GPT-3. Developed a Jupyter notebook extension to generate code from user commands and I/O examples for the Pandas library in Python. This project was done under the guidance of &lt;a href=&#34;https://www.microsoft.com/en-us/research/people/sriram/&#34;&gt;Dr. Sriram Rajamani&lt;/a&gt; at Microsoft Research, India.&lt;/p&gt;
+      <description>&lt;p&gt;Used program synthesis techniques to generate code from multi-modal user input using large language models like GPT-3. Developed a Jupyter notebook extension to generate code from user commands and I/O examples for the Pandas library in Python. This project was done under the guidance of &lt;a href=&#34;https://www.microsoft.com/en-us/research/people/sriram/&#34; target=&#34;_blank&#34;&gt;Dr. Sriram Rajamani&lt;/a&gt;
+ at Microsoft Research, India.&lt;/p&gt;
 </description>
     </item>
     
@@ -34,7 +35,8 @@
       <link>https://skandavaidyanath.github.io/project/bug-prediction/</link>
       <pubDate>Tue, 01 Oct 2019 00:00:00 +0000</pubDate>
       <guid>https://skandavaidyanath.github.io/project/bug-prediction/</guid>
-      <description>&lt;p&gt;Developed an efficient NLP-based method to extract features from source code of software projects to detect bugs. This project was done under the guidance of &lt;a href=&#34;https://www.bits-pilani.ac.in/hyderabad/bhanumurthy/Profile&#34;&gt;Prof. N. L. Bhanu Murthy&lt;/a&gt;.&lt;/p&gt;
+      <description>&lt;p&gt;Developed an efficient NLP-based method to extract features from source code of software projects to detect bugs. This project was done under the guidance of &lt;a href=&#34;https://www.bits-pilani.ac.in/hyderabad/bhanumurthy/Profile&#34; target=&#34;_blank&#34;&gt;Prof. N. L. Bhanu Murthy&lt;/a&gt;
+.&lt;/p&gt;
 </description>
     </item>
     
@@ -43,7 +45,9 @@
       <link>https://skandavaidyanath.github.io/project/brain-decoding/</link>
       <pubDate>Mon, 01 Jul 2019 00:00:00 +0000</pubDate>
       <guid>https://skandavaidyanath.github.io/project/brain-decoding/</guid>
-      <description>&lt;p&gt;This &lt;a href=&#34;https://vamsi-aribandi.github.io/brain_decoding_1/&#34;&gt;blog post&lt;/a&gt; has some interesting details. The code and a PDF report are available in links above. This project was done by &lt;a href=&#34;https://vamsi-aribandi.github.io/&#34;&gt;Vamsi Aribandi&lt;/a&gt; and myself.&lt;/p&gt;
+      <description>&lt;p&gt;This &lt;a href=&#34;https://vamsi-aribandi.github.io/brain_decoding_1/&#34; target=&#34;_blank&#34;&gt;blog post&lt;/a&gt;
+ has some interesting details. The code and a PDF report are available in links above. This project was done by &lt;a href=&#34;https://vamsi-aribandi.github.io/&#34; target=&#34;_blank&#34;&gt;Vamsi Aribandi&lt;/a&gt;
+ and myself.&lt;/p&gt;
 </description>
     </item>
     

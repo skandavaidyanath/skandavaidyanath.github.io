@@ -17,7 +17,8 @@
       <link>https://skandavaidyanath.github.io/project/jigsaw/</link>
       <pubDate>Mon, 27 Dec 2021 12:44:33 -0800</pubDate>
       <guid>https://skandavaidyanath.github.io/project/jigsaw/</guid>
-      <description>&lt;p&gt;Used program synthesis techniques to generate code from multi-modal user input using large language models like GPT-3. Developed a Jupyter notebook extension to generate code from user commands and I/O examples for the Pandas library in Python. This project was done under the guidance of &lt;a href=&#34;https://www.microsoft.com/en-us/research/people/sriram/&#34;&gt;Dr. Sriram Rajamani&lt;/a&gt; at Microsoft Research, India.&lt;/p&gt;
+      <description>&lt;p&gt;Used program synthesis techniques to generate code from multi-modal user input using large language models like GPT-3. Developed a Jupyter notebook extension to generate code from user commands and I/O examples for the Pandas library in Python. This project was done under the guidance of &lt;a href=&#34;https://www.microsoft.com/en-us/research/people/sriram/&#34; target=&#34;_blank&#34;&gt;Dr. Sriram Rajamani&lt;/a&gt;
+ at Microsoft Research, India.&lt;/p&gt;
 </description>
     </item>
     

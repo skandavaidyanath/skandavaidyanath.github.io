@@ -28,7 +28,7 @@
   
     
   
-  <meta name="description" content="In this post, we will take a look at the bandit problem and discuss some solution strategies. This is a fairly introductory overview so a basic understanding of probability should be enough to get through this one. Most of the posts on my page talk about RL and various topics related to RL and this post is no different. If you are already familiar with some RL, then the best way to understand bandits is as a simplified RL problem.">
+  <meta name="description" content="In this post, we will take a look at the bandit problem and discuss some solution strategies. This is a fairly introductory overview so a basic understanding of probability should be enough to get through this one. Most of the posts on my page talk about RL and various topics related to RL and this post is no different. If you are already familiar with some RL, then the best way to understand bandits is as a simplified RL problem. If you aren&rsquo;t familiar with RL, we&rsquo;ll start from scratch anyway and try to make the link with RL at the end of this post. And with that, lets begin.">
 
   
   <link rel="alternate" hreflang="en-us" href="https://skandavaidyanath.github.io/post/bandits/">
@@ -83,7 +83,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/academic.min.8565976d7831ba0a0daf18ae5d4ff0e8.css">
+  <link rel="stylesheet" href="/css/academic.min.6fc7d7a0d656cf3f62910d40bd0a3856.css">
 
   
 
@@ -115,7 +115,7 @@
   <meta property="og:site_name" content="Skanda Vaidyanath">
   <meta property="og:url" content="https://skandavaidyanath.github.io/post/bandits/">
   <meta property="og:title" content="An Overview of Bandits | Skanda Vaidyanath">
-  <meta property="og:description" content="In this post, we will take a look at the bandit problem and discuss some solution strategies. This is a fairly introductory overview so a basic understanding of probability should be enough to get through this one. Most of the posts on my page talk about RL and various topics related to RL and this post is no different. If you are already familiar with some RL, then the best way to understand bandits is as a simplified RL problem."><meta property="og:image" content="https://skandavaidyanath.github.io/post/bandits/featured.jpg">
+  <meta property="og:description" content="In this post, we will take a look at the bandit problem and discuss some solution strategies. This is a fairly introductory overview so a basic understanding of probability should be enough to get through this one. Most of the posts on my page talk about RL and various topics related to RL and this post is no different. If you are already familiar with some RL, then the best way to understand bandits is as a simplified RL problem. If you aren&rsquo;t familiar with RL, we&rsquo;ll start from scratch anyway and try to make the link with RL at the end of this post. And with that, lets begin."><meta property="og:image" content="https://skandavaidyanath.github.io/post/bandits/featured.jpg">
   <meta property="twitter:image" content="https://skandavaidyanath.github.io/post/bandits/featured.jpg"><meta property="og:locale" content="en-us">
   
     
@@ -171,7 +171,7 @@
       "url": "https://skandavaidyanath.github.io/img/icon-512.png"
     }
   },
-  "description": "In this post, we will take a look at the bandit problem and discuss some solution strategies. This is a fairly introductory overview so a basic understanding of probability should be enough to get through this one. Most of the posts on my page talk about RL and various topics related to RL and this post is no different. If you are already familiar with some RL, then the best way to understand bandits is as a simplified RL problem."
+  "description": "\u003cp\u003eIn this post, we will take a look at the bandit problem and discuss some solution strategies. This is a fairly introductory overview so a basic understanding of probability should be enough to get through this one. Most of the posts on my page talk about RL and various topics related to RL and this post is no different. If you are already familiar with some RL, then the best way to understand bandits is as a simplified RL problem. If you aren\u0026rsquo;t familiar with RL, we\u0026rsquo;ll start from scratch anyway and try to make the link with RL at the end of this post. And with that, lets begin.\u003c/p\u003e"
 }
 </script>
 
@@ -427,7 +427,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    13 min read
+    14 min read
   </span>
   
 
@@ -553,7 +553,7 @@
 
 <div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 405px;">
   <div style="position: relative">
-    <img src="/post/bandits/featured_hud5e8dcdb799b2955802d806e9a7dcf92_167875_720x0_resize_q90_lanczos.jpg" alt="" class="featured-image">
+    <img src="/post/bandits/featured_hu_52efd7e7fb3ce48c.jpg" alt="" class="featured-image">
     
   </div>
 </div>
@@ -633,7 +633,7 @@ Our job is to find and play the arm that would give us the maximum payoff. Now i
 <h3 id="the-naive-solution">The Naive Solution</h3>
 <p>You&rsquo;ve probably already thought of it by now but the easiest solution to the problem is to pull each arm many, many times and using the law of large numbers, estimate the expected payoff of each arm and then keep playing the arm with maximum payoff.
 This will work but it will take a long time and several arm pulls to get a good estimate of the expected payoff so this is inefficient. How can we do better?</p>
-<p>Before we get into some more intricate solutions, we will need a little bit more background. From now on, we will refer to the true expected payoff of arm <em>a</em> as <em>q</em><!-- raw HTML omitted -->*<!-- raw HTML omitted -->(<em>a</em>) and the expected payoff for arm <em>a</em> that we have computed as <em>q</em>(<em>a</em>). So in our initial example, <em>q</em><!-- raw HTML omitted -->*<!-- raw HTML omitted -->(<em>a</em>) = <em>p</em>, but we do not know this value or any other <em>q</em><!-- raw HTML omitted -->*<!-- raw HTML omitted -->(<em>a</em>) value. We only know the <em>q</em> values which are our estimates of the true <em>q</em><!-- raw HTML omitted -->*<!-- raw HTML omitted -->(<em>a</em>) values and we want to get our estimates as accurate as possible so that we can eventually pick and play the best arm all the time. One simple example of finding <em>q</em> values is by taking an average reward obtained from each arm (in the Bernoulli case this will be between 0 and 1).</p>
+<p>Before we get into some more intricate solutions, we will need a little bit more background. From now on, we will refer to the true expected payoff of arm <em>a</em> as <em>q</em><sup>*</sup>(<em>a</em>) and the expected payoff for arm <em>a</em> that we have computed as <em>q</em>(<em>a</em>). So in our initial example, <em>q</em><sup>*</sup>(<em>a</em>) = <em>p</em>, but we do not know this value or any other <em>q</em><sup>*</sup>(<em>a</em>) value. We only know the <em>q</em> values which are our estimates of the true <em>q</em><sup>*</sup>(<em>a</em>) values and we want to get our estimates as accurate as possible so that we can eventually pick and play the best arm all the time. One simple example of finding <em>q</em> values is by taking an average reward obtained from each arm (in the Bernoulli case this will be between 0 and 1).</p>
 <p>So its quite clear that our naive solution is inadequate to solve the problem. Is there even another way? As it turns out, there is. We don&rsquo;t want to play so many arms before we find the best arm, so we need to be smart about which arms we want to play and when. Bandit algorithms and RL algorithms as well follow this extremely crucial strategy called the <em>exploration-exploitation strategy</em>. The idea now is to explore all the arms of the bandit to try and get an idea of their reward distributions whilst also exploting the information we have by playing the arm with the maximum <em>q</em> value. This is the expore-exploit dilemma that algorithms must handle. We want to explore as many arms as possible while trying to increase our payoff by playing the best possible arm (according to us, at the time). Now there are several clever exploration strategies that we will talk about in this post but the idea behind all of them is the same. Why can&rsquo;t we just constantly exploit? This would be fine if the best arm according to us is the true best arm, but if we&rsquo;re wrong, then we will constantly play a sub-optimal arm and never learn to play the best arm. Hence, exploration is crucial and you will find that smart exploration will help us find the best arm much faster than our previous naive solution.</p>
 <p>We are going to define a new term now called <em>regret</em>. Lets assume that we will be able to eventually solve the bandit problem and start playing the right arm all the time. In fact, we have already seen a simple solution to do it and we have spoken about how exploration can improve that solution. The only question is, <em>when</em>? The sooner we find the best arm, the better our bandit algorithm is. We just spoke about the importance of exploration and how it is going to help us find the best arm quickly. There are several different ways to explore and some strategies take us very close to the optimal payoff very quickly but take a long time to reach <em>the</em> optimal payoff. Some other strategies may increase the payoff slowly but eventually reach <em>the</em> optimal payoff faster than the former strategy. In either case, the diagram of how the reward we get increases with time is as follows. The curve itself could be steeper or flatter but the shape is similar. The policy $\pi$ is nothing but a mapping of actions to the probability of playing that action. So $\pi_{t}(a)$ is the probability of playing action a. The policy is subscripted with <em>t</em> because it changes with time. <em>Regret</em>, the region shown in the diagram, is the additional reward you could have gained if you had known the best arm from the very beginning. One of the key goals of bandit algorithms is to minimize regret. At any time <em>t</em>, the regret at the time is proportional to $logt$ but we can play around with the constant (in other words, $logt$ is the lower bound).</p>
 
@@ -686,13 +686,13 @@ This will work but it will take a long time and several arm pulls to get a good 
 <h3 id="naive-pac">Naive PAC</h3>
 <p>PAC stands for Probably Approximately Correct and often comes with a tag such as $(\epsilon, \delta)$-PAC which means our algorithm will take in input values $\epsilon$ and $\delta$ and give out an arm that satisfies the condition that with probability $1-\delta$, the expected payoff is $\epsilon$ within the best arm.</p>
 <p>The naive PAC algorithm is as follows:</p>
-<pre tabindex="0"><code>for each arm 'a' do:
-   sample 'a' 'l' times
-Let q(a) be the average reward of arm 'a'
+<pre tabindex="0"><code>for each arm &#39;a&#39; do:
+   sample &#39;a&#39; &#39;l&#39; times
+Let q(a) be the average reward of arm &#39;a&#39;
 Output a with the max q(a) value
-</code></pre><p>Here the magic number &lsquo;l&rsquo; is given as (where <em>K</em> is the number of arms):
+</code></pre><p>Here the magic number &rsquo;l&rsquo; is given as (where <em>K</em> is the number of arms):
 $$l = \frac{2}{\epsilon^2} \ln(\frac{2K}{\delta})$$</p>
-<p>Once again, the algorithm is extremely easy to implement and the only question is how we got the magic number &lsquo;l&rsquo;. There is a theorem that derives this and proves the sample complexity of the algorithm but I will not get into the details here.</p>
+<p>Once again, the algorithm is extremely easy to implement and the only question is how we got the magic number &rsquo;l&rsquo;. There is a theorem that derives this and proves the sample complexity of the algorithm but I will not get into the details here.</p>
 <h3 id="median-elimination-pac">Median Elimination PAC</h3>
 <p>This is another PAC algorithm that is as follows. Once again, the algorithm is very easy to implement but much harder to prove so we will not get into the details here.</p>
 
@@ -726,17 +726,19 @@ $$l = \frac{2}{\epsilon^2} \ln(\frac{2K}{\delta})$$</p>
 
 <p><em>A</em> is the set of all arms. Median elimination proceeds in rounds. In each round, pull each arm the magic number times. Once we have done that, find the median of all the <em>q</em> values. Then eliminate all arms whose value is less than the median. Again, change the constants by some magic numbers. Keep going until we have only one arm left.</p>
 <h3 id="other-solution-strategies">Other Solution strategies</h3>
-<p>We will quickly talk about a few more solution strategies for the bandit problem. The first one is <em>Thompson Sampling</em> which is like a Bayesian treatment of the problem. This method is supposed to get better regret bounds than UCB. It involves guessing probability distributions of the different <em>q</em><!-- raw HTML omitted -->*<!-- raw HTML omitted --> values and eventually narrowing down these distributions until they converge.</p>
+<p>We will quickly talk about a few more solution strategies for the bandit problem. The first one is <em>Thompson Sampling</em> which is like a Bayesian treatment of the problem. This method is supposed to get better regret bounds than UCB. It involves guessing probability distributions of the different <em>q</em><sup>*</sup> values and eventually narrowing down these distributions until they converge.</p>
 <p>The next one is called <em>Policy Search</em>. As we already mentioned, a policy is a mapping from states to actions in the full RL problem but since we have no states here, it will just be the probability of picking each action at different timesteps. So we represent a policy as $\pi_t(a)$. Now we don&rsquo;t try and find any value functions anymore. We update the policy directly with certain algorithms like Linear Reward Penalty algorithm, Linear Reward $\epsilon$-penalty algorithm and Linear Reward Inaction algorithm. Each of them have very different convergence behaviours and are suitable for different kinds of bandit problems.</p>
 <p>Another common approach that we see a lot in the full RL problem as well is the <em>Policy Gradient</em> technique where once again, we update the parameters of a policy directly without calculating any intermediate value functions. What do we mean by parameters of a policy? A policy is a probability distribution and we can represent this in many ways, for example, as a softmax function. The exponent in the softmax function can be &ldquo;anything&rdquo; and this &ldquo;anything&rdquo; can involve some parameters that we want to optimise to learn the ideal policy. These parameteres are also called <em>preferences</em>. The parameters often come from a neural network. We won&rsquo;t talk about policy gradients too much here and we will deal with it in detail in the context of the full RL problem (in the RL course on my page).</p>
-<h2 id="contextual-bandits----a-step-towards-the-full-rl-problem">Contextual Bandits &ndash; A Step Towards the Full RL problem</h2>
+<h2 id="contextual-bandits--a-step-towards-the-full-rl-problem">Contextual Bandits &ndash; A Step Towards the Full RL problem</h2>
 <p>We now relax the bandit assumption of &ldquo;no states&rdquo; and we take a step towards the full RL problem. In fact, the bandit problem is called <em>Immediate RL</em> because as soon as we play the action, we get the feedback in the form of a reward. So contextual bandits are between immediate RL and the full RL problem. But RL problems have a certain sequential dependence that we don&rsquo;t have in the contextual bandit case. This means we don&rsquo;t need to learn the best sequence of states and actions as we do in the full RL problem; the actions we pick now won&rsquo;t affect our future and we don&rsquo;t care about the sequence of actions in our past. All we need to do is pick the best action in each state. So this can be thought of as solving many bandit problems. So if we have 10 states, we have 10 bandit problems and we can solve each of them. These problems are often solved by parametrisation of the states, the actions and the policy (although in many cases this means we parameterise the value function and not the policy).</p>
 <p>And with that we have covered the bandit problem and some of its solutions. Now that we&rsquo;ve gone through all of that, it may be worth it to look at some real-world applications of bandits. You can find some in the paper I have linked below.</p>
 <p>Let me know if you have any suggestions/if I have made any mistakes!</p>
 <h3 id="references">References</h3>
 <ol>
-<li><a href="https://nptel.ac.in/courses/106/106/106106143/">NPTEL Reinforcement Learning Course Weeks 1 and 2</a></li>
-<li><a href="https://arxiv.org/pdf/1904.10040.pdf">A Survey on Practical Applications of Multi-Armed and Contextual Bandits (Bouneffouf et. al 2019)</a></li>
+<li><a href="https://nptel.ac.in/courses/106/106/106106143/" target="_blank">NPTEL Reinforcement Learning Course Weeks 1 and 2</a>
+</li>
+<li><a href="https://arxiv.org/pdf/1904.10040.pdf" target="_blank">A Survey on Practical Applications of Multi-Armed and Contextual Bandits (Bouneffouf et. al 2019)</a>
+</li>
 </ol>
 
     </div>
@@ -784,12 +786,12 @@ $$l = \frac{2}{\epsilon^2} \ln(\frac{2K}{\delta})$$</p>
   <div class="media author-card">
     
       
-      <img class="portrait mr-3" src="/authors/admin/avatar_hub1c2c38cda459ee00afc7beaf7133d62_259593_250x250_fill_q90_lanczos_center.jpeg" alt="Avatar">
+      <img class="portrait mr-3" src="/authors/admin/avatar_hu_b4b9f93bdde40779.jpeg" alt="Avatar">
     
 
     <div class="media-body">
       <h5 class="card-title"><a href="https://skandavaidyanath.github.io/">Skanda Vaidyanath</a></h5>
-      <h6 class="card-subtitle">Member of Technical Staff</h6>
+      <h6 class="card-subtitle">Founding AI Researcher</h6>
       <p class="card-text">My research interests lie primarily in the area of reinforcement learning (RL) and control to build agents that can acquire complex behaviours in the real world via interaction.</p>
       <ul class="network-icon" aria-hidden="true">
   
@@ -1030,7 +1032,7 @@ $$l = \frac{2}{\epsilon^2} \ln(\frac{2K}{\delta})$$</p>
     
     
     
-    <script src="/js/academic.min.c5b98a8914247ae95edfbe976665d60f.js"></script>
+    <script src="/js/academic.min.b89d1011e4e05f2d9ac6fafcb0f556d1.js"></script>
 
     
 
